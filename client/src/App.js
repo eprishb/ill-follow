@@ -1,5 +1,5 @@
 import Pageloader from "./components/Pageloader";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/navigation/sidebar/Sidebar";
 import Feed from "./pages/Feed";
 import ChatWrapper from "./components/ChatWrapper";
 

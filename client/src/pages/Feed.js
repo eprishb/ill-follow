@@ -1,10 +1,13 @@
 import React from "react";
-import FeedMenuShadowDom from "../components/placeloads/feed-page/FeedMenuShadowDom"
+import Toolbar from "../components/navigation/toolbar/Toolbar";
+import FeedMenuShadowDom from "../components/placeloads/feed-page/FeedMenuShadowDom";
 
 function Feed() {
   return (
     <div>
-      <div className="toolbar-v1-fixed-wrap">{/* {{> toolbar-v1}} */}</div>
+      <div className="toolbar-v1-fixed-wrap">
+        <Toolbar />
+      </div>
 
       <div
         id="main-feed"
@@ -12,9 +15,9 @@ function Feed() {
         data-open-sidebar
         data-page-title="Timeline"
       >
-        {/* {{> toolbar-v1}} */}
+        <Toolbar />
 
-<FeedMenuShadowDom />
+        <FeedMenuShadowDom />
         <div id="activity-feed" className="view-wrap true-dom is-hidden">
           <div className="columns">
             <div className="column is-8">
