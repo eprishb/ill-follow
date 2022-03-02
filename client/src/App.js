@@ -1,7 +1,7 @@
 import Pageloader from "./components/Pageloader";
 import Sidebar from "./components/navigation/sidebar/Sidebar";
 import Feed from "./pages/Feed";
-import ChatWrapper from "./components/ChatWrapper";
+import ChatWrapper from "./components/chat/ChatWrapper";
 
 function App() {
   return (

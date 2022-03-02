@@ -1,6 +1,7 @@
 import React from "react";
 import Toolbar from "../components/navigation/toolbar/Toolbar";
 import FeedMenuShadowDom from "../components/placeloads/feed-page/FeedMenuShadowDom";
+import ComposeCard from "../components/pages/feed/ComposeCard";
 
 function Feed() {
   return (
@@ -21,7 +22,7 @@ function Feed() {
         <div id="activity-feed" className="view-wrap true-dom is-hidden">
           <div className="columns">
             <div className="column is-8">
-              {/* {{> compose-card}} */}
+              <ComposeCard />
 
               {/* {{> feed-post1}} */}
 
