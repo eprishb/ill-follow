@@ -1,9 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Toolbar from "../components/navigation/toolbar/Toolbar";
 import FeedMenuShadowDom from "../components/placeloads/feed-page/FeedMenuShadowDom";
 import ComposeCard from "../components/pages/feed/ComposeCard";
+import FeedPost from "../components/pages/feed/FeedPost";
 
-function Feed() {
+const Feed = forwardRef((props, ref) => {
   return (
     <div>
       <div className="toolbar-v1-fixed-wrap">
@@ -12,29 +13,34 @@ function Feed() {
 
       <div
         id="main-feed"
+				ref={ref}
         className="container sidebar-boxed"
         data-open-sidebar
         data-page-title="Timeline"
       >
         <Toolbar />
 
-        <FeedMenuShadowDom />
-        <div id="activity-feed" className="view-wrap true-dom is-hidden">
+        {props.shadowDom && <FeedMenuShadowDom />}
+
+        <div
+          id="activity-feed"
+          className={`view-wrap true-dom ${props.trueDom ? "" : "is-hidden"}`}
+        >
           <div className="columns">
             <div className="column is-8">
               <ComposeCard />
 
-              {/* {{> feed-post1}} */}
+              <FeedPost />
 
-              {/* {{> feed-post2}} */}
+              <FeedPost />
 
-              {/* {{> feed-post3}} */}
+              <FeedPost />
 
-              {/* {{> feed-post4}} */}
+              <FeedPost />
 
-              {/* {{> feed-post5}} */}
+              <FeedPost />
 
-              {/* {{> feed-post6}} */}
+              <FeedPost />
 
               <div className=" load-more-wrap has-text-centered">
                 <a href="#" className="load-more-button">
@@ -71,6 +77,6 @@ function Feed() {
       {/* {{> no-stream-modal}} */}
     </div>
   );
-}
+})
 
 export default Feed;
