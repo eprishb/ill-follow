@@ -3,9 +3,9 @@ import Toolbar from "../components/navigation/toolbar/Toolbar";
 import FeedMenuShadowDom from "../components/placeloads/feed-page/FeedMenuShadowDom";
 import ComposeCard from "../components/pages/feed/ComposeCard";
 import FeedPost from "../components/pages/feed/posts/FeedPost";
-import StoriesWidget from "../components/widgets/StoriesWidget";
-import BirthdayWidget from "../components/widgets/BirthdayWidget";
-import SuggestedFriendsWidget from "../components/widgets/SuggestedFriendsWidget";
+import StoriesWidget from "../components/misc/widgets/StoriesWidget";
+import BirthdayWidget from "../components/misc/widgets/BirthdayWidget";
+import SuggestedFriendsWidget from "../components/misc/widgets/SuggestedFriendsWidget";
 
 import { Posts } from "../dummyData";
 

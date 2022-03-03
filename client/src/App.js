@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import Pageloader from "./components/Pageloader";
+import Pageloader from "./components/pageloader/Pageloader";
 import Sidebar from "./components/navigation/sidebar/Sidebar";
 import Feed from "./pages/Feed";
 import ChatWrapper from "./components/chat/ChatWrapper";
+import ProfileMain from "./pages/ProfileMain";
 
 function App() {
 	const pageloader = useRef(null);
@@ -39,7 +40,8 @@ function App() {
       <div className="app-overlay is-sidebar-v1"></div>
       <Sidebar />
       <div className="view-wrapper is-sidebar-v1 is-fold">
-				<Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} />
+				{/* <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> */}
+					<ProfileMain />
 			</div>
       <ChatWrapper />
     </div>
