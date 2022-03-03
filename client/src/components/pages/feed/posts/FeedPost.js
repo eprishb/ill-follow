@@ -1,7 +1,16 @@
-import React from "react";
-import { Users } from "../../../dummyData";
+import React, { useState } from "react";
+import { Users } from "../../../../dummyData";
+import FeedPostActions from "../buttons/FeedPostActions";
 
 function FeedPost({ post }) {
+	const [like, setLike] = useState(post.like);
+	const [isLiked, setIsLiked] = useState(false);
+
+	const likeHandler = () => {
+		setLike(isLiked ? like-1: like+1);
+		setIsLiked(!isLiked);
+	}
+
   return (
     <div id="feed-post-1" className="card is-post">
       <div className="content-wrap">
@@ -43,7 +52,7 @@ function FeedPost({ post }) {
                 alt=""
               />
             </a>
-            {/* {{> feed-post-actions}} */}
+            <FeedPostActions likeHandler={likeHandler} />
           </div>
         </div>
 
@@ -78,12 +87,12 @@ function FeedPost({ post }) {
             <p>
               <a href="#">Milly</a>,<a href="#">David</a>
             </p>
-            <p>and {post.like} more liked this</p>
+            <p>and {like} more liked this</p>
           </div>
           <div className="social-count">
             <div className="likes-count">
               <i data-feather="heart"></i>
-              <span>27</span>
+              <span>{like}</span>
             </div>
             <div className="shares-count">
               <i data-feather="link-2"></i>

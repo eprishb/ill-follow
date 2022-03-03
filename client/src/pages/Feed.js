@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import Toolbar from "../components/navigation/toolbar/Toolbar";
 import FeedMenuShadowDom from "../components/placeloads/feed-page/FeedMenuShadowDom";
 import ComposeCard from "../components/pages/feed/ComposeCard";
-import FeedPost from "../components/pages/feed/FeedPost";
+import FeedPost from "../components/pages/feed/posts/FeedPost";
 import StoriesWidget from "../components/widgets/StoriesWidget";
 import BirthdayWidget from "../components/widgets/BirthdayWidget";
 import SuggestedFriendsWidget from "../components/widgets/SuggestedFriendsWidget";
