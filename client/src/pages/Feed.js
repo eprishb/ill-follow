@@ -3,6 +3,11 @@ import Toolbar from "../components/navigation/toolbar/Toolbar";
 import FeedMenuShadowDom from "../components/placeloads/feed-page/FeedMenuShadowDom";
 import ComposeCard from "../components/pages/feed/ComposeCard";
 import FeedPost from "../components/pages/feed/FeedPost";
+import StoriesWidget from "../components/widgets/StoriesWidget";
+import BirthdayWidget from "../components/widgets/BirthdayWidget";
+import SuggestedFriendsWidget from "../components/widgets/SuggestedFriendsWidget";
+
+import { Posts } from "../dummyData";
 
 const Feed = forwardRef((props, ref) => {
   return (
@@ -30,17 +35,9 @@ const Feed = forwardRef((props, ref) => {
             <div className="column is-8">
               <ComposeCard />
 
-              <FeedPost />
-
-              <FeedPost />
-
-              <FeedPost />
-
-              <FeedPost />
-
-              <FeedPost />
-
-              <FeedPost />
+							{ Posts.map(post => (
+								<FeedPost key={post.id} post={post} />
+							))}
 
               <div className=" load-more-wrap has-text-centered">
                 <a href="#" className="load-more-button">
@@ -50,13 +47,12 @@ const Feed = forwardRef((props, ref) => {
             </div>
 
             <div className="column is-4">
-              {/* {{> stories-widget}} */}
+              <StoriesWidget />
 
-              {/* {{> birthday-widget}} */}
+              <BirthdayWidget />
 
-              {/* {{> suggested-friends-1-widget}} */}
+              <SuggestedFriendsWidget />
 
-              {/* {{> new-job-widget}} */}
             </div>
           </div>
         </div>

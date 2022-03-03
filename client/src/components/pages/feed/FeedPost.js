@@ -1,6 +1,7 @@
 import React from "react";
+import { Users } from "../../../dummyData";
 
-function FeedPost() {
+function FeedPost({ post }) {
   return (
     <div id="feed-post-1" className="card is-post">
       <div className="content-wrap">
@@ -8,15 +9,17 @@ function FeedPost() {
           <div className="user-block">
             <div className="image">
               <img
-                src="https://via.placeholder.com/300x300"
+                src={Users.filter((u) => u.user_id === post.userId)[0].profile_picture}
                 data-demo-src="assets/img/avatars/dan.jpg"
                 data-user-popover="1"
                 alt=""
               />
             </div>
             <div className="user-info">
-              <a href="#">Dan Walker</a>
-              <span className="time">July 26 2018, 01:03pm</span>
+              <a href="#">
+                {Users.filter((u) => u.user_id === post.userId)[0].username}
+              </a>
+              <span className="time">{post.time}</span>
             </div>
           </div>
           {/* {{> feed-post-dropdown}} */}
@@ -24,13 +27,7 @@ function FeedPost() {
 
         <div className="card-body">
           <div className="post-text">
-            <p>
-              Yesterday with
-              <a href="#">@Karen Miller</a> and
-              <a href="#">@Marvin Stemperd</a> at the
-              <a href="#">#Rock'n'Rolla</a> concert in LA. Was totally
-              fantastic! People were really excited about this one!
-            </p>
+            <p>{post.content}</p>
           </div>
           <div className="post-image">
             <a
@@ -41,7 +38,7 @@ function FeedPost() {
               data-demo-href="assets/img/demo/unsplash/1.jpg"
             >
               <img
-                src="https://via.placeholder.com/1600x900"
+                src={post?.photo}
                 data-demo-src="assets/img/demo/unsplash/1.jpg"
                 alt=""
               />
@@ -81,7 +78,7 @@ function FeedPost() {
             <p>
               <a href="#">Milly</a>,<a href="#">David</a>
             </p>
-            <p>and 23 more liked this</p>
+            <p>and {post.like} more liked this</p>
           </div>
           <div className="social-count">
             <div className="likes-count">
@@ -90,11 +87,11 @@ function FeedPost() {
             </div>
             <div className="shares-count">
               <i data-feather="link-2"></i>
-              <span>9</span>
+              <span>{post.share}</span>
             </div>
             <div className="comments-count">
               <i data-feather="message-circle"></i>
-              <span>3</span>
+              <span>{post.comment}</span>
             </div>
           </div>
         </div>
