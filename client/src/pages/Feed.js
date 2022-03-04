@@ -7,6 +7,7 @@ import StoriesWidget from "../components/misc/widgets/StoriesWidget";
 import BirthdayWidget from "../components/misc/widgets/BirthdayWidget";
 import SuggestedFriendsWidget from "../components/misc/widgets/SuggestedFriendsWidget";
 
+import { Link } from 'react-router-dom';
 import { Posts } from "../dummyData";
 
 const Feed = forwardRef((props, ref) => {
@@ -35,8 +36,12 @@ const Feed = forwardRef((props, ref) => {
             <div className="column is-8">
               <ComposeCard />
 
+								{/* <FeedPost key={post.id} post={post} /> */}
 							{ Posts.map(post => (
-								<FeedPost key={post.id} post={post} />
+								<Link to={`/feed/${post.id}`}
+								key={post.id} >
+									<FeedPost post={post}/>
+								</Link>
 							))}
 
               <div className=" load-more-wrap has-text-centered">

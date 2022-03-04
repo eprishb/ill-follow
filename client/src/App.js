@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import Pageloader from "./components/pageloader/Pageloader";
 import Sidebar from "./components/navigation/sidebar/Sidebar";
 import Feed from "./pages/Feed";
@@ -39,16 +40,30 @@ function App() {
   return (
     <div>
       <Pageloader ref={pageloader} plActive={plActive} ilActive={ilActive} />
-			<div className="signup-wrapper">
-        {/* <Login /> */}
-				<Register />
-			</div>
-      {/* <div className="app-overlay is-sidebar-v1"></div>
-      <Sidebar />
-      <div className="view-wrapper is-sidebar-v1 is-fold"> */}
-				{/* <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> */}
-				{/* <ProfileMain /> */}
-			{/* </div> */}
+      {/* <div className="signup-wrapper"> */}
+      {/* <Login /> */}
+      {/* <Link to="/register">Register</Link> */}
+      {/* </div> */}
+      {/* <div className="app-overlay is-sidebar-v1"></div> */}
+      {/* <Sidebar /> */}
+      <Link to="/feed">
+        Feed
+        {/* <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> */}
+      </Link>
+      <div className="view-wrapper is-sidebar-v1 is-fold">
+        <Routes>
+          <Route path="feed" element={<Feed />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+        </Routes>
+        {/* <ProfileMain /> */}
+      </div>
       {/* <ChatWrapper /> */}
     </div>
   );
