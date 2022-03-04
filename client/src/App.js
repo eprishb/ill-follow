@@ -4,6 +4,8 @@ import Sidebar from "./components/navigation/sidebar/Sidebar";
 import Feed from "./pages/Feed";
 import ChatWrapper from "./components/chat/ChatWrapper";
 import ProfileMain from "./pages/ProfileMain";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
 	const pageloader = useRef(null);
@@ -37,13 +39,17 @@ function App() {
   return (
     <div>
       <Pageloader ref={pageloader} plActive={plActive} ilActive={ilActive} />
-      <div className="app-overlay is-sidebar-v1"></div>
-      <Sidebar />
-      <div className="view-wrapper is-sidebar-v1 is-fold">
-				{/* <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> */}
-					<ProfileMain />
+			<div className="signup-wrapper">
+        {/* <Login /> */}
+				<Register />
 			</div>
-      <ChatWrapper />
+      {/* <div className="app-overlay is-sidebar-v1"></div>
+      <Sidebar />
+      <div className="view-wrapper is-sidebar-v1 is-fold"> */}
+				{/* <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> */}
+				{/* <ProfileMain /> */}
+			{/* </div> */}
+      {/* <ChatWrapper /> */}
     </div>
   );
 }
