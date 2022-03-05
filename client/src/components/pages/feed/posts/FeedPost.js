@@ -1,10 +1,21 @@
-import React, { useState } from "react";
-import { Users } from "../../../../dummyData";
+import React, { useState, useEffect } from "react";
+import { Link } from  'react-router-dom'
+import axios from 'axios';
+import { format } from 'timeago.js'
 import FeedPostActions from "../buttons/FeedPostActions";
 
 function FeedPost({ post }) {
-	const [like, setLike] = useState(post.like);
+	const [like, setLike] = useState(post.likes.length);
 	const [isLiked, setIsLiked] = useState(false);
+	const [user, setUser] = useState({})
+
+	useEffect(() => {
+    const fetchUser = async () => {
+      const res = await axios.get(`users/${post.userId}`);
+      setUser(res.data);
+    };
+    fetchUser();
+  }, [post.userId]);
 
 	const likeHandler = () => {
 		setLike(isLiked ? like-1: like+1);
@@ -17,18 +28,21 @@ function FeedPost({ post }) {
         <div className="card-heading">
           <div className="user-block">
             <div className="image">
-              <img
-                src={Users.filter((u) => u.user_id === post.userId)[0].profile_picture}
-                data-demo-src="assets/img/avatars/dan.jpg"
-                data-user-popover="1"
-                alt=""
-              />
+							<Link to={`profile/${user.username}`}>
+								<img
+									src={
+										user.profile_picture ||
+										"https://randomuser.me/api/portraits/women/91.jpg"
+									}
+									data-demo-src="assets/img/avatars/dan.jpg"
+									data-user-popover="1"
+									alt=""
+								/>
+							</Link>
             </div>
             <div className="user-info">
-              <a href="#">
-                {Users.filter((u) => u.user_id === post.userId)[0].username}
-              </a>
-              <span className="time">{post.time}</span>
+              <a href="#">{user.username}</a>
+              <span className="time">{format(post.createdAt)}</span>
             </div>
           </div>
           {/* {{> feed-post-dropdown}} */}
@@ -36,7 +50,7 @@ function FeedPost({ post }) {
 
         <div className="card-body">
           <div className="post-text">
-            <p>{post.content}</p>
+            <p>{post?.desc}</p>
           </div>
           <div className="post-image">
             <a
@@ -47,7 +61,7 @@ function FeedPost({ post }) {
               data-demo-href="assets/img/demo/unsplash/1.jpg"
             >
               <img
-                src={post?.photo}
+                src={post?.img}
                 data-demo-src="assets/img/demo/unsplash/1.jpg"
                 alt=""
               />

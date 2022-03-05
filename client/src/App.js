@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, Outlet, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Pageloader from "./components/pageloader/Pageloader";
 import Sidebar from "./components/navigation/sidebar/Sidebar";
 import Feed from "./pages/Feed";
@@ -39,20 +39,28 @@ function App() {
 
   return (
     <div>
+      <Link to="/feed">Feed</Link>
+			<Link to="/profile">Profile</Link>
+      <Link to="/register">Register</Link>
+			<Link to="/login">Login</Link>
       <Pageloader ref={pageloader} plActive={plActive} ilActive={ilActive} />
-      {/* <div className="signup-wrapper"> */}
-      {/* <Login /> */}
-      {/* <Link to="/register">Register</Link> */}
-      {/* </div> */}
-      {/* <div className="app-overlay is-sidebar-v1"></div> */}
-      {/* <Sidebar /> */}
-      <Link to="/feed">
-        Feed
-        {/* <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> */}
-      </Link>
+      {/* <div className="signup-wrapper">
+				<Routes>
+					<Route path="register" element={<Register />} />
+					<Route path="login" element={<Login />} />
+				</Routes>
+      </div> */}
+      <div className="app-overlay is-sidebar-v1"></div>
+      <Sidebar />
       <div className="view-wrapper is-sidebar-v1 is-fold">
         <Routes>
-          <Route path="feed" element={<Feed />} />
+          <Route
+            path="feed"
+            element={
+              <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} />
+            }
+          />
+          <Route path="profile" element={<ProfileMain />} />
           <Route
             path="*"
             element={
@@ -62,7 +70,6 @@ function App() {
             }
           />
         </Routes>
-        {/* <ProfileMain /> */}
       </div>
       {/* <ChatWrapper /> */}
     </div>
