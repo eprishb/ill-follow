@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-function TimelineHeader() {
+function TimelineHeader({ username }) {
+
   return (
     <>
       <div className="cover-bg">
@@ -113,7 +115,7 @@ function TimelineHeader() {
           <span>Friends</span>
         </div>
         <div className="subheader-middle">
-          <h2>Jenna Davis</h2>
+          <h2>{username}</h2>
           <span>Media Influencer</span>
         </div>
         <div className="subheader-end is-hidden-mobile">

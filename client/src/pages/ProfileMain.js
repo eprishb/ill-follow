@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import { useParams } from "react-router";
+
 import Toolbar from "../components/navigation/toolbar/Toolbar";
 import TimelinePost from "../components/pages/profile/posts/TimelinePost";
 import TimelineHeader from "../components/pages/profile/TimelineHeader";
@@ -9,6 +12,27 @@ import TripsWidget from "../components/pages/profile/widgets/TripsWidget";
 import VideosWidget from "../components/pages/profile/widgets/VideosWidget";
 
 function ProfileMain() {
+  const [user, setUser] = useState({});
+	const [posts, setPosts] = useState([]);
+	const username = "Janet Doe";
+	
+  useEffect(() => {
+		const fetchUser = async () => {
+			const res = await axios.get(`/api/users?username=Janet%20Doe`);
+      setUser(res.data);
+      console.log(res.data);
+    };
+    fetchUser();
+  }, []);
+	
+	useEffect(() => {
+		const fetchPosts = async () => {
+			const res = await axios.get("/api/posts/profile/" + username);
+			setPosts(res.data);
+		};
+		fetchPosts();
+	}, [username]); 
+
   return (
     <div>
       <div className="toolbar-v1-fixed-wrap">
@@ -26,7 +50,7 @@ function ProfileMain() {
         <div className="view-wrap is-headless">
           <div className="columns is-multiline no-margin">
             <div className="column is-paddingless">
-              <TimelineHeader />
+              <TimelineHeader username={user.username} />
             </div>
           </div>
 
@@ -101,7 +125,7 @@ function ProfileMain() {
               </div>
 
               <div className="profile-timeline">
-                <TimelinePost />
+                <TimelinePost username={username} />
               </div>
             </div>
           </div>

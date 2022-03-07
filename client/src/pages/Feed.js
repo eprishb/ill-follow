@@ -1,4 +1,7 @@
 import React, { forwardRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+
 import Toolbar from "../components/navigation/toolbar/Toolbar";
 import FeedMenuShadowDom from "../components/misc/placeloads/feed-page/FeedMenuShadowDom";
 import ComposeCard from "../components/pages/feed/ComposeCard";
@@ -7,15 +10,12 @@ import StoriesWidget from "../components/misc/widgets/StoriesWidget";
 import BirthdayWidget from "../components/misc/widgets/BirthdayWidget";
 import SuggestedFriendsWidget from "../components/misc/widgets/SuggestedFriendsWidget";
 
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-
 const Feed = forwardRef((props, ref) => {
 	const [posts, setPosts] = useState([]);
 
 	useEffect(() => {
 		const fetchPosts = async () => {
-			const res = await axios.get("posts/timeline/621bba1f0b85ddc5b4bafe75");
+			const res = await axios.get("api/posts/timeline/621bba1f0b85ddc5b4bafe75");
 			setPosts(res.data);
 		};
 		fetchPosts();

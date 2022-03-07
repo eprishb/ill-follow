@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-function TimelinePost() {
+function TimelinePost({ username }) {
+	const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const res = await axios.get("posts/profile/" + username);
+      setPosts(res.data);
+      console.log(res.data);
+    };
+    fetchPosts();
+  }, []);
+
   return (
     <div>
       <div className="profile-post">
@@ -26,7 +38,7 @@ function TimelinePost() {
                   />
                 </div>
                 <div className="user-info">
-                  <a href="#">Jenna Davis</a>
+                  <a href="#">{username}</a>
                   <span className="time">October 17 2018, 11:03am</span>
                 </div>
               </div>

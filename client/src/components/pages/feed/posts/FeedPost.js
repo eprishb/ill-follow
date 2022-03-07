@@ -11,7 +11,7 @@ function FeedPost({ post }) {
 
 	useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`users/${post.userId}`);
+      const res = await axios.get(`/api/users?userId=${post.userId}`);
       setUser(res.data);
     };
     fetchUser();
@@ -28,7 +28,7 @@ function FeedPost({ post }) {
         <div className="card-heading">
           <div className="user-block">
             <div className="image">
-							<Link to={`profile/${user.username}`}>
+							<Link to={`/profile/${user.username}`}>
 								<img
 									src={
 										user.profile_picture ||
