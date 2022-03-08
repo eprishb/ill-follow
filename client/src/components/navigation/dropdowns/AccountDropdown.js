@@ -1,19 +1,26 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-function AccountDropdown() {
+function AccountDropdown({ user }) {
   return (
     <div
       id="account-dropdown"
       className="navbar-item is-account drop-trigger has-caret"
     >
-      <div className="user-image">
-        <img
-          src="https://via.placeholder.com/400x400"
-          data-demo-src="assets/img/avatars/jenna.png"
-          alt=""
-        />
-        <span className="indicator"></span>
-      </div>
+			<Link to={`/profile/${user.username}`}>
+				<div className="user-image">
+					<img
+						src={
+							user.profilePicture
+								? user.profilePicture
+								: "https://randomuser.me/api/portraits/women/91.jpg"
+						}
+						data-demo-src="assets/img/avatars/jenna.png"
+						alt=""
+					/>
+					<span className="indicator"></span>
+				</div>
+			</Link>
 
       <div className="nav-drop is-account-dropdown">
         <div className="inner">

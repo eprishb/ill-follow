@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../../context/AuthContext";
 import FriendRequestsDropdownRight from "../dropdowns/FriendRequestsDropdownRight";
 import NotificationsDropdownRight from "../dropdowns/NotificationsDropdownRight";
 import MessagesDropdownRight from "../dropdowns/MessagesDropdownRight";
 import AccountDropdown from "../dropdowns/AccountDropdown";
 
 function Toolbar() {
+	const {user} = useContext(AuthContext);
+
   return (
     <div className="toolbar-v1 is-narrow">
       <div className="friendkit-hamburger sidebar-v1-trigger">
@@ -23,7 +26,7 @@ function Toolbar() {
         <FriendRequestsDropdownRight />
         <NotificationsDropdownRight />
         <MessagesDropdownRight />
-        <AccountDropdown />
+        <AccountDropdown user={{user}}/>
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ function App() {
       <Link to="/register">Register</Link>
 			<Link to="/login">Login</Link>
       <Pageloader ref={pageloader} plActive={plActive} ilActive={ilActive} />
-      <div className="signup-wrapper">
+      {/* <div className="signup-wrapper">
 				<Routes>
 					<Route path="/" element={
 						user ? <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> : <Register />
@@ -60,9 +60,9 @@ function App() {
 					/>
 				</Routes>
       </div>
-      <div className="app-overlay is-sidebar-v1"></div>
+      <div className="app-overlay is-sidebar-v1"></div> */}
       <Sidebar />
-      {/* <div className="view-wrapper is-sidebar-v1 is-fold">
+      <div className="view-wrapper is-sidebar-v1 is-fold">
         <Routes>
           <Route
             path="feed"
@@ -80,7 +80,7 @@ function App() {
             }
           />
         </Routes>
-      </div> */}
+      </div>
       {/* <ChatWrapper /> */}
     </div>
   );
