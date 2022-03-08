@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
+import { loginCall } from "../apiCalls";
+import { AuthContext }  from "../context/AuthContext";
 
 function Login() {
+	const email = useRef();
+	const password = useRef();
+	const {user, isFetching, error, dispatch } = useContext(AuthContext);
+
+	const handleClick = (e) => {
+		e.preventDefault();
+		loginCall({ email: email.current.value , password: password.current.value }, dispatch);
+	}
+
+	// TODO: Add loading bar up top for when user logs in
+
   return (
     <div>
       <div className="fake-nav">
@@ -43,15 +56,17 @@ function Login() {
                 Enter your credentials to sign in.
               </h3>
 
-              <div className="login-form">
+              <form className="login-form" onSubmit={handleClick}>
                 <div className="form-panel">
                   <div className="field">
                     <label>Email</label>
                     <div className="control">
                       <input
-                        type="text"
+                        type="email"
+												required
                         className="input"
                         placeholder="Enter your email address"
+												ref={email}
                       />
                     </div>
                   </div>
@@ -60,8 +75,11 @@ function Login() {
                     <div className="control">
                       <input
                         type="password"
+												required
+												minLength="6"
                         className="input"
                         placeholder="Enter your password"
+												ref={password}
                       />
                     </div>
                   </div>
@@ -80,15 +98,15 @@ function Login() {
                 </div>
 
                 <div className="buttons">
-                  <a className="button is-solid primary-button is-fullwidth raised">
-                    Login
-                  </a>
+                  <button className="button is-solid primary-button is-fullwidth raised" type="submit">
+                    {isFetching ? "Loading" : "Login"}
+                  </button>
                 </div>
 
                 <div className="account-link has-text-centered">
                   <a href="/signup.html">Don't have an account? Sign Up</a>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

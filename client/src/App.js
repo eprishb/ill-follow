@@ -1,11 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, Route, Routes } from 'react-router-dom';
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { Link, Route, Routes, Navigate } from 'react-router-dom';
+import { AuthContext } from "./context/AuthContext";
 import Pageloader from "./components/pageloader/Pageloader";
 import Sidebar from "./components/navigation/sidebar/Sidebar";
-import Feed from "./pages/Feed";
 import ChatWrapper from "./components/chat/ChatWrapper";
-import ProfileMain from "./pages/ProfileMain";
+import Feed from "./pages/Feed";
 import Login from "./pages/Login";
+import ProfileMain from "./pages/ProfileMain";
 import Register from "./pages/Register";
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
 	const [ilActive, setIlActive] = useState(true);
 	const [shadowDom, setShadowDom] = useState(true);
 	const [trueDom, setTrueDom] = useState(false);
+
+	const {user} = useContext(AuthContext)
 
 	useEffect(() => {
     if (!pageloader.current) return;
@@ -46,8 +49,15 @@ function App() {
       <Pageloader ref={pageloader} plActive={plActive} ilActive={ilActive} />
       <div className="signup-wrapper">
 				<Routes>
-					<Route path="register" element={<Register />} />
-					<Route path="login" element={<Login />} />
+					<Route path="/" element={
+						user ? <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> : <Register />
+					} />				
+					<Route path="register" element={
+						user ? <Navigate to="/" /> : <Register />}
+					/>
+					<Route path="login" element={
+					  user ? <Navigate to="/" /> : <Login />}
+					/>
 				</Routes>
       </div>
       <div className="app-overlay is-sidebar-v1"></div>

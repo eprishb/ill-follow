@@ -1,6 +1,36 @@
-import React from "react";
+import axios from "axios";
+import React, { useRef } from "react";
+import { useNavigate } from "react-router";
 
 function Register() {
+	const username = useRef();
+	const email = useRef();
+	const password = useRef();
+	const pwConfirmation = useRef();
+	const navigate = useNavigate();
+
+	const handleClick = async (e) => {
+    e.preventDefault();
+		if(pwConfirmation.current.value !== password.current.value){
+			pwConfirmation.current.setCustomValidity("Passwords do not match");
+		} else {
+			const user = {
+        username: username.current.value,
+        email: email.current.value,
+        password: password.current.value,
+      };
+
+			console.log(user)
+
+			try {
+				await axios.post("api/auth/register", user);
+				navigate("/login");
+			} catch(err) {
+				console.log(err)
+			}
+		}
+  };
+
   return (
     <div>
       <div className="fake-nav">
@@ -31,29 +61,19 @@ function Register() {
                 Lets create your account.
               </h3>
 
-              <div className="login-form">
+              <form className="login-form" onSubmit={handleClick}>
                 <div className="form-panel">
                   <div className="columns is-multiline">
-                    <div className="column is-6">
+                    <div className="column is-12">
                       <div className="field">
-                        <label>First Name</label>
+                        <label>Name</label>
                         <div className="control">
                           <input
                             type="text"
+														required
                             className="input"
-                            placeholder="Enter your first name"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="column is-6">
-                      <div className="field">
-                        <label>Last Name</label>
-                        <div className="control">
-                          <input
-                            type="text"
-                            className="input"
-                            placeholder="Enter your last name"
+                            placeholder="Enter your Name"
+														ref={username}
                           />
                         </div>
                       </div>
@@ -63,9 +83,11 @@ function Register() {
                         <label>Email</label>
                         <div className="control">
                           <input
-                            type="text"
+                            type="email"
+														required
                             className="input"
                             placeholder="Enter your email address"
+														ref={email}
                           />
                         </div>
                       </div>
@@ -76,22 +98,26 @@ function Register() {
                         <div className="control">
                           <input
                             type="password"
+														required
+														minLength="6"
                             className="input"
                             placeholder="Enter your password"
+														ref={password}
                           />
                         </div>
                       </div>
                     </div>
                     <div className="column is-12">
-                      <div className="field is-flex">
-                        <div className="switch-block">
-                          <label className="f-switch">
-                            <input type="checkbox" className="is-switch" />
-                            <i></i>
-                          </label>
-                          <div className="meta">
-                            <p>Subscribe to Newsletter?</p>
-                          </div>
+                      <div className="field">
+                        <label>Confirm Password</label>
+                        <div className="control">
+                          <input
+                            type="password"
+														required
+                            className="input"
+                            placeholder="Confirm your password"
+														ref={pwConfirmation}
+                          />
                         </div>
                       </div>
                     </div>
@@ -99,15 +125,15 @@ function Register() {
                 </div>
 
                 <div className="buttons mt-2">
-                  <a className="button is-solid primary-button is-fullwidth raised">
+                  <button className="button is-solid primary-button is-fullwidth raised" type="submit">
                     Create Account
-                  </a>
+                  </button>
                 </div>
 
                 <div className="account-link has-text-centered">
                   <a href="/login-boxed.html">Have an account? Sign In</a>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

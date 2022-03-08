@@ -27,5 +27,3 @@ export const AuthContextProvider = ({children}) => {
 		</AuthContext.Provider>
 	)
 }
-
-// Login & Register dispatch an action. Reducer decides which properties to update. 
