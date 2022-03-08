@@ -14,16 +14,15 @@ import VideosWidget from "../components/pages/profile/widgets/VideosWidget";
 function ProfileMain() {
   const [user, setUser] = useState({});
 	const [posts, setPosts] = useState([]);
-	const username = "Janet Doe";
+	const username = useParams().username;
 	
   useEffect(() => {
 		const fetchUser = async () => {
-			const res = await axios.get(`/api/users?username=Janet%20Doe`);
+			const res = await axios.get(`/api/users?username=${username}`);
       setUser(res.data);
-      console.log(res.data);
     };
     fetchUser();
-  }, []);
+  }, [username]);
 	
 	useEffect(() => {
 		const fetchPosts = async () => {
@@ -31,7 +30,7 @@ function ProfileMain() {
 			setPosts(res.data);
 		};
 		fetchPosts();
-	}, [username]); 
+	}, [username]);
 
   return (
     <div>
@@ -50,13 +49,13 @@ function ProfileMain() {
         <div className="view-wrap is-headless">
           <div className="columns is-multiline no-margin">
             <div className="column is-paddingless">
-              <TimelineHeader username={user.username} />
+              <TimelineHeader username={username} />
             </div>
           </div>
 
           <div className="columns">
             <div id="profile-timeline-widgets" className="column is-4">
-              <BasicInfosWidget />
+              <BasicInfosWidget user={user} />
 
               <PhotosWidget />
 

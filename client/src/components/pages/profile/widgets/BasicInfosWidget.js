@@ -1,6 +1,8 @@
 import React from 'react'
 
-function BasicInfosWidget() {
+function BasicInfosWidget({ user }) {
+	console.log(user);
+
 	return (
     <div>
       <div className="box-heading">
@@ -47,7 +49,7 @@ function BasicInfosWidget() {
           </div>
           <div className="info-row">
             <div>
-              <span>Married to</span>
+              <span>{user.relationship === 1 ? "Single" : user.relationship === 2 ? "Married to" : "Relationship"}</span>
               <a className="is-inverted">Dan Walker</a>
             </div>
             <i className="mdi mdi-heart"></i>
@@ -69,7 +71,7 @@ function BasicInfosWidget() {
           <div className="info-row">
             <div>
               <span>Followers</span>
-              <a className="is-muted">258 followers</a>
+              <a className="is-muted"></a>
             </div>
             <i className="mdi mdi-bell-ring"></i>
           </div>

@@ -60,7 +60,7 @@ function App() {
               <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} />
             }
           />
-          <Route path="profile" element={<ProfileMain />} />
+          <Route path="profile/:username" element={<ProfileMain />} />
           <Route
             path="*"
             element={

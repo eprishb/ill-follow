@@ -6,9 +6,8 @@ function TimelinePost({ username }) {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("posts/profile/" + username);
+      const res = await axios.get("/api/posts/profile/" + username);
       setPosts(res.data);
-      console.log(res.data);
     };
     fetchPosts();
   }, []);

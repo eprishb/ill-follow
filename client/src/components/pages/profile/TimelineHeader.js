@@ -8,7 +8,7 @@ function TimelineHeader({ username }) {
       <div className="cover-bg">
         <img
           className="cover-image"
-          src="https://via.placeholder.com/1600x460"
+          src={username.coverPicture || "https://via.placeholder.com/1600x460"}
           data-demo-src="assets/img/demo/bg/4.png"
           alt=""
         />
@@ -16,7 +16,7 @@ function TimelineHeader({ username }) {
           <img
             id="user-avatar"
             className="avatar-image"
-            src="https://via.placeholder.com/300x300"
+            src={username.profilePicture || "https://via.placeholder.com/300x300"}
             data-demo-src="assets/img/avatars/jenna.png"
             alt=""
           />

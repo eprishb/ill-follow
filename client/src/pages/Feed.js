@@ -21,7 +21,6 @@ const Feed = forwardRef((props, ref) => {
 		fetchPosts();
 	}, [])
 	
-
   return (
     <div>
       <div className="toolbar-v1-fixed-wrap">
