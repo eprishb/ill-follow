@@ -12,13 +12,10 @@ import ProfileMain from "./pages/ProfileMain";
 
 function App() {
 	const pageloader = useRef(null);
-	const mainfeed = useRef(null);
 	const [plActive, setPlActive] = useState(false);
 	const [ilActive, setIlActive] = useState(true);
-	const [shadowDom, setShadowDom] = useState(true);
-	const [trueDom, setTrueDom] = useState(false);
 
-	const {user} = useContext(AuthContext)
+	const {user} = useContext(AuthContext);
 
 	useEffect(() => {
     if (!pageloader.current) return;
@@ -30,15 +27,6 @@ function App() {
 			setIlActive((active) => !active);
 			clearTimeout(pageloaderTimeout);
 		}, 700);
-		
-		if (!mainfeed.current) return;
-
-		const shadowDomTimeout = setTimeout(() => {
-			setShadowDom(false);
-			setTrueDom(true);
-			clearTimeout(shadowDomTimeout);
-		}, 2500);
-
   }, []);
 
   return (
@@ -50,29 +38,7 @@ function App() {
           element={
             user ? (
               <Routes>
-								<Route path="/" element={<DefaultWrapper />}>
-									<Route
-										index
-										element={
-											<Feed
-												ref={mainfeed}
-												shadowDom={shadowDom}
-												trueDom={trueDom}
-											/>
-										}
-									/>
-									<Route
-										path="feed"
-										element={
-											<Feed
-												ref={mainfeed}
-												shadowDom={shadowDom}
-												trueDom={trueDom}
-											/>
-										}
-									/>
-									<Route path="profile/:username" element={<ProfileMain />} />
-								</Route>
+								<Route path="/*" element={<DefaultWrapper />} />
               </Routes>
             ) : (
               <Login />
