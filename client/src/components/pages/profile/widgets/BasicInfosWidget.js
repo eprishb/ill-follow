@@ -70,7 +70,7 @@ function BasicInfosWidget({ user }) {
           <div className="info-row">
             <div>
               <span>Followers</span>
-              <a className="is-muted">{user.followers.length}</a>
+              <a className="is-muted"></a>
             </div>
             <i className="mdi mdi-bell-ring"></i>
           </div>

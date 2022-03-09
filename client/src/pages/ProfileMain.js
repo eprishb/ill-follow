@@ -59,7 +59,7 @@ function ProfileMain() {
 
               <PhotosWidget />
 
-              <StarFriendsWidget />
+              <StarFriendsWidget user={user} />
 
               <VideosWidget />
 
