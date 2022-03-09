@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Link, Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { AuthContext } from "./context/AuthContext";
+import DefaultWrapper from "./layouts/DefaultWrapper";
+import SignUpWrapper from "./layouts/SignUpWrapper";
 import Pageloader from "./components/pageloader/Pageloader";
-import Sidebar from "./components/navigation/sidebar/Sidebar";
 import ChatWrapper from "./components/chat/ChatWrapper";
-import Feed from "./pages/Feed";
 import Login from "./pages/Login";
-import ProfileMain from "./pages/ProfileMain";
 import Register from "./pages/Register";
+import Feed from "./pages/Feed";
+import ProfileMain from "./pages/ProfileMain";
 
 function App() {
 	const pageloader = useRef(null);
@@ -42,45 +43,61 @@ function App() {
 
   return (
     <div>
-      <Link to="/feed">Feed</Link>
-			<Link to="/profile">Profile</Link>
-      <Link to="/register">Register</Link>
-			<Link to="/login">Login</Link>
       <Pageloader ref={pageloader} plActive={plActive} ilActive={ilActive} />
-      {/* <div className="signup-wrapper">
-				<Routes>
-					<Route path="/" element={
-						user ? <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} /> : <Register />
-					} />				
-					<Route path="register" element={
-						user ? <Navigate to="/" /> : <Register />}
-					/>
-					<Route path="login" element={
-					  user ? <Navigate to="/" /> : <Login />}
-					/>
-				</Routes>
-      </div>
-      <div className="app-overlay is-sidebar-v1"></div> */}
-      <Sidebar />
-      <div className="view-wrapper is-sidebar-v1 is-fold">
-        <Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            user ? (
+              <Routes>
+								<Route path="/" element={<DefaultWrapper />}>
+									<Route
+										index
+										element={
+											<Feed
+												ref={mainfeed}
+												shadowDom={shadowDom}
+												trueDom={trueDom}
+											/>
+										}
+									/>
+									<Route
+										path="feed"
+										element={
+											<Feed
+												ref={mainfeed}
+												shadowDom={shadowDom}
+												trueDom={trueDom}
+											/>
+										}
+									/>
+									<Route path="profile/:username" element={<ProfileMain />} />
+								</Route>
+              </Routes>
+            ) : (
+              <Login />
+            )
+          }
+        />
+        <Route path="/" element={<SignUpWrapper />}>
           <Route
-            path="feed"
-            element={
-              <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} />
-            }
+            path="register"
+            element={user ? <Navigate to="/" /> : <Register />}
           />
-          <Route path="profile/:username" element={<ProfileMain />} />
           <Route
-            path="*"
-            element={
-              <main style={{ padding: "1rem" }}>
-                <p>There's nothing here!</p>
-              </main>
-            }
+            path="login"
+            element={user ? <Navigate to="/" /> : <Login />}
           />
-        </Routes>
-      </div>
+        </Route>
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
+      </Routes>
       {/* <ChatWrapper /> */}
     </div>
   );

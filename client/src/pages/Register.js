@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router";
+import { Link } from 'react-router-dom';
 
 function Register() {
 	const username = useRef();
@@ -131,7 +132,7 @@ function Register() {
                 </div>
 
                 <div className="account-link has-text-centered">
-                  <a href="/login-boxed.html">Have an account? Sign In</a>
+                  <Link to="/login">Have an account? Sign In</Link>
                 </div>
               </form>
             </div>

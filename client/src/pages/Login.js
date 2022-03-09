@@ -1,4 +1,5 @@
 import React, { useContext, useRef } from "react";
+import { Link } from 'react-router-dom';
 import { loginCall } from "../apiCalls";
 import { AuthContext }  from "../context/AuthContext";
 
@@ -104,7 +105,7 @@ function Login() {
                 </div>
 
                 <div className="account-link has-text-centered">
-                  <a href="/signup.html">Don't have an account? Sign Up</a>
+                  <Link to="/register">Don't have an account? Sign Up</Link>
                 </div>
               </form>
             </div>
