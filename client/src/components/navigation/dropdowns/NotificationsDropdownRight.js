@@ -1,10 +1,12 @@
 import React from "react";
+import Icon from "../../misc/icon/Icon";
 
 function NotificationsDropdownRight() {
   return (
     <div className="navbar-item is-icon drop-trigger">
       <a className="icon-link" href="javascript:void(0);">
-        <i data-feather="bell"></i>
+        <Icon icon="bell" />
+				{/* <i data-feather="bell"></i> */}
         <span className="indicator"></span>
       </a>
 

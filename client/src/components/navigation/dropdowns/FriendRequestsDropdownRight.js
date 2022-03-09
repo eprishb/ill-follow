@@ -1,10 +1,12 @@
 import React from "react";
+import Icon from "../../misc/icon/Icon";
 
 function FriendRequestsDropdownRight() {
   return (
     <div className="navbar-item is-icon drop-trigger">
       <a className="icon-link is-friends" href="javascript:void(0);">
-        <i data-feather="heart"></i>
+				<Icon icon="heart" />
+        {/* <i data-feather="heart"></i> */}
         <span className="indicator"></span>
       </a>
 
