@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from  'react-router-dom'
 import axios from 'axios';
 import { format } from 'timeago.js'
 import FeedPostActions from "../buttons/FeedPostActions";
+import { AuthContext } from "../../../../context/AuthContext";
 
 function FeedPost({ post }) {
 	const [like, setLike] = useState(post.likes.length);
 	const [isLiked, setIsLiked] = useState(false);
-	const [user, setUser] = useState({})
+	const [user, setUser] = useState({});
+	const {user:currentUser} = useContext(AuthContext)
 
 	useEffect(() => {
     const fetchUser = async () => {
@@ -18,6 +20,11 @@ function FeedPost({ post }) {
   }, [post.userId]);
 
 	const likeHandler = () => {
+		try {
+			axios.put("/api/posts/"+post._id+"/like", { userId: currentUser._id })
+		} catch(err) {
+
+		}
 		setLike(isLiked ? like-1: like+1);
 		setIsLiked(!isLiked);
 	}
@@ -31,7 +38,7 @@ function FeedPost({ post }) {
 							<Link to={`/profile/${user.username}`}>
 								<img
 									src={
-										user.profile_picture ||
+										user.profilePicture ||
 										"https://randomuser.me/api/portraits/women/91.jpg"
 									}
 									data-demo-src="assets/img/avatars/dan.jpg"

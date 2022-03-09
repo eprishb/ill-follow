@@ -49,7 +49,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    secondFrienc: {
+    secondFriend: {
       type: String,
       default: "",
     },

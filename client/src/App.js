@@ -34,7 +34,7 @@ function App() {
       <Pageloader ref={pageloader} plActive={plActive} ilActive={ilActive} />
       <Routes>
         <Route
-          path="/"
+          path="/*"
           element={
             user ? (
               <Routes>
@@ -45,7 +45,7 @@ function App() {
             )
           }
         />
-        <Route path="/" element={<SignUpWrapper />}>
+        <Route path="signup/" element={<SignUpWrapper />}>
           <Route
             path="register"
             element={user ? <Navigate to="/" /> : <Register />}

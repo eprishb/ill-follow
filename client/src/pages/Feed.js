@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { forwardRef, useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -9,17 +9,19 @@ import FeedPost from "../components/pages/feed/posts/FeedPost";
 import StoriesWidget from "../components/misc/widgets/StoriesWidget";
 import BirthdayWidget from "../components/misc/widgets/BirthdayWidget";
 import SuggestedFriendsWidget from "../components/misc/widgets/SuggestedFriendsWidget";
+import { AuthContext } from "../context/AuthContext";
 
 const Feed = forwardRef((props, ref) => {
 	const [posts, setPosts] = useState([]);
+	const {user} = useContext(AuthContext)
 
 	useEffect(() => {
 		const fetchPosts = async () => {
-			const res = await axios.get("api/posts/timeline/621bba1f0b85ddc5b4bafe75");
+			const res = await axios.get("api/posts/timeline/" + user._id);
 			setPosts(res.data);
 		};
 		fetchPosts();
-	}, [])
+	}, [user._id])
 	
   return (
     <div>
@@ -29,7 +31,7 @@ const Feed = forwardRef((props, ref) => {
 
       <div
         id="main-feed"
-				ref={ref}
+        ref={ref}
         className="container sidebar-boxed"
         data-open-sidebar
         data-page-title="Timeline"
@@ -46,13 +48,12 @@ const Feed = forwardRef((props, ref) => {
             <div className="column is-8">
               <ComposeCard />
 
-								{/* <FeedPost key={post.id} post={post} /> */}
-							{ posts.map(post => (
-								<Link to={`/feed/${post.id}`}
-								key={post._id} >
-									<FeedPost post={post}/>
-								</Link>
-							))}
+              {/* <Link to={`/feed/${post.id}`} key={post._id}>
+                <FeedPost post={post} />
+              </Link> */}
+              {posts.map((post) => (
+                <FeedPost key={post._id} post={post} />
+              ))}
 
               <div className=" load-more-wrap has-text-centered">
                 <a href="#" className="load-more-button">
@@ -67,7 +68,6 @@ const Feed = forwardRef((props, ref) => {
               <BirthdayWidget />
 
               <SuggestedFriendsWidget />
-
             </div>
           </div>
         </div>
