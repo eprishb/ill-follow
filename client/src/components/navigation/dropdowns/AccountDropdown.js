@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 function AccountDropdown({ user }) {
+	
   return (
     <div
       id="account-dropdown"
       className="navbar-item is-account drop-trigger has-caret"
     >
-			<Link to={`/profile/${user.username}`}>
+			<Link to={`profile/${user.username}`}>
 				<div className="user-image">
 					<img
 						src={

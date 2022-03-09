@@ -26,7 +26,7 @@ function Toolbar() {
         <FriendRequestsDropdownRight />
         <NotificationsDropdownRight />
         <MessagesDropdownRight />
-        <AccountDropdown user={{user}}/>
+        <AccountDropdown user={user}/>
       </div>
     </div>
   );
