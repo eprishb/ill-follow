@@ -49,7 +49,7 @@ function ProfileMain() {
         <div className="view-wrap is-headless">
           <div className="columns is-multiline no-margin">
             <div className="column is-paddingless">
-              <TimelineHeader username={username} />
+              <TimelineHeader user={user} />
             </div>
           </div>
 

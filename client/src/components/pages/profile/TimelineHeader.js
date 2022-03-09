@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function TimelineHeader({ username }) {
+function TimelineHeader({ user }) {
 
   return (
     <>
       <div className="cover-bg">
         <img
           className="cover-image"
-          src={username.coverPicture || "https://via.placeholder.com/1600x460"}
+          src={user.coverImage ? user.coverImage : "https://via.placeholder.com/1600x460"}
           data-demo-src="assets/img/demo/bg/4.png"
           alt=""
         />
@@ -16,7 +16,7 @@ function TimelineHeader({ username }) {
           <img
             id="user-avatar"
             className="avatar-image"
-            src={username.profilePicture || "https://via.placeholder.com/300x300"}
+            src={user.profilePicture ? user.profilePicture : "https://via.placeholder.com/300x300"}
             data-demo-src="assets/img/avatars/jenna.png"
             alt=""
           />
@@ -115,8 +115,8 @@ function TimelineHeader({ username }) {
           <span>Friends</span>
         </div>
         <div className="subheader-middle">
-          <h2>{username}</h2>
-          <span>Media Influencer</span>
+          <h2>{user.username}</h2>
+          <span>{user.title}</span>
         </div>
         <div className="subheader-end is-hidden-mobile">
           <a className="button has-icon is-bold">
