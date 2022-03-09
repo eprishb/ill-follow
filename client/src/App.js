@@ -7,8 +7,6 @@ import Pageloader from "./components/pageloader/Pageloader";
 import ChatWrapper from "./components/chat/ChatWrapper";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Feed from "./pages/Feed";
-import ProfileMain from "./pages/ProfileMain";
 
 function App() {
 	const pageloader = useRef(null);

@@ -1,15 +1,46 @@
-import React from "react";
+import axios from "axios";
+import React,{ useContext, useRef, useEffect, useState } from "react";
+import { AuthContext } from "../../../context/AuthContext";
+import Icon from "../../misc/icon/Icon";
 
 function ComposeCard() {
+	const {user} = useContext(AuthContext);
+	const composeCard = useRef(null);
+	const desc = useRef();
+	const [file, setFile] = useState(null);
+
+	const submitHandler = async (e) => {
+		e.preventDefault();
+		const newPost = {
+			userId: user._id,
+			desc: desc.current.value
+		}
+
+		try {
+			await axios.post("/api/posts", newPost);
+		} catch(err) {
+
+		}
+	}
+
+	function togglePublish () {
+		return;
+	}
+
+	useEffect(() => {
+		if (!composeCard.current) return;
+	}, [])
+	
+
   return (
-    <div id="compose-card" className="card is-new-content">
+    <div ref={composeCard} id="compose-card" className="card is-new-content">
       <div className="tabs-wrapper">
         <div className="tabs is-boxed is-fullwidth">
           <ul>
             <li className="is-active">
               <a>
                 <span className="icon is-small">
-                  <i data-feather="edit-3"></i>
+                  <Icon icon="edit-3" />
                 </span>
                 <span>Publish</span>
               </a>
@@ -17,7 +48,7 @@ function ComposeCard() {
             <li>
               <a className="modal-trigger" data-modal="albums-help-modal">
                 <span className="icon is-small">
-                  <i data-feather="image"></i>
+                  <Icon icon="image" />
                 </span>
                 <span>Albums</span>
               </a>
@@ -25,14 +56,14 @@ function ComposeCard() {
             <li>
               <a className="modal-trigger" data-modal="videos-help-modal">
                 <span className="icon is-small">
-                  <i data-feather="video"></i>
+                  <Icon icon="video" />
                 </span>
                 <span>Video</span>
               </a>
             </li>
             <li className="close-wrap">
               <span className="close-publish">
-                <i data-feather="x"></i>
+                <Icon icon="x" />
               </span>
             </li>
           </ul>
@@ -42,16 +73,21 @@ function ComposeCard() {
           <div className="compose">
             <div className="compose-form">
               <img
-                src="https://via.placeholder.com/300x300"
+                src={
+                  user.profilePicture ||
+                  "https://randomuser.me/api/portraits/women/91.jpg"
+                }
                 data-demo-src="assets/img/avatars/jenna.png"
                 alt=""
               />
               <div className="control">
                 <textarea
+                  ref={desc}
                   id="publish"
                   className="textarea"
                   rows="3"
                   placeholder="Write something about you..."
+                  onClick={togglePublish}
                 ></textarea>
               </div>
             </div>
@@ -73,10 +109,10 @@ function ComposeCard() {
                   placeholder="Who are you with?"
                 />
                 <div className="icon">
-                  <i data-feather="search"></i>
+                  <Icon icon="search" />
                 </div>
                 <div className="close-icon is-main">
-                  <i data-feather="x"></i>
+                  <Icon icon="x" />
                 </div>
               </div>
             </div>
@@ -96,10 +132,10 @@ function ComposeCard() {
                   placeholder="What are you doing right now?"
                 />
                 <div className="icon">
-                  <i data-feather="search"></i>
+                  <Icon icon="search" />
                 </div>
                 <div className="close-icon is-main">
-                  <i data-feather="x"></i>
+                  <Icon icon="x" />
                 </div>
               </div>
 
@@ -116,7 +152,7 @@ function ComposeCard() {
                   />
                   <div className="input-block">Feels</div>
                   <div className="close-icon is-subactivity">
-                    <i data-feather="x"></i>
+                    <Icon icon="x" />
                   </div>
                 </div>
               </div>
@@ -134,7 +170,7 @@ function ComposeCard() {
                   />
                   <div className="input-block">Drinks</div>
                   <div className="close-icon is-subactivity">
-                    <i data-feather="x"></i>
+                    <Icon icon="x" />
                   </div>
                 </div>
               </div>
@@ -152,7 +188,7 @@ function ComposeCard() {
                   />
                   <div className="input-block">Eats</div>
                   <div className="close-icon is-subactivity">
-                    <i data-feather="x"></i>
+                    <Icon icon="x" />
                   </div>
                 </div>
               </div>
@@ -170,7 +206,7 @@ function ComposeCard() {
                   />
                   <div className="input-block">Reads</div>
                   <div className="close-icon is-subactivity">
-                    <i data-feather="x"></i>
+                    <Icon icon="x" />
                   </div>
                 </div>
               </div>
@@ -188,7 +224,7 @@ function ComposeCard() {
                   />
                   <div className="input-block">Watches</div>
                   <div className="close-icon is-subactivity">
-                    <i data-feather="x"></i>
+                    <Icon icon="x" />
                   </div>
                 </div>
               </div>
@@ -206,7 +242,7 @@ function ComposeCard() {
                   />
                   <div className="input-block">Travels</div>
                   <div className="close-icon is-subactivity">
-                    <i data-feather="x"></i>
+                    <Icon icon="x" />
                   </div>
                 </div>
               </div>
@@ -227,10 +263,10 @@ function ComposeCard() {
                   placeholder="Where are you now?"
                 />
                 <div className="icon">
-                  <i data-feather="map-pin"></i>
+                  <Icon icon="map-pin" />
                 </div>
                 <div className="close-icon is-main">
-                  <i data-feather="x"></i>
+                  <Icon icon="x" />
                 </div>
               </div>
             </div>
@@ -250,10 +286,10 @@ function ComposeCard() {
                   placeholder="Enter the link URL"
                 />
                 <div className="icon">
-                  <i data-feather="link-2"></i>
+                  <Icon icon="link-2" />
                 </div>
                 <div className="close-icon is-main">
-                  <i data-feather="x"></i>
+                  <Icon icon="x" />
                 </div>
               </div>
             </div>
@@ -274,10 +310,10 @@ function ComposeCard() {
                   autoFocus
                 />
                 <div className="icon">
-                  <i data-feather="search"></i>
+                  <Icon icon="search" />
                 </div>
                 <div className="close-icon is-main">
-                  <i data-feather="x"></i>
+                  <Icon icon="x" />
                 </div>
                 <div className="gif-dropdown">
                   <div className="inner">
@@ -357,7 +393,7 @@ function ComposeCard() {
             <div className="columns is-multiline is-full">
               <div className="column is-6 is-narrower">
                 <div className="compose-option is-centered">
-                  <i data-feather="camera"></i>
+                  <Icon icon="camera" />
                   <span>Photo/Video</span>
                   <input
                     id="feed-upload-input-1"
@@ -372,7 +408,10 @@ function ComposeCard() {
                   id="extended-show-activities"
                   className="compose-option is-centered"
                 >
-                  <img src="assets/img/icons/emoji/emoji-1.svg" alt="" />
+                  <img
+                    src="https://friendkit.cssninja.io/assets/img/icons/emoji/emoji-1.svg"
+                    alt=""
+                  />
                   <span>Mood/Activity</span>
                 </div>
               </div>
@@ -381,7 +420,7 @@ function ComposeCard() {
                   id="open-tag-suboption"
                   className="compose-option is-centered"
                 >
-                  <i data-feather="tag"></i>
+                  <Icon icon="tag" />
                   <span>Tag friends</span>
                 </div>
               </div>
@@ -390,7 +429,7 @@ function ComposeCard() {
                   id="open-location-suboption"
                   className="compose-option is-centered"
                 >
-                  <i data-feather="map-pin"></i>
+                  <Icon icon="map-pin" />
                   <span>Post location</span>
                 </div>
               </div>
@@ -399,7 +438,7 @@ function ComposeCard() {
                   id="open-link-suboption"
                   className="compose-option is-centered"
                 >
-                  <i data-feather="link-2"></i>
+                  <Icon icon="link-2" />
                   <span>Share link</span>
                 </div>
               </div>
@@ -408,33 +447,46 @@ function ComposeCard() {
                   id="open-gif-suboption"
                   className="compose-option is-centered"
                 >
-                  <i data-feather="image"></i>
+                  <Icon icon="image" />
                   <span>Post GIF</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="basic-options" className="compose-options">
-            <div className="compose-option">
-              <i data-feather="camera"></i>
+          <form
+            id="basic-options"
+            className="compose-options"
+            onSubmit={submitHandler}
+          >
+            <label htmlFor="feed-upload-input-2" className="compose-option">
+              <Icon icon="camera" />
               <span>Media</span>
               <input
                 id="feed-upload-input-2"
                 type="file"
-                type="file"
                 accept=".png, .jpg, .jpeg"
-                onChange="readURL(this)"
+                onChange={(e) => setFile(e.target.files[0])}
               />
-            </div>
+            </label>
             <div id="show-activities" className="compose-option">
-              <img src="assets/img/icons/emoji/emoji-1.svg" alt="" />
+              <img
+                src="https://friendkit.cssninja.io/assets/img/icons/emoji/emoji-1.svg"
+                alt=""
+              />
               <span>Activity</span>
             </div>
             <div id="open-extended-options" className="compose-option">
-              <i data-feather="more-horizontal"></i>
+              <Icon icon="more-horizontal" />
             </div>
-          </div>
+            <button
+              id="publish-button"
+              type="submit"
+              className="button is-solid accent-button is-fullwidth"
+            >
+              Publish
+            </button>
+          </form>
 
           <div className="hidden-options">
             <div className="target-channels">
@@ -446,22 +498,22 @@ function ComposeCard() {
                   </div>
                 </div>
                 <div className="channel-icon">
-                  <i data-feather="bell"></i>
+                  <Icon icon="bell" />
                 </div>
                 <div className="channel-name">Activity Feed</div>
                 <div className="dropdown is-spaced is-modern is-right is-neutral dropdown-trigger">
                   <div>
                     <button className="button" aria-haspopup="true">
-                      <i className="main-icon" data-feather="smile"></i>
+                      <i className="main-icon" data-feather="smile" />
                       <span>Friends</span>
-                      <i className="caret" data-feather="chevron-down"></i>
+                      <i className="caret" data-feather="chevron-down" />
                     </button>
                   </div>
                   <div className="dropdown-menu" role="menu">
                     <div className="dropdown-content">
                       <a href="#" className="dropdown-item">
                         <div className="media">
-                          <i data-feather="globe"></i>
+                          <Icon icon="globe" />
                           <div className="media-content">
                             <h3>Public</h3>
                             <small>Anyone can see this publication.</small>
@@ -470,7 +522,7 @@ function ComposeCard() {
                       </a>
                       <a className="dropdown-item">
                         <div className="media">
-                          <i data-feather="users"></i>
+                          <Icon icon="users" />
                           <div className="media-content">
                             <h3>Friends</h3>
                             <small>
@@ -481,7 +533,7 @@ function ComposeCard() {
                       </a>
                       <a className="dropdown-item">
                         <div className="media">
-                          <i data-feather="user"></i>
+                          <Icon icon="user" />
                           <div className="media-content">
                             <h3>Specific friends</h3>
                             <small>Don't show it to some friends.</small>
@@ -491,7 +543,7 @@ function ComposeCard() {
                       <hr className="dropdown-divider" />
                       <a className="dropdown-item">
                         <div className="media">
-                          <i data-feather="lock"></i>
+                          <Icon icon="lock" />
                           <div className="media-content">
                             <h3>Only me</h3>
                             <small>Only me can see this publication.</small>
@@ -511,7 +563,7 @@ function ComposeCard() {
                 </div>
                 <div className="story-icon">
                   <div className="plus-icon">
-                    <i data-feather="plus"></i>
+                    <Icon icon="plus" />
                   </div>
                 </div>
 
@@ -519,16 +571,16 @@ function ComposeCard() {
                 <div className="dropdown is-spaced is-modern is-right is-neutral dropdown-trigger">
                   <div>
                     <button className="button" aria-haspopup="true">
-                      <i className="main-icon" data-feather="smile"></i>
+                      <i className="main-icon" data-feather="smile" />
                       <span>Friends</span>
-                      <i className="caret" data-feather="chevron-down"></i>
+                      <i className="caret" data-feather="chevron-down" />
                     </button>
                   </div>
                   <div className="dropdown-menu" role="menu">
                     <div className="dropdown-content">
                       <a href="#" className="dropdown-item">
                         <div className="media">
-                          <i data-feather="globe"></i>
+                          <Icon icon="globe" />
                           <div className="media-content">
                             <h3>Public</h3>
                             <small>Anyone can see this publication.</small>
@@ -537,7 +589,7 @@ function ComposeCard() {
                       </a>
                       <a className="dropdown-item">
                         <div className="media">
-                          <i data-feather="users"></i>
+                          <Icon icon="users" />
                           <div className="media-content">
                             <h3>Friends</h3>
                             <small>
@@ -548,7 +600,7 @@ function ComposeCard() {
                       </a>
                       <a className="dropdown-item">
                         <div className="media">
-                          <i data-feather="users"></i>
+                          <Icon icon="users" />
                           <div className="media-content">
                             <h3>Friends and contacts</h3>
                             <small>Your friends and contacts.</small>
@@ -570,7 +622,7 @@ function ComposeCard() {
                     href="javascript:void(0);"
                     className="search-trigger"
                   >
-                    <i data-feather="search"></i>
+                    <Icon icon="search" />
                   </a>
                   <div id="compose-search" className="control is-hidden">
                     <input
@@ -579,7 +631,7 @@ function ComposeCard() {
                       placeholder="Search People"
                     />
                     <span>
-                      <i data-feather="search"></i>
+                      <Icon icon="search" />
                     </span>
                   </div>
                   <a
@@ -677,7 +729,7 @@ function ComposeCard() {
               className="button is-more"
               aria-haspopup="true"
             >
-              <i data-feather="more-vertical"></i>
+              <Icon icon="more-vertical" />
               <span>View More</span>
             </button>
             <button
