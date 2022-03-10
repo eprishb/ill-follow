@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import FriendRequestsDropdownRight from "../dropdowns/FriendRequestsDropdownRight";
 import NotificationsDropdownRight from "../dropdowns/NotificationsDropdownRight";
@@ -7,6 +8,17 @@ import AccountDropdown from "../dropdowns/AccountDropdown";
 
 function Toolbar() {
 	const {user} = useContext(AuthContext);
+	const location = useLocation();
+	const [pageTitle, setPageTitle] = useState("");
+
+	useEffect(() => {
+    let pathname = location.pathname;
+		pathname === "/" ? pathname = "Timeline" :
+    pathname =
+      pathname.slice(1).charAt(0).toUpperCase() +
+      pathname.slice(2).split("/")[0];
+    setPageTitle(pathname);
+  }, [location]);
 
   return (
     <div className="toolbar-v1 is-narrow">
@@ -21,7 +33,7 @@ function Toolbar() {
           </span>
         </span>
       </div>
-      <h1>Timeline</h1>
+      <h1>{pageTitle}</h1>
       <div className="controls">
         <FriendRequestsDropdownRight />
         <NotificationsDropdownRight />

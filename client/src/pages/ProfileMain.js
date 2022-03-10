@@ -34,10 +34,6 @@ function ProfileMain() {
 
   return (
     <div>
-      <div className="toolbar-v1-fixed-wrap">
-        <Toolbar />
-      </div>
-
       <div
         id="profile-main"
         className="container sidebar-boxed"

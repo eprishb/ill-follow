@@ -29,9 +29,9 @@ const Feed = forwardRef((props, ref) => {
 	
   return (
     <div>
-      <div className="toolbar-v1-fixed-wrap">
+      {/* <div className="toolbar-v1-fixed-wrap">
         <Toolbar />
-      </div>
+      </div> */}
 
       <div
         id="main-feed"

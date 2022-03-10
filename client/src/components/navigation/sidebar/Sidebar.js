@@ -2,7 +2,7 @@ import React from "react";
 
 function Sidebar() {
   return (
-    <div className="sidebar-v1 is-fold">
+    <div className="sidebar-v1">
       <div className="top-section">
         <button id="sidebar-v1-close" className="close-button">
           <i data-feather="arrow-left"></i>

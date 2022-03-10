@@ -62,7 +62,7 @@ function StarFriendsWidget({ user }) {
       </div>
 
       <div className="friend-cards-list">
-        {friends.map((friend) => (
+        {/* {friends.map((friend) => (
           <Link to={"/profile/" + friend.username}>
             <div className="card is-friend-card">
               <div className="friend-item">
@@ -86,7 +86,7 @@ function StarFriendsWidget({ user }) {
               </div>
             </div>
           </Link>
-        ))}
+        ))} */}
       </div>
     </div>
   );

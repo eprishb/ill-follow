@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
-import Sidebar from '../components/navigation/sidebar/Sidebar'
+import Sidebar from '../components/navigation/sidebar/Sidebar';
+import Toolbar from '../components/navigation/toolbar/Toolbar';
 import Feed from '../pages/Feed';
 import ProfileMain from '../pages/ProfileMain';
 
@@ -18,12 +19,15 @@ function DefaultWrapper () {
       clearTimeout(shadowDomTimeout);
     }, 2500);
 	}, [])
-	
+
 	return (
     <>
       <div className="app-overlay is-sidebar-v1"></div>
       <Sidebar />
-      <div className="view-wrapper is-sidebar-v1 is-fold">
+      <div className="view-wrapper is-sidebar-v1">
+        <div className="toolbar-v1-fixed-wrap">
+          <Toolbar />
+        </div>
         <Routes>
           <Route
             index
