@@ -1,10 +1,14 @@
 import React from "react";
 
-function Sidebar() {
+function Sidebar({ toggleSidebar, sidebarOpen}) {
   return (
-    <div className="sidebar-v1">
+    <div className={`sidebar-v1 ${sidebarOpen ? "" : "is-fold"}`}>
       <div className="top-section">
-        <button id="sidebar-v1-close" className="close-button">
+        <button
+          id="sidebar-v1-close"
+          className="close-button"
+          onClick={toggleSidebar}
+        >
           <i data-feather="arrow-left"></i>
         </button>
         <div className="field is-grouped">

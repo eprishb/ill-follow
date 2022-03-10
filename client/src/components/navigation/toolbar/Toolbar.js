@@ -6,7 +6,7 @@ import NotificationsDropdownRight from "../dropdowns/NotificationsDropdownRight"
 import MessagesDropdownRight from "../dropdowns/MessagesDropdownRight";
 import AccountDropdown from "../dropdowns/AccountDropdown";
 
-function Toolbar() {
+function Toolbar({ toggleSidebar, sidebarOpen }) {
 	const {user} = useContext(AuthContext);
 	const location = useLocation();
 	const [pageTitle, setPageTitle] = useState("");
@@ -22,9 +22,12 @@ function Toolbar() {
 
   return (
     <div className="toolbar-v1 is-narrow">
-      <div className="friendkit-hamburger sidebar-v1-trigger">
+      <div
+        className="friendkit-hamburger sidebar-v1-trigger "
+        onClick={toggleSidebar}
+      >
         <span className="menu-toggle has-chevron">
-          <span className="icon-box-toggle">
+          <span className={`icon-box-toggle ${sidebarOpen ? "active" : ""}`}>
             <span className="rotate">
               <i className="icon-line-top"></i>
               <i className="icon-line-center"></i>
@@ -38,7 +41,7 @@ function Toolbar() {
         <FriendRequestsDropdownRight />
         <NotificationsDropdownRight />
         <MessagesDropdownRight />
-        <AccountDropdown user={user}/>
+        <AccountDropdown user={user} />
       </div>
     </div>
   );

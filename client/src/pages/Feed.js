@@ -40,8 +40,6 @@ const Feed = forwardRef((props, ref) => {
         data-open-sidebar
         data-page-title="Timeline"
       >
-        <Toolbar />
-
         {props.shadowDom && <FeedMenuShadowDom />}
 
         <div
