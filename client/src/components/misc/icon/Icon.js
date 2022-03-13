@@ -23,6 +23,10 @@ function Icon({ icon }) {
 				: icon === "users" ? <FeatherIcon.Users />
 				: icon === "lock" ? <FeatherIcon.Lock />
 				: icon === "plus" ? <FeatherIcon.Plus />
+				: icon === "message-square" ? <FeatherIcon.MessageSquare />
+				: icon === "search" ? <FeatherIcon.Search />
+				: icon === "sun" ? <FeatherIcon.Sun />
+				: icon === "moon" ? <FeatherIcon.Moon />
 				: null
 			}
 		</div>

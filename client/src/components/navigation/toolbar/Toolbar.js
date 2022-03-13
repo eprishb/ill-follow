@@ -1,15 +1,12 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { AuthContext } from "../../../context/AuthContext";
-import FriendRequestsDropdownRight from "../dropdowns/FriendRequestsDropdownRight";
-import NotificationsDropdownRight from "../dropdowns/NotificationsDropdownRight";
-import MessagesDropdownRight from "../dropdowns/MessagesDropdownRight";
-import AccountDropdown from "../dropdowns/AccountDropdown";
+import Control from "../dropdowns/components/Control";
+import { controls } from "../dropdowns/components/controls";
 
 function Toolbar({ toggleSidebar, sidebarOpen }) {
-	const {user} = useContext(AuthContext);
 	const location = useLocation();
 	const [pageTitle, setPageTitle] = useState("");
+	const [dropTrigger, setDropTrigger] = useState("");
 
 	useEffect(() => {
     let pathname = location.pathname;
@@ -37,12 +34,15 @@ function Toolbar({ toggleSidebar, sidebarOpen }) {
         </span>
       </div>
       <h1>{pageTitle}</h1>
-      <div className="controls">
-        <FriendRequestsDropdownRight />
-        <NotificationsDropdownRight />
-        <MessagesDropdownRight />
-        <AccountDropdown user={user} />
-      </div>
+			<div className="controls">
+				{controls.map((data, key) => {
+					return <Control data={data} key={key} dropTrigger={dropTrigger} setDropTrigger={setDropTrigger} />
+				})}
+			</div>
+			{/* <FriendRequestsDropdownRight />
+			<NotificationsDropdownRight />
+			<MessagesDropdownRight />
+			<AccountDropdown user={user} /> */}
     </div>
   );
 }
