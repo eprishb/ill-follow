@@ -4,6 +4,7 @@ import axios from 'axios';
 import { format } from 'timeago.js'
 import FeedPostActions from "../buttons/FeedPostActions";
 import { AuthContext } from "../../../../context/AuthContext";
+import Icon from "../../../misc/icon/Icon";
 
 function FeedPost({ post }) {
 	const [like, setLike] = useState(post.likes.length);
@@ -73,7 +74,7 @@ function FeedPost({ post }) {
                 alt=""
               />
             </a>
-            <FeedPostActions likeHandler={likeHandler} />
+            <FeedPostActions likeHandler={likeHandler} isLiked={isLiked} />
           </div>
         </div>
 
@@ -112,15 +113,15 @@ function FeedPost({ post }) {
           </div>
           <div className="social-count">
             <div className="likes-count">
-              <i data-feather="heart"></i>
+              <Icon icon="heart" />
               <span>{like}</span>
             </div>
             <div className="shares-count">
-              <i data-feather="link-2"></i>
+               <Icon icon="link-2" />
               <span>{post.share}</span>
             </div>
             <div className="comments-count">
-              <i data-feather="message-circle"></i>
+               <Icon icon="message-circle" />
               <span>{post.comment}</span>
             </div>
           </div>
@@ -134,7 +135,7 @@ function FeedPost({ post }) {
             <small>(8)</small>
           </h4>
           <div className="close-comments">
-            <i data-feather="x"></i>
+             <Icon icon="x" />
           </div>
         </div>
 
@@ -161,7 +162,7 @@ function FeedPost({ post }) {
               </p>
               <div className="controls">
                 <div className="like-count">
-                  <i data-feather="thumbs-up"></i>
+                   <Icon icon="thumbs-up" />
                   <span>4</span>
                 </div>
                 <div className="reply">
@@ -193,7 +194,7 @@ function FeedPost({ post }) {
                   </p>
                   <div className="controls">
                     <div className="like-count">
-                      <i data-feather="thumbs-up"></i>
+                       <Icon icon="thumbs-up" />
                       <span>0</span>
                     </div>
                     <div className="reply">
@@ -230,7 +231,7 @@ function FeedPost({ post }) {
               </p>
               <div className="controls">
                 <div className="like-count">
-                  <i data-feather="thumbs-up"></i>
+                   <Icon icon="thumbs-up" />
                   <span>2</span>
                 </div>
                 <div className="reply">
@@ -259,7 +260,7 @@ function FeedPost({ post }) {
                   </p>
                   <div className="controls">
                     <div className="like-count">
-                      <i data-feather="thumbs-up"></i>
+                       <Icon icon="thumbs-up" />
                       <span>0</span>
                     </div>
                     <div className="reply">
@@ -293,7 +294,7 @@ function FeedPost({ post }) {
                   </p>
                   <div className="controls">
                     <div className="like-count">
-                      <i data-feather="thumbs-up"></i>
+                       <Icon icon="thumbs-up" />
                       <span>1</span>
                     </div>
                     <div className="reply">
@@ -327,7 +328,7 @@ function FeedPost({ post }) {
                   </p>
                   <div className="controls">
                     <div className="like-count">
-                      <i data-feather="thumbs-up"></i>
+                       <Icon icon="thumbs-up" />
                       <span>0</span>
                     </div>
                     <div className="reply">
@@ -363,7 +364,7 @@ function FeedPost({ post }) {
               </p>
               <div className="controls">
                 <div className="like-count">
-                  <i data-feather="thumbs-up"></i>
+                   <Icon icon="thumbs-up" />
                   <span>5</span>
                 </div>
                 <div className="reply">
@@ -399,13 +400,13 @@ function FeedPost({ post }) {
                 </div>
                 <div className="toolbar">
                   <div className="action is-auto">
-                    <i data-feather="at-sign"></i>
+                     <Icon icon="at-sign" />
                   </div>
                   <div className="action is-emoji">
-                    <i data-feather="smile"></i>
+                     <Icon icon="smile" />
                   </div>
                   <div className="action is-upload">
-                    <i data-feather="camera"></i>
+                     <Icon icon="camera" />
                     <input type="file" />
                   </div>
                   <a className="button is-solid primary-button raised">

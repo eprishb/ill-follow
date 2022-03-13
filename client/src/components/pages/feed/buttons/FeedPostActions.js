@@ -1,10 +1,11 @@
 import React from "react";
+import Icon from "../../../misc/icon/Icon";
 
-function FeedPostActions({ likeHandler }) {
+function FeedPostActions({ likeHandler, isLiked }) {
   return (
     <>
       <div className="like-wrapper">
-        <div onClick={likeHandler} className="like-button">
+        <div onClick={likeHandler} className={`like-button ${isLiked ? "is-active" : ""}`}>
           <i className="mdi mdi-heart not-liked bouncy"></i>
           <i className="mdi mdi-heart is-liked bouncy"></i>
           <span className="like-overlay"></span>
@@ -13,17 +14,16 @@ function FeedPostActions({ likeHandler }) {
 
       <div className="fab-wrapper is-share">
         <a
-          href="javascript:void(0);"
           className="small-fab share-fab modal-trigger"
           data-modal="share-modal"
         >
-          <i data-feather="link-2"></i>
+          <Icon icon="link-2" />
         </a>
       </div>
 
       <div className="fab-wrapper is-comment">
-        <a href="javascript:void(0);" className="small-fab">
-          <i data-feather="message-circle"></i>
+        <a className="small-fab">
+          <Icon icon="message-circle" />
         </a>
       </div>
     </>

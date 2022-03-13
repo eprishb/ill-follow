@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from '../../Avatar';
+import Icon from "../../misc/icon/Icon";
 
 function Sidebar({ toggleSidebar, sidebarOpen}) {
   return (
@@ -10,7 +11,7 @@ function Sidebar({ toggleSidebar, sidebarOpen}) {
           className="close-button"
           onClick={toggleSidebar}
         >
-          <i data-feather="arrow-left"></i>
+          <Icon icon="arrow-left" />
         </button>
         <div className="field is-grouped">
           <div className="control">
@@ -20,7 +21,7 @@ function Sidebar({ toggleSidebar, sidebarOpen}) {
               placeholder="Search..."
             />
             <div className="form-icon">
-              <i data-feather="search"></i>
+              <Icon icon="search" />
             </div>
             <div id="tipue_drop_content" className="tipue-drop-content"></div>
           </div>
@@ -38,25 +39,25 @@ function Sidebar({ toggleSidebar, sidebarOpen}) {
         <ul>
           <li>
             <a href="sidebar-v1-feed.html" className="is-active">
-              <i data-feather="clock"></i>
+              <Icon icon="clock" />
               <span>Timeline</span>
             </a>
           </li>
           <li>
             <a href="sidebar-v1-profile-friends.html">
-              <i data-feather="user"></i>
+              <Icon icon="user" />
               <span>Friends</span>
             </a>
           </li>
           <li>
             <a href="sidebar-v1-groups.html">
-              <i data-feather="users"></i>
+              <Icon icon="users" />
               <span>Groups</span>
             </a>
           </li>
           <li>
             <a href="sidebar-v1-profile-photos.html">
-              <i data-feather="image"></i>
+              <Icon icon="image" />
               <span>Photos</span>
             </a>
           </li>
@@ -64,13 +65,13 @@ function Sidebar({ toggleSidebar, sidebarOpen}) {
         <ul>
           <li>
             <a href="sidebar-v1-settings.html">
-              <i data-feather="settings"></i>
+              <Icon icon="settings" />
               <span>Settings</span>
             </a>
           </li>
           <li>
             <a>
-              <i data-feather="log-out"></i>
+              <Icon icon="log-out" />
               <span>Logout</span>
             </a>
           </li>

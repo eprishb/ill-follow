@@ -5,28 +5,43 @@ function Icon({ icon }) {
 	return (
 		<div style={{ lineHeight: 0 }}>
 			{
-				icon === "heart" ? <FeatherIcon.Heart />
+				icon === "arrow-left" ? <FeatherIcon.ArrowLeft />
 				: icon === "bell" ? <FeatherIcon.Bell />
-				: icon === "mail" ? <FeatherIcon.Mail />
-				: icon === "edit-3" ? <FeatherIcon.Edit3 />
-				: icon === "image" ? <FeatherIcon.Image />
-				: icon === "video" ? <FeatherIcon.Video />
-				: icon === "x" ? <FeatherIcon.X />
-				: icon === "map-pin" ? <FeatherIcon.MapPin />
-				: icon === "link-2" ? <FeatherIcon.Link2 />
 				: icon === "camera" ? <FeatherIcon.Camera />
-				: icon === "tag" ? <FeatherIcon.Tag />
+				: icon === "calendar" ? <FeatherIcon.Calendar />
+				: icon === "check" ? <FeatherIcon.Check />
+				: icon === "clock" ? <FeatherIcon.Clock />
+				: icon === "code" ? <FeatherIcon.Code />
+				: icon === "compass" ? <FeatherIcon.Compass />
+				: icon === "edit-3" ? <FeatherIcon.Edit3 />
+				: icon === "flag" ? <FeatherIcon.Flag />
+				: icon === "file-text" ? <FeatherIcon.FileText />
+				: icon === "globe" ? <FeatherIcon.Globe />
+				: icon === "heart" ? <FeatherIcon.Heart />
+				: icon === "image" ? <FeatherIcon.Image />
+				: icon === "link-2" ? <FeatherIcon.Link2 />
+				: icon === "lock" ? <FeatherIcon.Lock />
+				: icon === "log-out" ? <FeatherIcon.LogOut />
+				: icon === "mail" ? <FeatherIcon.Mail />
+				: icon === "map-pin" ? <FeatherIcon.MapPin />
+				: icon === "message-circle" ? <FeatherIcon.MessageCircle />
+				: icon === "message-square" ? <FeatherIcon.MessageSquare />
+				: icon === "moon" ? <FeatherIcon.Moon />
+				: icon === "monitor" ? <FeatherIcon.Monitor />
 				: icon === "more-horizontal" ? <FeatherIcon.MoreHorizontal />
 				: icon === "more-vertical" ? <FeatherIcon.MoreVertical />
-				: icon === "globe" ? <FeatherIcon.Globe />
+				: icon === "plus" ? <FeatherIcon.Plus />
+				: icon === "search" ? <FeatherIcon.Search />
+				: icon === "server" ? <FeatherIcon.Server />
+				: icon === "settings" ? <FeatherIcon.Settings />
+				: icon === "share-2" ? <FeatherIcon.Share2 />
+				: icon === "smile" ? <FeatherIcon.Smile />
+				: icon === "sun" ? <FeatherIcon.Sun />
+				: icon === "tag" ? <FeatherIcon.Tag />
 				: icon === "user" ? <FeatherIcon.User />
 				: icon === "users" ? <FeatherIcon.Users />
-				: icon === "lock" ? <FeatherIcon.Lock />
-				: icon === "plus" ? <FeatherIcon.Plus />
-				: icon === "message-square" ? <FeatherIcon.MessageSquare />
-				: icon === "search" ? <FeatherIcon.Search />
-				: icon === "sun" ? <FeatherIcon.Sun />
-				: icon === "moon" ? <FeatherIcon.Moon />
+				: icon === "video" ? <FeatherIcon.Video />
+				: icon === "x" ? <FeatherIcon.X />
 				: null
 			}
 		</div>

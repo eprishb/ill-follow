@@ -25,8 +25,6 @@ function DefaultWrapper () {
     }, 2500);
 	}, []);	
 
-	console.log(sidebarOpen);
-
 	return (
     <>
       <div className="app-overlay is-sidebar-v1"></div>

@@ -307,7 +307,6 @@ function ComposeCard() {
                   type="text"
                   className="input"
                   placeholder="Search a GIF to add"
-                  autoFocus
                 />
                 <div className="icon">
                   <Icon icon="search" />
@@ -399,7 +398,7 @@ function ComposeCard() {
                     id="feed-upload-input-1"
                     type="file"
                     accept=".png, .jpg, .jpeg"
-                    onChange="readURL(this)"
+                    // onChange="readURL(this)"
                   />
                 </div>
               </div>
@@ -494,7 +493,7 @@ function ComposeCard() {
                 <div className="round-checkbox is-small">
                   <div>
                     <input type="checkbox" id="checkbox-1" defaultChecked />
-                    <label for="checkbox-1"></label>
+                    <label htmlFor="checkbox-1"></label>
                   </div>
                 </div>
                 <div className="channel-icon">
@@ -558,7 +557,7 @@ function ComposeCard() {
                 <div className="round-checkbox is-small">
                   <div>
                     <input type="checkbox" id="checkbox-2" />
-                    <label for="checkbox-2"></label>
+                    <label htmlFor="checkbox-2"></label>
                   </div>
                 </div>
                 <div className="story-icon">
@@ -619,7 +618,6 @@ function ComposeCard() {
                 <div className="actions">
                   <a
                     id="open-compose-search"
-                    href="javascript:void(0);"
                     className="search-trigger"
                   >
                     <Icon icon="search" />
@@ -635,7 +633,6 @@ function ComposeCard() {
                     </span>
                   </div>
                   <a
-                    href="javascript:void(0);"
                     className="is-inverted modal-trigger"
                     data-modal="create-group-modal"
                   >
@@ -648,7 +645,7 @@ function ComposeCard() {
                   <div className="round-checkbox is-small">
                     <div>
                       <input type="checkbox" id="checkbox-3" />
-                      <label for="checkbox-3"></label>
+                      <label htmlFor="checkbox-3"></label>
                     </div>
                   </div>
                   <img
@@ -663,7 +660,7 @@ function ComposeCard() {
                   <div className="round-checkbox is-small">
                     <div>
                       <input type="checkbox" id="checkbox-4" />
-                      <label for="checkbox-4"></label>
+                      <label htmlFor="checkbox-4"></label>
                     </div>
                   </div>
                   <img
@@ -678,7 +675,7 @@ function ComposeCard() {
                   <div className="round-checkbox is-small">
                     <div>
                       <input type="checkbox" id="checkbox-5" />
-                      <label for="checkbox-5"></label>
+                      <label htmlFor="checkbox-5"></label>
                     </div>
                   </div>
                   <img
@@ -693,7 +690,7 @@ function ComposeCard() {
                   <div className="round-checkbox is-small">
                     <div>
                       <input type="checkbox" id="checkbox-6" />
-                      <label for="checkbox-6"></label>
+                      <label htmlFor="checkbox-6"></label>
                     </div>
                   </div>
                   <img
@@ -708,7 +705,7 @@ function ComposeCard() {
                   <div className="round-checkbox is-small">
                     <div>
                       <input type="checkbox" id="checkbox-7" />
-                      <label for="checkbox-7"></label>
+                      <label htmlFor="checkbox-7"></label>
                     </div>
                   </div>
                   <img
