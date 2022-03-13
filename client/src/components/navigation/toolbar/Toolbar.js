@@ -39,10 +39,6 @@ function Toolbar({ toggleSidebar, sidebarOpen }) {
 					return <Control data={data} key={key} dropTrigger={dropTrigger} setDropTrigger={setDropTrigger} />
 				})}
 			</div>
-			{/* <FriendRequestsDropdownRight />
-			<NotificationsDropdownRight />
-			<MessagesDropdownRight />
-			<AccountDropdown user={user} /> */}
     </div>
   );
 }

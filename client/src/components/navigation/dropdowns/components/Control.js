@@ -20,10 +20,7 @@ function Control({ data, dropTrigger, setDropTrigger }) {
     <div
       id={data.controlType}
       className={`navbar-item is-icon drop-trigger
-				${
-					data.controlType === "account-dropdown" ?
-					"is-account" : ""
-				}
+				${data.controlType === "account-dropdown" ? "is-account" : ""}
 				${
           data.controlType === "account-dropdown" &&
           dropTrigger === "account-dropdown"
@@ -41,18 +38,18 @@ function Control({ data, dropTrigger, setDropTrigger }) {
             : `icon-link ${data?.iconClass}`
         }	`}
       >
-        {data.controlType === "account-dropdown" ? 
+        {data.controlType === "account-dropdown" ? (
           <img
             src={
               user.profilePicture
                 ? user.profilePicture
-                : "https://randomuser.me/api/portraits/women/91.jpg"
+                : "https://via.placeholder.com/400x400"
             }
             alt={user.username}
           />
-        :
+        ) : (
           <Icon icon={data.displayIcon} />
-        }
+        )}
         <span className="indicator"></span>
       </div>
 

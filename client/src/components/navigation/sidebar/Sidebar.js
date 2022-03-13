@@ -1,4 +1,5 @@
 import React from "react";
+import Avatar from '../../Avatar';
 
 function Sidebar({ toggleSidebar, sidebarOpen}) {
   return (
@@ -26,12 +27,7 @@ function Sidebar({ toggleSidebar, sidebarOpen}) {
         </div>
 
         <div className="user-block">
-          <img
-            className="avatar"
-            src="https://via.placeholder.com/150x150"
-            data-demo-src="assets/img/avatars/jenna.png"
-            alt=""
-          />
+          <Avatar />
           <div className="meta">
             <span>Jenna Davis</span>
             <span>Influencer</span>

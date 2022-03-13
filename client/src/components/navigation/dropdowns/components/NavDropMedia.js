@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Avatar from '../../../Avatar';
 import Icon from '../../../misc/icon/Icon';
 
 function NavDropMedia({ data, user }) {
@@ -8,32 +9,20 @@ function NavDropMedia({ data, user }) {
       <figure className="media-left">
         {data.controlType === "account-dropdown" ?
           <Link to={`profile/${user.username}`} className="account-item">
-						<div className="image">
-							<img
-								src="https://via.placeholder.com/400x400"
-								data-demo-src="assets/img/avatars/jenna.png"
-								alt=""
-							/>
-						</div>
+						<Avatar />
 						<div className="media-right">
 							<i data-feather="check"></i>
 						</div>
           </Link>
         : 
-				<p className="image">
-          <img
-            src="https://via.placeholder.com/300x300"
-            data-demo-src="assets/img/avatars/david.jpg"
-            alt=""
-          />
-        </p>
+				<Avatar />
         }
       </figure>
       <div className="media-content">
 				{
 					data.controlType === "account-dropdown" ?
 					<div>
-						<h3>Jenna Davis</h3>
+						<h3>{user.username}</h3>
 						<small>Main account</small>
 					</div>
 					:
