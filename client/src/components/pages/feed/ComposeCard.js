@@ -11,10 +11,14 @@ function ComposeCard({ setOverlay }) {
 	}, [])
 
   return (
-    <div ref={composeCard} id="compose-card" className={`card is-new-content ${newContent ? "is-highlighted" : ""}`}>
+    <div
+      ref={composeCard}
+      id="compose-card"
+      className={`card is-new-content ${newContent ? "is-highlighted" : ""}`}
+    >
       <div className="tabs-wrapper">
-        <Tabs />
-				<TabContent setOverlay={setOverlay} setNewContent={setNewContent} />
+        <Tabs setOverlay={setOverlay} setNewContent={setNewContent} />
+        <TabContent setOverlay={setOverlay} setNewContent={setNewContent} />
       </div>
     </div>
   );

@@ -1,7 +1,13 @@
 import React from 'react'
 import Icon from '../../../misc/icon/Icon';
 
-function Tabs() {
+function Tabs({ setOverlay, setNewContent }) {
+
+	const closePublish = () => {
+		setOverlay(false);
+		setNewContent(false);
+	}
+
 	return (
     <div className="tabs is-boxed is-fullwidth">
       <ul>
@@ -30,7 +36,7 @@ function Tabs() {
           </a>
         </li>
         <li className="close-wrap">
-          <span className="close-publish">
+          <span className="close-publish" onClick={closePublish} >
             <Icon icon="x" />
           </span>
         </li>

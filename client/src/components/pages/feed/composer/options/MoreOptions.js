@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from '../../../../misc/icon/Icon';
 
-function MoreOptions() {
+function MoreOptions({ publishButton }) {
 	return (
     <div className="more-wrap">
       <button
@@ -16,7 +16,7 @@ function MoreOptions() {
       <button
         id="publish-button"
         type="submit"
-        className={`button is-solid accent-button is-fullwidth is-disabled`}
+        className={`button is-solid accent-button is-fullwidth ${publishButton ? "" : "is-disabled"}`}
       >
         Publish
       </button>

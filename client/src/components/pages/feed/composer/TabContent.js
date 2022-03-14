@@ -8,9 +8,17 @@ import SubOptions from './options/SubOptions';
 
 function TabContent({ setOverlay, setNewContent }) {
 
+	const [publishButton, setPublishButton] = useState(false);
+
 	const openPublishMode = () => {
-		setOverlay((active) => !active);
-		setNewContent((active) => !active);
+		setOverlay(true);
+		setNewContent(true);
+	}
+
+	const enablePublishMode = (e) => {
+		e.target.value.length >= 1 ?
+		setPublishButton(true) :
+		setPublishButton(false);
 	}
 
 	return (
@@ -25,6 +33,7 @@ function TabContent({ setOverlay, setNewContent }) {
               rows="3"
               placeholder="Write something about you..."
 							onClick={openPublishMode}
+							onInput={enablePublishMode}
             ></textarea>
           </div>
         </div>
@@ -38,7 +47,7 @@ function TabContent({ setOverlay, setNewContent }) {
 			<ExtendedOptions />
 			<BasicOptions />
       <HiddenOptions />
-			<MoreOptions />
+			<MoreOptions publishButton={publishButton} />
       
     </div>
   );
