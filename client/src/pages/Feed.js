@@ -48,7 +48,7 @@ const Feed = forwardRef((props, ref) => {
         >
           <div className="columns">
             <div className="column is-8">
-              <ComposeCard />
+              <ComposeCard setOverlay={props.setOverlay} />
 
               {/* <Link to={`/feed/${post.id}`} key={post._id}>
                 <FeedPost post={post} />

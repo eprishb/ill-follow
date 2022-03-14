@@ -5,13 +5,11 @@ function Avatar() {
 	const { user } = useContext(AuthContext);
 
 	return (
-    <div className="image">
-      <img
-				className="avatar"
-        src={user?.profilePicture || "https://via.placeholder.com/400x400"}
-        alt={user.username}
-      />
-    </div>
+		<img
+			className="avatar"
+			src={user?.profilePicture || "https://via.placeholder.com/400x400"}
+			alt={user.username}
+		/>
   );
 }
 

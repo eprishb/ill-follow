@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { createRef, useEffect, useRef, useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/navigation/sidebar/Sidebar';
 import Toolbar from '../components/navigation/toolbar/Toolbar';
@@ -10,6 +10,7 @@ function DefaultWrapper () {
 	const [shadowDom, setShadowDom] = useState(true);
 	const [trueDom, setTrueDom] = useState(false);
 	const [sidebarOpen, setSidebarOpen] = useState(true);
+	const [overlay, setOverlay] = useState(false);
 
 	function toggleSidebar () {
 		setSidebarOpen((open) => !open);
@@ -27,7 +28,7 @@ function DefaultWrapper () {
 
 	return (
     <>
-      <div className="app-overlay is-sidebar-v1"></div>
+      <div className={`app-overlay is-sidebar-v1 ${overlay ? "is-active" : ""}`}></div>
       <Sidebar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
       <div className={`view-wrapper is-sidebar-v1 ${sidebarOpen ? "" : "is-fold"}`}>
         <div className={`toolbar-v1 is-narrow ${sidebarOpen ? "" : ""}`}>
@@ -37,7 +38,7 @@ function DefaultWrapper () {
           <Route
             index
             element={
-              <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} />
+              <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} setOverlay={setOverlay} />
             }
           />
           <Route
