@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from '../../../../misc/icon/Icon';
 
-function ExtendedOptions() {
+function ExtendedOptions({ setFile }) {
 	return (
     <div id="extended-options" className="compose-options is-hidden">
       <div className="columns is-multiline is-full">
@@ -13,7 +13,7 @@ function ExtendedOptions() {
               id="feed-upload-input-1"
               type="file"
               accept=".png, .jpg, .jpeg"
-              // onChange="readURL(this)"
+              onChange={(e) => setFile(e.target.files[0])}
             />
           </div>
         </div>

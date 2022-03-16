@@ -1,9 +1,9 @@
 import React from 'react'
 import Icon from '../../../../misc/icon/Icon';
 
-function HiddenOptions() {
+function HiddenOptions({ composeFriends }) {
 	return (
-    <div className="hidden-options">
+    <div className={`hidden-options ${composeFriends ? "is-opened" : ""}`}>
       <div className="target-channels">
         <div className="channel">
           <div className="round-checkbox is-small">
@@ -124,7 +124,7 @@ function HiddenOptions() {
         </div>
       </div>
 
-      <div className="friends-list is-hidden">
+      <div className={`friends-list ${composeFriends ? "" : "is-hidden"}`}>
         <div className="list-header">
           <span>Send in a message</span>
           <div className="actions">

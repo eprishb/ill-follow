@@ -2,6 +2,15 @@ import React from 'react'
 import Icon from '../../../../misc/icon/Icon';
 
 function SubOptions() {
+
+	const handleAutoComplete = (event) => {
+		let e = document.createEvent('KeyboardEvent');
+		let e_id = event.target.id
+		e_id.focus();
+		e_id.getAttribute('value');
+		e_id.dispatchEvent(new Event(e))
+	}
+
 	return (
     <div>
       <div
@@ -35,6 +44,7 @@ function SubOptions() {
             type="text"
             className="input"
             placeholder="What are you doing right now?"
+            onKeyUp={handleAutoComplete}
           />
           <div className="icon">
             <Icon icon="search" />
@@ -54,6 +64,7 @@ function SubOptions() {
               type="text"
               className="input is-subactivity"
               placeholder="How do you feel?"
+              onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Feels</div>
             <div className="close-icon is-subactivity">
@@ -72,6 +83,7 @@ function SubOptions() {
               type="text"
               className="input is-subactivity"
               placeholder="What are you drinking?"
+              onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Drinks</div>
             <div className="close-icon is-subactivity">
@@ -90,6 +102,7 @@ function SubOptions() {
               type="text"
               className="input is-subactivity"
               placeholder="What are you eating?"
+              onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Eats</div>
             <div className="close-icon is-subactivity">
@@ -108,6 +121,7 @@ function SubOptions() {
               type="text"
               className="input is-subactivity"
               placeholder="What are you reading?"
+              onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Reads</div>
             <div className="close-icon is-subactivity">
@@ -126,6 +140,7 @@ function SubOptions() {
               type="text"
               className="input is-subactivity"
               placeholder="What are you watching?"
+              onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Watches</div>
             <div className="close-icon is-subactivity">
@@ -144,6 +159,7 @@ function SubOptions() {
               type="text"
               className="input is-subactivity"
               placeholder="Where are you going?"
+              onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Travels</div>
             <div className="close-icon is-subactivity">

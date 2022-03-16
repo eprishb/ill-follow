@@ -1,30 +1,13 @@
-import axios from "axios";
-import React, { useContext, useRef } from "react";
-import { AuthContext } from "../../../../../context/AuthContext";
+
+import React from "react";
 import Icon from "../../../../misc/icon/Icon";
 
-function BasicOptions() {
-
-	const { user } = useContext(AuthContext);
-	const desc = useRef();
-
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    const newPost = {
-      userId: user._id,
-      desc: desc.current.value,
-    };
-
-    try {
-      await axios.post("/api/posts", newPost);
-    } catch (err) {}
-  };
+function BasicOptions({ setFile }) {
 
   return (
     <form
       id="basic-options"
       className="compose-options"
-      onSubmit={submitHandler}
     >
       <label htmlFor="feed-upload-input-2" className="compose-option">
         <Icon icon="camera" />
@@ -33,7 +16,7 @@ function BasicOptions() {
           id="feed-upload-input-2"
           type="file"
           accept=".png, .jpg, .jpeg"
-          // onChange="readUrl(this)"
+          onChange={(e) => setFile(e.target.files[0])}
         />
       </label>
       <div id="show-activities" className="compose-option">
