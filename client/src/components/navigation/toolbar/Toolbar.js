@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import classNames from "classnames";
 import Control from "../dropdowns/components/Control";
 import { controls } from "../dropdowns/components/controls";
 
@@ -24,7 +25,11 @@ function Toolbar({ toggleSidebar, sidebarOpen }) {
         onClick={toggleSidebar}
       >
         <span className="menu-toggle has-chevron">
-          <span className={`icon-box-toggle ${sidebarOpen ? "active" : ""}`}>
+          <span className={ classNames(
+						"icon-box-toggle", {
+							"active" : sidebarOpen
+							})}
+							>
             <span className="rotate">
               <i className="icon-line-top"></i>
               <i className="icon-line-center"></i>

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import classNames from 'classnames'
 import { AuthContext } from "../../../../context/AuthContext";
 import Icon from '../../../misc/icon/Icon';
 import NavDropHeader from './NavDropHeader';
@@ -32,7 +33,7 @@ function Control({ data, dropTrigger, setDropTrigger }) {
     >
       <div
         className={`
-				${
+        ${
           data.controlType === "account-dropdown"
             ? "user-image"
             : `icon-link ${data?.iconClass}`

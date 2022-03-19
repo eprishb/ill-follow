@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React,{ useRef, useEffect, useState } from "react";
 import TabContent from "./composer/TabContent";
 import Tabs from "./composer/Tabs";
@@ -14,7 +15,10 @@ function ComposeCard({ setOverlay }) {
     <div
       ref={composeCard}
       id="compose-card"
-      className={`card is-new-content ${newContent ? "is-highlighted" : ""}`}
+      className={ classNames(
+				"card", "is-new-content", {
+				"is-highlighted": newContent
+			})}
     >
       <div className="tabs-wrapper">
         <Tabs setOverlay={setOverlay} setNewContent={setNewContent} />

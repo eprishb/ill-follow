@@ -1,11 +1,17 @@
 import React from "react";
+import classNames from "classnames";
 import Icon from "../../../misc/icon/Icon";
 
 function FeedPostActions({ likeHandler, isLiked }) {
   return (
     <>
       <div className="like-wrapper">
-        <div onClick={likeHandler} className={`like-button ${isLiked ? "is-active" : ""}`}>
+        <div
+          onClick={likeHandler}
+          className={classNames("like-button", {
+            "is-active": isLiked,
+          })}
+        >
           <i className="mdi mdi-heart not-liked bouncy"></i>
           <i className="mdi mdi-heart is-liked bouncy"></i>
           <span className="like-overlay"></span>

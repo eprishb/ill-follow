@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useContext } from "react";
+import classNames from "classnames";
 import { AuthContext } from "../../../../../context/AuthContext";
 import Icon from "../../../../misc/icon/Icon";
 
@@ -36,7 +37,10 @@ function MoreOptions({ publishButton, setComposeFriends, file, desc, composeFrie
       <button
         id="show-compose-friends"
         type="button"
-        className={`button is-more ${composeFriends ? "is-hidden" : "" }`}
+        className={ classNames(
+					"button", "is-more", {
+						"is-hidden" : composeFriends 
+					})}
         aria-haspopup="true"
 				onClick={() => setComposeFriends((active) => !active)}
       >
@@ -46,9 +50,10 @@ function MoreOptions({ publishButton, setComposeFriends, file, desc, composeFrie
       <button
         id="publish-button"
         type="submit"
-        className={`button is-solid accent-button is-fullwidth ${
-          publishButton || file ? "" : "is-disabled"
-        }`}
+        className={classNames (
+					"button", "is-solid", "accent-button", "is-fullwidth", {
+          "is-disabled" : !publishButton && !file
+        })}
       >
         Publish
       </button>

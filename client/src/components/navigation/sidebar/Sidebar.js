@@ -1,10 +1,15 @@
 import React from "react";
+import classNames from "classnames";
 import Avatar from '../../Avatar';
 import Icon from "../../misc/icon/Icon";
 
 function Sidebar({ toggleSidebar, sidebarOpen}) {
   return (
-    <div className={`sidebar-v1 ${sidebarOpen ? "" : "is-fold"}`}>
+    <div className={ classNames(
+			"sidebar-v1", {
+				"is-fold": !sidebarOpen
+			})}
+			>
       <div className="top-section">
         <button
           id="sidebar-v1-close"

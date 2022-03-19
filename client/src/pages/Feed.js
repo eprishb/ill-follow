@@ -1,6 +1,7 @@
+import axios from "axios";
 import React, { forwardRef, useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import classNames from "classnames";
 
 import Toolbar from "../components/navigation/toolbar/Toolbar";
 import FeedMenuShadowDom from "../components/misc/placeloads/feed-page/FeedMenuShadowDom";
@@ -44,7 +45,10 @@ const Feed = forwardRef((props, ref) => {
 
         <div
           id="activity-feed"
-          className={`view-wrap true-dom ${props.trueDom ? "" : "is-hidden"}`}
+          className={ classNames(
+						"view-wrap", "true-dom", {
+						"is-hidden": !props.trueDom
+					})}
         >
           <div className="columns">
             <div className="column is-8">

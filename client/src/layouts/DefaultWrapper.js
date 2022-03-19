@@ -1,5 +1,6 @@
 import React, { createRef, useEffect, useRef, useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
+import classNames from 'classnames';
 import Sidebar from '../components/navigation/sidebar/Sidebar';
 import Toolbar from '../components/navigation/toolbar/Toolbar';
 import Feed from '../pages/Feed';
@@ -28,9 +29,17 @@ function DefaultWrapper () {
 
 	return (
     <>
-      <div className={`app-overlay is-sidebar-v1 ${overlay ? "is-active" : ""}`}></div>
+      <div className={ classNames(
+				"app-overlay", "is-sidebar-v1", {
+					"is-active" : overlay
+					})}
+			></div>
       <Sidebar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
-      <div className={`view-wrapper is-sidebar-v1 ${sidebarOpen ? "" : "is-fold"}`}>
+      <div className={ classNames(
+				"view-wrapper", "is-sidebar-v1", {
+					"is-fold": !sidebarOpen
+					})}
+					>
         <div className={`toolbar-v1 is-narrow ${sidebarOpen ? "" : ""}`}>
           <Toolbar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
         </div>
