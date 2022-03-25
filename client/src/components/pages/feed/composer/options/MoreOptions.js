@@ -5,6 +5,7 @@ import { AuthContext } from "../../../../../context/AuthContext";
 import Icon from "../../../../misc/icon/Icon";
 
 function MoreOptions({ publishButton, setComposeFriends, file, desc, composeFriends }) {
+	
   const { user } = useContext(AuthContext);
 
   const submitHandler = async (e) => {

@@ -27,15 +27,6 @@ function App() {
 		}, 700);
   }, []);
 
-	// useEffect(() => {
-	// 	const openSidebar = document.querySelectorAll("[data-open-sidebar]");
-  //   openSidebar.forEach((el) => {
-  //     console.log(el);
-  //   });
-
-	// }, [])
-	
-
   return (
     <div>
       <Pageloader ref={pageloader} plActive={plActive} ilActive={ilActive} />

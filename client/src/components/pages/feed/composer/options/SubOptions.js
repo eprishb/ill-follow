@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import classNames from 'classnames';
 import Icon from '../../../../misc/icon/Icon';
 
-function SubOptions() {
+function SubOptions({ suboptionType, setSuboptionType }) {
+
+	// console.log(suboptionType)
 
 	const handleAutoComplete = (event) => {
 		let e = document.createEvent('KeyboardEvent');
@@ -15,7 +18,9 @@ function SubOptions() {
     <div>
       <div
         id="tag-suboption"
-        className="is-autocomplete is-suboption is-hidden"
+        className={classNames("is-autocomplete", "is-suboption", {
+          "is-hidden": suboptionType !== "tag-suboption",
+        })}
       >
         <div id="tag-list" className="tag-list"></div>
         <div className="control">
@@ -28,7 +33,10 @@ function SubOptions() {
           <div className="icon">
             <Icon icon="search" />
           </div>
-          <div className="close-icon is-main">
+          <div
+            className="close-icon is-main"
+            onClick={() => setSuboptionType(null)}
+          >
             <Icon icon="x" />
           </div>
         </div>
@@ -49,7 +57,10 @@ function SubOptions() {
           <div className="icon">
             <Icon icon="search" />
           </div>
-          <div className="close-icon is-main">
+          <div
+            className="close-icon is-main"
+            onClick={() => setSuboptionType(null)}
+          >
             <Icon icon="x" />
           </div>
         </div>
@@ -67,7 +78,10 @@ function SubOptions() {
               onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Feels</div>
-            <div className="close-icon is-subactivity">
+            <div
+              className="close-icon is-subactivity"
+              onClick={() => setSuboptionType(null)}
+            >
               <Icon icon="x" />
             </div>
           </div>
@@ -86,7 +100,10 @@ function SubOptions() {
               onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Drinks</div>
-            <div className="close-icon is-subactivity">
+            <div
+              className="close-icon is-subactivity"
+              onClick={() => setSuboptionType(null)}
+            >
               <Icon icon="x" />
             </div>
           </div>
@@ -105,7 +122,10 @@ function SubOptions() {
               onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Eats</div>
-            <div className="close-icon is-subactivity">
+            <div
+              className="close-icon is-subactivity"
+              onClick={() => setSuboptionType(null)}
+            >
               <Icon icon="x" />
             </div>
           </div>
@@ -124,7 +144,10 @@ function SubOptions() {
               onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Reads</div>
-            <div className="close-icon is-subactivity">
+            <div
+              className="close-icon is-subactivity"
+              onClick={() => setSuboptionType(null)}
+            >
               <Icon icon="x" />
             </div>
           </div>
@@ -143,7 +166,10 @@ function SubOptions() {
               onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Watches</div>
-            <div className="close-icon is-subactivity">
+            <div
+              className="close-icon is-subactivity"
+              onClick={() => setSuboptionType(null)}
+            >
               <Icon icon="x" />
             </div>
           </div>
@@ -162,7 +188,10 @@ function SubOptions() {
               onKeyUp={handleAutoComplete}
             />
             <div className="input-block">Travels</div>
-            <div className="close-icon is-subactivity">
+            <div
+              className="close-icon is-subactivity"
+              onClick={() => setSuboptionType(null)}
+            >
               <Icon icon="x" />
             </div>
           </div>
@@ -186,7 +215,10 @@ function SubOptions() {
           <div className="icon">
             <Icon icon="map-pin" />
           </div>
-          <div className="close-icon is-main">
+          <div
+            className="close-icon is-main"
+            onClick={() => setSuboptionType(null)}
+          >
             <Icon icon="x" />
           </div>
         </div>
@@ -209,7 +241,10 @@ function SubOptions() {
           <div className="icon">
             <Icon icon="link-2" />
           </div>
-          <div className="close-icon is-main">
+          <div
+            className="close-icon is-main"
+            onClick={() => setSuboptionType(null)}
+          >
             <Icon icon="x" />
           </div>
         </div>
@@ -232,7 +267,10 @@ function SubOptions() {
           <div className="icon">
             <Icon icon="search" />
           </div>
-          <div className="close-icon is-main">
+          <div
+            className="close-icon is-main"
+            onClick={() => setSuboptionType(null)}
+          >
             <Icon icon="x" />
           </div>
           <div className="gif-dropdown">

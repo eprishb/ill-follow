@@ -1,11 +1,12 @@
 import React from 'react'
 import Icon from '../../../misc/icon/Icon';
 
-function Tabs({ setOverlay, setNewContent }) {
+function Tabs({ setOverlay, setNewContent, setComposeOptions }) {
 
 	const closePublish = () => {
 		setOverlay(false);
 		setNewContent(false);
+		setComposeOptions(false);
 	}
 
 	return (

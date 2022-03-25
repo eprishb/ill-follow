@@ -1,6 +1,4 @@
-import axios from 'axios';
 import React, { useRef, useState } from 'react'
-import { CloudLightning } from 'react-feather';
 import Avatar from '../../../Avatar';
 import Icon from '../../../misc/icon/Icon';
 import BasicOptions from './options/BasicOptions';
@@ -9,12 +7,13 @@ import HiddenOptions from './options/HiddenOptions';
 import MoreOptions from './options/MoreOptions';
 import SubOptions from './options/SubOptions';
 
-function TabContent({ setOverlay, setNewContent }) {
+function TabContent({ setOverlay, setNewContent, setComposeOptions, composeOptions }) {
 
 	const desc = useRef();
 	const [file, setFile] = useState(null);
 	const [publishButton, setPublishButton] = useState(false);
 	const [composeFriends, setComposeFriends] = useState(false);
+	const [suboptionType, setSuboptionType] = useState(null)
 
 	const openPublishMode = () => {
 		setOverlay(true);
@@ -57,18 +56,32 @@ function TabContent({ setOverlay, setNewContent }) {
         </div>
 
         <div id="options-summary" className="options-summary"></div>
-        <SubOptions />
+        <SubOptions
+					suboptionType={suboptionType}
+					setSuboptionType={setSuboptionType}
+					/>
       </div>
 
-      <ExtendedOptions setFile={setFile} />
-      <BasicOptions setFile={setFile} />
-      <HiddenOptions composeFriends={composeFriends} />
+      <ExtendedOptions
+				composeOptions={composeOptions}
+				setFile={setFile}
+				setSuboptionType={setSuboptionType}
+			/>
+      <BasicOptions
+        openPublishMode={openPublishMode}
+        composeOptions={composeOptions}
+        setFile={setFile}
+        setComposeOptions={setComposeOptions}
+      />
+      <HiddenOptions
+				composeFriends={composeFriends}
+			/>
       <MoreOptions
-        publishButton={publishButton}
-        setComposeFriends={setComposeFriends}
         file={file}
         desc={desc}
-				composeFriends={composeFriends}
+        publishButton={publishButton}
+        composeFriends={composeFriends}
+        setComposeFriends={setComposeFriends}
       />
     </div>
   );

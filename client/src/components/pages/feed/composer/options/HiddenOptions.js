@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames';
 import Icon from '../../../../misc/icon/Icon';
 
 function HiddenOptions({ composeFriends }) {
+
+	const [composeSearch, setComposeSearch] = useState(false);
+
+	function toggleComposeSearch() {
+		setComposeSearch((compose) => !compose);
+	}
+
 	return (
-    <div className={ classNames(
-			"hidden-options", {
-				"is-opened": composeFriends
-			})}
-		>
+    <div
+      className={classNames("hidden-options", {
+        "is-opened": composeFriends,
+      })}
+    >
       <div className="target-channels">
         <div className="channel">
           <div className="round-checkbox is-small">
@@ -129,18 +136,29 @@ function HiddenOptions({ composeFriends }) {
         </div>
       </div>
 
-      <div className={ classNames(
-				"friends-list", {
-					"is-hidden": !composeFriends
-				})}
-			>
+      <div
+        className={classNames("friends-list", {
+          "is-hidden": !composeFriends,
+        })}
+      >
         <div className="list-header">
           <span>Send in a message</span>
           <div className="actions">
-            <a id="open-compose-search" className="search-trigger">
+            <div
+              id="open-compose-search"
+              className={classNames("search-trigger", {
+                "is-hidden": composeSearch,
+              })}
+              onClick={toggleComposeSearch}
+            >
               <Icon icon="search" />
-            </a>
-            <div id="compose-search" className="control is-hidden">
+            </div>
+            <div
+              id="compose-search"
+              className={classNames("control", {
+                "is-hidden": !composeSearch,
+              })}
+            >
               <input
                 type="text"
                 className="input"

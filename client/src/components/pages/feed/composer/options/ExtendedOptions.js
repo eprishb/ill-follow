@@ -1,9 +1,16 @@
 import React from 'react'
+import classNames from 'classnames';
 import Icon from '../../../../misc/icon/Icon';
 
-function ExtendedOptions({ setFile }) {
+function ExtendedOptions({ setFile, setSuboptionType, composeOptions }) {
+
 	return (
-    <div id="extended-options" className="compose-options is-hidden">
+    <div
+      id="extended-options"
+      className={classNames("compose-options", {
+        "is-hidden": !composeOptions,
+      })}
+    >
       <div className="columns is-multiline is-full">
         <div className="column is-6 is-narrower">
           <div className="compose-option is-centered">
@@ -30,7 +37,11 @@ function ExtendedOptions({ setFile }) {
           </div>
         </div>
         <div className="column is-6 is-narrower">
-          <div id="open-tag-suboption" className="compose-option is-centered">
+          <div
+            id="open-tag-suboption"
+            className="compose-option is-centered"
+            onClick={() => setSuboptionType("tag-suboption")}
+          >
             <Icon icon="tag" />
             <span>Tag friends</span>
           </div>

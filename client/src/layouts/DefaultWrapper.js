@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import classNames from 'classnames';
 import Sidebar from '../components/navigation/sidebar/Sidebar';
@@ -7,47 +7,50 @@ import Feed from '../pages/Feed';
 import ProfileMain from '../pages/ProfileMain';
 
 function DefaultWrapper () {
-	const mainfeed = useRef(null);
-	const [shadowDom, setShadowDom] = useState(true);
-	const [trueDom, setTrueDom] = useState(false);
-	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [overlay, setOverlay] = useState(false);
+  const mainfeed = useRef(null);
+  const [shadowDom, setShadowDom] = useState(true);
+  const [trueDom, setTrueDom] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [overlay, setOverlay] = useState(false);
+  
+  function toggleSidebar() {
+    setSidebarOpen((open) => !open);
+  }
 
-	function toggleSidebar () {
-		setSidebarOpen((open) => !open);
-	}
-
-	useEffect(() => {
-		if (!mainfeed.current) return;
+  useEffect(() => {
+    if (!mainfeed.current) return;
 
     const shadowDomTimeout = setTimeout(() => {
       setShadowDom(false);
       setTrueDom(true);
       clearTimeout(shadowDomTimeout);
     }, 2500);
-	}, []);	
+  }, []);
 
-	return (
-    <>
-      <div className={ classNames(
-				"app-overlay", "is-sidebar-v1", {
-					"is-active" : overlay
-					})}
-			></div>
+  return (
+    <div>
+      <div
+        className={classNames("app-overlay", "is-sidebar-v1", {
+          "is-active": overlay,
+        })}
+      ></div>
       <Sidebar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
-      <div className={ classNames(
-				"view-wrapper", "is-sidebar-v1", {
-					"is-fold": !sidebarOpen
-					})}
-					>
-        <div className={`toolbar-v1 is-narrow ${sidebarOpen ? "" : ""}`}>
-          <Toolbar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
-        </div>
+      <div
+        className={classNames("view-wrapper", "is-sidebar-v1", {
+          "is-fold": !sidebarOpen,
+        })}
+      >
+				<Toolbar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
         <Routes>
           <Route
             index
             element={
-              <Feed ref={mainfeed} shadowDom={shadowDom} trueDom={trueDom} setOverlay={setOverlay} />
+              <Feed
+                ref={mainfeed}
+                shadowDom={shadowDom}
+                trueDom={trueDom}
+                setOverlay={setOverlay}
+              />
             }
           />
           <Route
@@ -59,7 +62,7 @@ function DefaultWrapper () {
           <Route path="profile/:username" element={<ProfileMain />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 }
 

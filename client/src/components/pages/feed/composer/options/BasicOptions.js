@@ -1,13 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
+import classNames from "classnames";
 import Icon from "../../../../misc/icon/Icon";
 
-function BasicOptions({ setFile }) {
+function BasicOptions({ setFile, openPublishMode, setComposeOptions, composeOptions }) {
 
   return (
     <form
       id="basic-options"
-      className="compose-options"
+      className={ classNames(
+				"compose-options", {
+					"is-hidden": composeOptions
+				})}
     >
       <label htmlFor="feed-upload-input-2" className="compose-option">
         <Icon icon="camera" />
@@ -26,7 +30,7 @@ function BasicOptions({ setFile }) {
         />
         <span>Activity</span>
       </div>
-      <div id="open-extended-options" className="compose-option">
+      <div id="open-extended-options" className="compose-option" onClick={() => { openPublishMode(); setComposeOptions(true); }}>
         <Icon icon="more-horizontal" />
       </div>
     </form>
