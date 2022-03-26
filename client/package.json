@@ -41,6 +41,10 @@
     "vanillajs-datepicker": "^1.1.4",
     "web-vitals": "^2.1.4"
   },
+	"devDependencies": {
+    "fslightbox-react": "^1.6.2-2",
+    "sortablejs": "^1.14.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -65,9 +69,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-	"devDependencies": {
-    "fslightbox-react": "^1.6.2-2",
-    "sortablejs": "^1.14.0"
   }
 }
