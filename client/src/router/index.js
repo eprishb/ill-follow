@@ -3,13 +3,15 @@ import { Routes, Route } from "react-router";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
+// default router
+import DefaultRouter from "./default-router";
+
 //layoutpages
 import Default from "../layouts/dashboard/default";
 import WithoutLeftSidebar from "../layouts/dashboard/without-leftsidebar";
 import WithoutRightSidebar from "../layouts/dashboard/without-rightsidebar";
 import Layout1 from "../layouts/dashboard/layout-1";
 import Simple from "../layouts/dashboard/simple";
-import DefaultRouter from "./default-router";
 
 const IndexRouters = () => {
 
