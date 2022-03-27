@@ -1,12 +1,12 @@
 import React from 'react'
 import {Container, Row, Col, Button, Image} from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 // img
 import error404 from '../../../assets/images/error/400.png'
 
 const Error404 = () => {
-   let history =useHistory()
+   let navigate =useNavigate()
     return (
         <>
            <Container className="p-0">
@@ -16,7 +16,7 @@ const Error404 = () => {
                             <Image src={error404} className="img-fluid iq-error-img" alt=""/>
                             <h2 className="mb-0 text-center">Oops! This Page is Not Found.</h2>
                             <p className="text-center">The requested page dose not exist.</p>
-                            <Button variant="primary" className="mt-3" onClick={() => history.push('/')}><i className="ri-home-4-line me-1"></i>Back to Home</Button>                            
+                            <Button variant="primary" className="mt-3" onClick={() => navigate('/')}><i className="ri-home-4-line me-1"></i>Back to Home</Button>                            
                         </div>
                     </Col>
                 </Row>

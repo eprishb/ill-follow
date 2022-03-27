@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row, Col, Button, Form, Container, Image} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,7 +21,7 @@ import login3 from '../../../assets/images/login/3.png'
 SwiperCore.use([Navigation, Autoplay]);
 
 const Recoverpw = () => {
-   let history =useHistory()
+   let navigate =useNavigate()
     return (
         <>       
             <section className="sign-in-page">
@@ -76,7 +76,7 @@ const Recoverpw = () => {
                                         <Form.Control type="email" className="mb-0" id="exampleInputEmail1" placeholder="Enter email"/>
                                     </Form.Group>
                                     <div className="d-inline-block w-100">
-                                    <Button variant="primary" type="button" className="float-right mt-3" onClick={() => history.push('/auth/sign-in')}>Reset Password</Button>
+                                    <Button variant="primary" type="button" className="float-right mt-3" onClick={() => navigate('/auth/sign-in')}>Reset Password</Button>
                                     </div>
                                 </Form>
                             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row,Col,Container,Form,Button,Image} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,7 +21,7 @@ import login3 from '../../../assets/images/login/3.png'
 SwiperCore.use([Navigation, Autoplay]);
 
 const SignUp = () => {
-   let history =useHistory()
+   let navigate =useNavigate()
    return (
       <>
          <section className="sign-in-page">
@@ -86,7 +86,7 @@ const SignUp = () => {
                                     <Form.Check.Input type="checkbox" className="me-2" id="customCheck1"/>
                                     <Form.Check.Label>I accept <Link to="#">Terms and Conditions</Link></Form.Check.Label>
                               </Form.Check>
-                              <Button type="button" className="btn-primary float-end" onClick={() => history.push('/')}>Sign Up</Button>
+                              <Button type="button" className="btn-primary float-end" onClick={() => navigate('/')}>Sign Up</Button>
                            </div>
                            <div className="sign-info">
                               <span className="dark-color d-inline-block line-height-2">Already Have Account ? <Link to="/auth/sign-in">Log In</Link></span>

@@ -28,10 +28,8 @@ const IndexRouters = () => {
         <Route path="auth/" element={<Simple user={user} />}></Route>
         <Route path="errors/" element={<Simple />}></Route>
         <Route path="extra-pages/" element={<Simple />}></Route>
-        <Route path="dashboards/" element={<Layout1 />}>
-					<DefaultRouter />
-				</Route>
-        <Route path="/" element={user ? <Default /> : <Navigate to="auth/" />}></Route>
+        <Route path="dashboards/" element={<Layout1 />}></Route>
+        <Route path="*" element={user ? <Default /> : <Navigate to="auth/" />}></Route>
       </Routes>
     </>
   );

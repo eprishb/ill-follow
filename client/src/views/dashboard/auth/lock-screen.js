@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row, Col, Container, Button, Form, Image} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,7 +22,7 @@ import user1 from '../../../assets/images/user/1.jpg'
 SwiperCore.use([Navigation, Autoplay]);
 
 const LockScreen = () => {
-   let history =useHistory()
+   let navigate =useNavigate()
    return (
       <>
          <section className="sign-in-page">
@@ -78,7 +78,7 @@ const LockScreen = () => {
                               <Form.Control type="Password" className="mb-0" id="exampleInputEmail1"  placeholder="Password"/>
                            </Form.Group>
                            <div className="d-inline-block w-100">
-                              <Button variant="primary" type="submit" className="float-right mt-3" onClick={() => history.push('/')}>Log In</Button>
+                              <Button variant="primary" type="submit" className="float-right mt-3" onClick={() => navigate('/')}>Log In</Button>
                            </div>
                         </Form>
                      </div>

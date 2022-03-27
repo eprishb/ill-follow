@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row,Col,Container,Image,Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,7 +22,7 @@ import login3 from '../../../assets/images/login/3.png'
 SwiperCore.use([Navigation, Autoplay]);
 
 const ConfirmMail = () => {
-   let history =useHistory()
+   let navigate =useNavigate()
    return (
         <>
             <section className="sign-in-page">
@@ -73,7 +73,7 @@ const ConfirmMail = () => {
                                 <h1 className="mt-3 mb-0">Success !</h1>
                                 <p>A email has been send to youremail@domain.com. Please check for an email from company and click on the included link to reset your password.</p>
                                 <div className="d-inline-block w-100">
-                                    <Button type="button"  onClick={() => history.push('/')} variant="primary" className="mt-3">Back to Home</Button>
+                                    <Button type="button"  onClick={() => navigate('/')} variant="primary" className="mt-3">Back to Home</Button>
                                 </div>
                             </div>
                         </Col>
