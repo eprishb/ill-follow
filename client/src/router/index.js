@@ -1,7 +1,7 @@
-import React from "react";
-
-//router
+import React, { useContext } from "react";
 import { Routes, Route } from "react-router";
+import { Navigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 //layoutpages
 import Default from "../layouts/dashboard/default";
@@ -12,6 +12,9 @@ import Simple from "../layouts/dashboard/simple";
 import DefaultRouter from "./default-router";
 
 const IndexRouters = () => {
+
+	const { user } = useContext(AuthContext);
+
   return (
     <>
       <Routes>
@@ -20,13 +23,13 @@ const IndexRouters = () => {
           path="without-rightsidebar/"
           element={<WithoutRightSidebar />}
         ></Route>
-        <Route path="auth/" element={<Simple />}></Route>
+        <Route path="auth/" element={<Simple user={user} />}></Route>
         <Route path="errors/" element={<Simple />}></Route>
         <Route path="extra-pages/" element={<Simple />}></Route>
         <Route path="dashboards/" element={<Layout1 />}>
 					<DefaultRouter />
 				</Route>
-        <Route path="/" element={<Default />}></Route>
+        <Route path="/" element={user ? <Default /> : <Navigate to="auth/" />}></Route>
       </Routes>
     </>
   );
