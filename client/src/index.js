@@ -4,20 +4,18 @@ import { BrowserRouter } from 'react-router-dom'
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// Contexts
+// Contexts & Providers
 import { AuthContextProvider } from "./context/AuthContext";
-import { ThemeContextProvider } from "./context/ThemeContext";
-import { DirContextProvider } from "./context/DirContext";
+import { Provider } from "react-redux";
+import Store from "./store";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<AuthContextProvider>
-				<ThemeContextProvider>
-					<DirContextProvider>
+				<Provider store={Store}>
 						<App />
-					</DirContextProvider>
-				</ThemeContextProvider>
+				</Provider>
 			</AuthContextProvider>
 		</BrowserRouter>
 	</React.StrictMode>,
