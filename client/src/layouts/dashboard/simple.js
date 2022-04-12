@@ -3,11 +3,11 @@ import React from 'react'
 //SimpleRouter 
 import SimpleRouter from '../../router/simple-router'
 
-const Simple = () => {
+const Simple = ({ path }) => {
     return (
         <>
           <div className="wrapper">
-            <SimpleRouter />
+            <SimpleRouter path={path} />
           </div>
         </>
     )

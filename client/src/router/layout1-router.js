@@ -31,39 +31,39 @@ const Layout1Router = () => {
   return (
     <>
       <Routes>
-        <Route path="dashboards/app/groups/" element={<Groups />}></Route>
+        <Route path="/groups/" element={<Groups />}></Route>
         <Route
-          path="dashboards/app/group-detail"
+          path="/group-detail"
           element={<GroupDetail />}
         ></Route>
-        <Route path="dashboards/app/friend-list/" element={<FriendList /> } />
-        <Route path="dashboards/app/profile-images/" element={<ProfileImages /> } />
-        <Route path="dashboards/app/profile-videos/" element={<ProfileVideos /> } />
-        <Route path="dashboards/app/profile-events/" element={<ProfileEvents /> } />
-        <Route path="dashboards/app/event-detail/" element={<EventDetail /> } />
-        <Route path="dashboards/app/calendar/" element={<Calendar /> } />
-        <Route path="dashboards/app/birthday/" element={<Birthday /> } />
-        <Route path="dashboards/app/weather/" element={<Weather /> } />
-        <Route path="dashboards/app/music/" element={<Music /> } />
+        <Route path="/friend-list/" element={<FriendList /> } />
+        <Route path="/profile-images/" element={<ProfileImages /> } />
+        <Route path="/profile-videos/" element={<ProfileVideos /> } />
+        <Route path="/profile-events/" element={<ProfileEvents /> } />
+        <Route path="/event-detail/" element={<EventDetail /> } />
+        <Route path="/calendar/" element={<Calendar /> } />
+        <Route path="/birthday/" element={<Birthday /> } />
+        <Route path="/weather/" element={<Weather /> } />
+        <Route path="/music/" element={<Music /> } />
         <Route
-          path="dashboards/store/store-category-grid"
+          path="/store/store-category-grid"
           element={<CatergoryGrid />}
         />
         <Route
-          path="dashboards/store/store-category-list"
+          path="/store/store-category-list"
           element={<CatergoryList />}
         />
-        <Route path="dashboards/store/store-detail/" element={<StoreDetail /> } />
+        <Route path="/store/store-detail/" element={<StoreDetail /> } />
         <Route
-          path="dashboards/store/store-checkout"
+          path="/store/store-checkout"
           element={<StoreCheckout />}
         />
 
-        <Route path="dashboards/market-place/market1/" element={<Market1 /> } />
-        <Route path="dashboards/market-place/market2/" element={<Market2 /> } />
-        <Route path="dashboards/profiles/profile1/" element={<Profile1 /> } />
-        <Route path="dashboards/profiles/profile2/" element={<Profile2 /> } />
-        <Route path="dashboards/profiles/profile3/" element={<Profile3 /> } />
+        <Route path="/market-place/market1/" element={<Market1 /> } />
+        <Route path="/market-place/market2/" element={<Market2 /> } />
+        <Route path="/profiles/profile1/" element={<Profile1 /> } />
+        <Route path="/profiles/profile2/" element={<Profile2 /> } />
+        <Route path="/profiles/profile3/" element={<Profile3 /> } />
       </Routes>
     </>
   );
