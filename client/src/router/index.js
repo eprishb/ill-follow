@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Routes, Route } from "react-router";
-import { Navigate, useMatch } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
 
 //layoutpages
 import Default from "../layouts/dashboard/default";

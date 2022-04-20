@@ -2,9 +2,33 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from  'react-router-dom'
 import axios from 'axios';
 import { format } from 'timeago.js'
-import FeedPostActions from "../buttons/FeedPostActions";
+// import FeedPostActions from "../buttons/FeedPostActions";
 import { AuthContext } from "../../../../context/AuthContext";
-import Icon from "../../../misc/icon/Icon";
+
+// Bootstrap
+import {
+  Dropdown,
+  OverlayTrigger,
+  Tooltip,
+} from "react-bootstrap";
+// End Bootstrap
+
+import CustomToggle from "../../../dropdowns";
+import ShareOffcanvas from "../../../share-offcanvas";
+
+//image
+import user2 from "../../../../assets/images/user/02.jpg";
+import user3 from "../../../../assets/images/user/03.jpg";
+import p1 from "../../../../assets/images/page-img/p1.jpg";
+import p2 from "../../../../assets/images/page-img/p2.jpg";
+import p3 from "../../../../assets/images/page-img/p3.jpg";
+import icon1 from "../../../../assets/images/icon/01.png";
+import icon2 from "../../../../assets/images/icon/02.png";
+import icon3 from "../../../../assets/images/icon/03.png";
+import icon4 from "../../../../assets/images/icon/04.png";
+import icon5 from "../../../../assets/images/icon/05.png";
+import icon6 from "../../../../assets/images/icon/06.png";
+import icon7 from "../../../../assets/images/icon/07.png";
 
 function FeedPost({ post }) {
 	const [like, setLike] = useState(post.likes.length);
@@ -30,392 +54,269 @@ function FeedPost({ post }) {
 		setIsLiked(!isLiked);
 	}
 
+	console.log(post);
+
   return (
-    <div id="feed-post-1" className="card is-post">
-      <div className="content-wrap">
-        <div className="card-heading">
-          <div className="user-block">
-            <div className="image">
-							<Link to={`/profile/${user.username}`}>
-								<img
-									src={
-										user.profilePicture ||
-										"https://randomuser.me/api/portraits/women/91.jpg"
-									}
-									data-demo-src="assets/img/avatars/dan.jpg"
-									data-user-popover="1"
-									alt=""
-								/>
-							</Link>
-            </div>
-            <div className="user-info">
-              <a href="#">{user.username}</a>
-              <span className="time">{format(post.createdAt)}</span>
-            </div>
-          </div>
-          {/* {{> feed-post-dropdown}} */}
-        </div>
-
-        <div className="card-body">
-          <div className="post-text">
-            <p>{post?.desc}</p>
-          </div>
-          <div className="post-image">
-            <a
-              data-fancybox="post1"
-              data-lightbox-type="comments"
-              data-thumb="assets/img/demo/unsplash/1.jpg"
-              href="https://via.placeholder.com/1600x900"
-              data-demo-href="assets/img/demo/unsplash/1.jpg"
-            >
-              <img
-                src={post?.img}
-                data-demo-src="assets/img/demo/unsplash/1.jpg"
-                alt=""
-              />
-            </a>
-            <FeedPostActions likeHandler={likeHandler} isLiked={isLiked} />
-          </div>
-        </div>
-
-        <div className="card-footer">
-          <div className="likers-group">
-            <img
-              src="https://via.placeholder.com/300x300"
-              data-demo-src="assets/img/avatars/dan.jpg"
-              data-user-popover="1"
-              alt=""
-            />
-            <img
-              src="https://via.placeholder.com/300x300"
-              data-demo-src="assets/img/avatars/david.jpg"
-              data-user-popover="4"
-              alt=""
-            />
-            <img
-              src="https://via.placeholder.com/300x300"
-              data-demo-src="assets/img/avatars/edward.jpeg"
-              data-user-popover="5"
-              alt=""
-            />
-            <img
-              src="https://via.placeholder.com/300x300"
-              data-demo-src="assets/img/avatars/milly.jpg"
-              data-user-popover="7"
-              alt=""
-            />
-          </div>
-          <div className="likers-text">
-            <p>
-              <a href="#">Milly</a>,<a href="#">David</a>
-            </p>
-            <p>and {like} more liked this</p>
-          </div>
-          <div className="social-count">
-            <div className="likes-count">
-              <Icon icon="heart" />
-              <span>{like}</span>
-            </div>
-            <div className="shares-count">
-               <Icon icon="link-2" />
-              <span>{post.share}</span>
-            </div>
-            <div className="comments-count">
-               <Icon icon="message-circle" />
-              <span>{post.comment}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="comments-wrap is-hidden">
-        <div className="comments-heading">
-          <h4>
-            Comments
-            <small>(8)</small>
-          </h4>
-          <div className="close-comments">
-             <Icon icon="x" />
-          </div>
-        </div>
-
-        <div className="comments-body has-slimscroll">
-          <div className="media is-comment">
-            <div className="media-left">
-              <div className="image">
+    <div className="card card-block card-stretch card-height">
+      <div className="card-body">
+        <div className="user-post-data">
+          <div className="d-flex justify-content-between">
+            <div className="me-3">
+              <Link to={`/profile/${user.username}`}>
                 <img
-                  src="https://via.placeholder.com/300x300"
-                  data-demo-src="assets/img/avatars/dan.jpg"
-                  data-user-popover="1"
+                  className="rounded-circle img-fluid"
+                  src={
+                    user.profilePicture ||
+                    "https://randomuser.me/api/portraits/women/91.jpg"
+                  }
                   alt=""
                 />
-              </div>
+              </Link>
             </div>
-            <div className="media-content">
-              <a href="#">Dan Walker</a>
-              <span className="time">28 minutes ago</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempo incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                consequat.
-              </p>
-              <div className="controls">
-                <div className="like-count">
-                   <Icon icon="thumbs-up" />
-                  <span>4</span>
+            <div className="w-100">
+              <div className="d-flex justify-content-between">
+                <div>
+                  <h5 className="mb-0 d-inline-block">{user.username}</h5>
+                  <span className="mb-0 ps-1 d-inline-block">Add New Post</span>
+                  <p className="mb-0 text-primary">{format(post.createdAt)}</p>
                 </div>
-                <div className="reply">
-                  <a href="#">Reply</a>
-                </div>
-                <div className="edit">
-                  <a href="#">Edit</a>
-                </div>
-              </div>
-
-              <div className="media is-comment">
-                <div className="media-left">
-                  <div className="image">
-                    <img
-                      src="https://via.placeholder.com/300x300"
-                      data-demo-src="assets/img/avatars/david.jpg"
-                      data-user-popover="4"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="media-content">
-                  <a href="#">David Kim</a>
-                  <span className="time">15 minutes ago</span>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempo incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <div className="controls">
-                    <div className="like-count">
-                       <Icon icon="thumbs-up" />
-                      <span>0</span>
-                    </div>
-                    <div className="reply">
-                      <a href="#">Reply</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="media-right">
-                  {/* {{> comment-dropdown}} */}
-                </div>
-              </div>
-            </div>
-            <div className="media-right">{/* {{> comment-dropdown}} */}</div>
-          </div>
-
-          <div className="media is-comment">
-            <div className="media-left">
-              <div className="image">
-                <img
-                  src="https://via.placeholder.com/300x300"
-                  data-demo-src="assets/img/avatars/rolf.jpg"
-                  data-user-popover="13"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="media-content">
-              <a href="#">Rolf Krupp</a>
-              <span className="time">9 hours ago</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempo incididunt ut labore et dolore magna aliqua.
-                Exercitation ullamco laboris consequat.
-              </p>
-              <div className="controls">
-                <div className="like-count">
-                   <Icon icon="thumbs-up" />
-                  <span>2</span>
-                </div>
-                <div className="reply">
-                  <a href="#">Reply</a>
-                </div>
-              </div>
-
-              <div className="media is-comment">
-                <div className="media-left">
-                  <div className="image">
-                    <img
-                      src="https://via.placeholder.com/300x300"
-                      data-demo-src="assets/img/avatars/elise.jpg"
-                      data-user-popover="6"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="media-content">
-                  <a href="#">Elise Walker</a>
-                  <span className="time">8 hours ago</span>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempo incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <div className="controls">
-                    <div className="like-count">
-                       <Icon icon="thumbs-up" />
-                      <span>0</span>
-                    </div>
-                    <div className="reply">
-                      <a href="#">Reply</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="media-right">
-                  {/* {{> comment-dropdown}} */}
-                </div>
-              </div>
-
-              <div className="media is-comment">
-                <div className="media-left">
-                  <div className="image">
-                    <img
-                      src="https://via.placeholder.com/300x300"
-                      data-demo-src="assets/img/avatars/rolf.jpg"
-                      data-user-popover="13"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="media-content">
-                  <a href="#">Rolf Krupp</a>
-                  <span className="time">7 hours ago</span>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempo incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <div className="controls">
-                    <div className="like-count">
-                       <Icon icon="thumbs-up" />
-                      <span>1</span>
-                    </div>
-                    <div className="reply">
-                      <a href="#">Reply</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="media-right">
-                  {/* {{> comment-dropdown}} */}
-                </div>
-              </div>
-
-              <div className="media is-comment">
-                <div className="media-left">
-                  <div className="image">
-                    <img
-                      src="https://via.placeholder.com/300x300"
-                      data-demo-src="assets/img/avatars/elise.jpg"
-                      data-user-popover="6"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="media-content">
-                  <a href="#">Elise Walker</a>
-                  <span className="time">6 hours ago</span>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempo incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <div className="controls">
-                    <div className="like-count">
-                       <Icon icon="thumbs-up" />
-                      <span>0</span>
-                    </div>
-                    <div className="reply">
-                      <a href="#">Reply</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="media-right">
-                  {/* {{> comment-dropdown}} */}
+                <div className="card-post-toolbar">
+                  <Dropdown>
+                    <Dropdown.Toggle className="bg-transparent border-white">
+                      <i className="ri-more-fill"></i>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className="dropdown-menu m-0 p-0">
+                      <Dropdown.Item className=" p-3" to="#">
+                        <div className="d-flex align-items-top">
+                          <div className="h4">
+                            <i className="ri-save-line"></i>
+                          </div>
+                          <div className="data ms-2">
+                            <h6>Save Post</h6>
+                            <p className="mb-0">Add this to your saved items</p>
+                          </div>
+                        </div>
+                      </Dropdown.Item>
+                      <Dropdown.Item className="p-3" to="#">
+                        <div className="d-flex align-items-top">
+                          <i className="ri-close-circle-line h4"></i>
+                          <div className="data ms-2">
+                            <h6>Hide Post</h6>
+                            <p className="mb-0">See fewer posts like this.</p>
+                          </div>
+                        </div>
+                      </Dropdown.Item>
+                      <Dropdown.Item className=" p-3" to="#">
+                        <div className="d-flex align-items-top">
+                          <i className="ri-user-unfollow-line h4"></i>
+                          <div className="data ms-2">
+                            <h6>Unfollow User</h6>
+                            <p className="mb-0">
+                              Stop seeing posts but stay friends.
+                            </p>
+                          </div>
+                        </div>
+                      </Dropdown.Item>
+                      <Dropdown.Item className=" p-3" to="#">
+                        <div className="d-flex align-items-top">
+                          <i className="ri-notification-line h4"></i>
+                          <div className="data ms-2">
+                            <h6>Notifications</h6>
+                            <p className="mb-0">
+                              Turn on notifications for this post
+                            </p>
+                          </div>
+                        </div>
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </div>
               </div>
             </div>
-            <div className="media-right">{/* {{> comment-dropdown}} */}</div>
-          </div>
-
-          <div className="media is-comment">
-            <div className="media-left">
-              <div className="image">
-                <img
-                  src="https://via.placeholder.com/300x300"
-                  data-demo-src="assets/img/avatars/lana.jpeg"
-                  data-user-popover="10"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="media-content">
-              <a href="#">Lana Henrikssen</a>
-              <span className="time">10 hours ago</span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempo incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div className="controls">
-                <div className="like-count">
-                   <Icon icon="thumbs-up" />
-                  <span>5</span>
-                </div>
-                <div className="reply">
-                  <a href="#">Reply</a>
-                </div>
-              </div>
-            </div>
-            <div className="media-right">{/* {{> comment-dropdown}} */}</div>
           </div>
         </div>
-
-        <div className="card-footer">
-          <div className="media post-comment has-emojis">
-            <div className="media-content">
-              <div className="field">
-                <p className="control">
-                  <textarea
-                    className="textarea comment-textarea"
-                    rows="5"
-                    placeholder="Write a comment..."
-                  ></textarea>
-                </p>
+        <div className="mt-3">
+          <p>{post?.desc}</p>
+        </div>
+        <div className="user-post">
+          {post?.img && (
+            <div className=" d-grid grid-rows-2 grid-flow-col gap-3">
+              <Link to="#">
+                <img src={post.img} alt="Adobe Stock Photo" className="img-fluid rounded w-100" />
+              </Link>
+              {/* <div className="row-span-2 row-span-md-1">
+								<img src={p2} alt="post1" className="img-fluid rounded w-100" />
+							</div>
+							<div className="row-span-1">
+								<img src={p1} alt="post2" className="img-fluid rounded w-100" />
+							</div>
+							<div className="row-span-1 ">
+								<img src={p3} alt="post3" className="img-fluid rounded w-100" />
+							</div> */}
+            </div>
+          )}
+        </div>
+        <div className="comment-area mt-3">
+          <div className="d-flex justify-content-between align-items-center flex-wrap">
+            <div className="like-block position-relative d-flex align-items-center">
+              <div className="d-flex align-items-center">
+                <div className="like-data">
+                  <Dropdown>
+                    <Dropdown.Toggle as={CustomToggle}>
+                      <img src={icon1} className="img-fluid" alt="" />
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className=" py-2">
+                      <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Like</Tooltip>}
+                        className="ms-2 me-2"
+                      >
+                        <img src={icon1} className="img-fluid" alt="" />
+                      </OverlayTrigger>
+                      <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Love</Tooltip>}
+                        className="me-2"
+                      >
+                        <img src={icon2} className="img-fluid" alt="" />
+                      </OverlayTrigger>
+                      <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Happy</Tooltip>}
+                        className="me-2"
+                      >
+                        <img src={icon3} className="img-fluid" alt="" />
+                      </OverlayTrigger>
+                      <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>HaHa</Tooltip>}
+                        className="me-2"
+                      >
+                        <img src={icon4} className="img-fluid" alt="" />
+                      </OverlayTrigger>
+                      <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Think</Tooltip>}
+                        className="me-2"
+                      >
+                        <img src={icon5} className="img-fluid" alt="" />
+                      </OverlayTrigger>
+                      <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Sade</Tooltip>}
+                        className="me-2"
+                      >
+                        <img src={icon6} className="img-fluid" alt="" />
+                      </OverlayTrigger>
+                      <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Lovely</Tooltip>}
+                        className="me-2"
+                      >
+                        <img src={icon7} className="img-fluid" alt="" />
+                      </OverlayTrigger>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+                <div className="total-like-block ms-2 me-3">
+                  <Dropdown>
+                    <Dropdown.Toggle as={CustomToggle} id="post-option">
+                      {like} Likes
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="#">Max Emum</Dropdown.Item>
+                      <Dropdown.Item href="#">Bill Yerds</Dropdown.Item>
+                      <Dropdown.Item href="#">Hap E. Birthday</Dropdown.Item>
+                      <Dropdown.Item href="#">Tara Misu</Dropdown.Item>
+                      <Dropdown.Item href="#">Midge Itz</Dropdown.Item>
+                      <Dropdown.Item href="#">Sal Vidge</Dropdown.Item>
+                      <Dropdown.Item href="#">Other</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
               </div>
-              <div className="actions">
-                <div className="image is-32x32">
+              <div className="total-comment-block">
+                <Dropdown>
+                  <Dropdown.Toggle as={CustomToggle} id="post-option">
+                    {post.comment} Comment
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#">Max Emum</Dropdown.Item>
+                    <Dropdown.Item href="#">Bill Yerds</Dropdown.Item>
+                    <Dropdown.Item href="#">Hap E. Birthday</Dropdown.Item>
+                    <Dropdown.Item href="#">Tara Misu</Dropdown.Item>
+                    <Dropdown.Item href="#">Midge Itz</Dropdown.Item>
+                    <Dropdown.Item href="#">Sal Vidge</Dropdown.Item>
+                    <Dropdown.Item href="#">Other</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
+            </div>
+            <ShareOffcanvas shareCount={post.share} />
+          </div>
+          <hr />
+          <ul className="post-comments list-inline p-0 m-0">
+            <li className="mb-2">
+              <div className="d-flex">
+                <div className="user-img">
                   <img
-                    className="is-rounded"
-                    src="https://via.placeholder.com/300x300"
-                    data-demo-src="assets/img/avatars/jenna.png"
-                    data-user-popover="0"
-                    alt=""
+                    src={user2}
+                    alt="user1"
+                    className="avatar-35 rounded-circle img-fluid"
                   />
                 </div>
-                <div className="toolbar">
-                  <div className="action is-auto">
-                     <Icon icon="at-sign" />
+                <div className="comment-data-block ms-3">
+                  <h6>Monty Carlo</h6>
+                  <p className="mb-0">Lorem ipsum dolor sit amet</p>
+                  <div className="d-flex flex-wrap align-items-center comment-activity">
+                    <Link to="#">like</Link>
+                    <Link to="#">reply</Link>
+                    <Link to="#">translate</Link>
+                    <span> 5 min </span>
                   </div>
-                  <div className="action is-emoji">
-                     <Icon icon="smile" />
-                  </div>
-                  <div className="action is-upload">
-                     <Icon icon="camera" />
-                    <input type="file" />
-                  </div>
-                  <a className="button is-solid primary-button raised">
-                    Post Comment
-                  </a>
                 </div>
               </div>
+            </li>
+            <li>
+              <div className="d-flex">
+                <div className="user-img">
+                  <img
+                    src={user3}
+                    alt="user1"
+                    className="avatar-35 rounded-circle img-fluid"
+                  />
+                </div>
+                <div className="comment-data-block ms-3">
+                  <h6>Paul Molive</h6>
+                  <p className="mb-0">Lorem ipsum dolor sit amet</p>
+                  <div className="d-flex flex-wrap align-items-center comment-activity">
+                    <Link to="#">like</Link>
+                    <Link to="#">reply</Link>
+                    <Link to="#">translate</Link>
+                    <span> 5 min </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <form className="comment-text d-flex align-items-center mt-3">
+            <input
+              type="text"
+              className="form-control rounded"
+              placeholder="Enter Your Comment"
+            />
+            <div className="comment-attagement d-flex">
+              <Link to="#">
+                <i className="ri-link me-3"></i>
+              </Link>
+              <Link to="#">
+                <i className="ri-user-smile-line me-3"></i>
+              </Link>
+              <Link to="#">
+                <i className="ri-camera-line me-3"></i>
+              </Link>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@ const DefaultRouter = () => {
           <Route index path="/" element={<Index />} />
 
           {/* app */}
-          <Route path="profile/" element={<UserProfile />} />
+          <Route path="profile/:username" element={<UserProfile />} />
           <Route
             path="user-privacy-setting/"
             element={<UserPrivacySetting />}
