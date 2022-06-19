@@ -53,7 +53,7 @@ function FeedPost({ post }) {
 		setIsLiked(!isLiked);
 	}
 
-	console.log(post);
+	// console.log(post);
 
   return (
 		<Card>

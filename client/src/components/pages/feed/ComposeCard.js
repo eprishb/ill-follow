@@ -1,4 +1,4 @@
-import React,{ useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../../context/AuthContext";
@@ -7,10 +7,7 @@ import Card from "../../Card";
 import CustomToggle from "../../dropdowns";
 
 // Bootstrap
-import {
-  Dropdown,
-  Modal,
-} from "react-bootstrap";
+import { Dropdown, Modal } from "react-bootstrap";
 // End Bootstrap
 
 //image
@@ -23,16 +20,25 @@ import img5 from "../../../assets/images/small/11.png";
 import img6 from "../../../assets/images/small/12.png";
 import img7 from "../../../assets/images/small/13.png";
 import img8 from "../../../assets/images/small/14.png";
+import BasicOptions from "./composer/options/BasicOptions";
+import Publish from "./buttons/Publish";
+import ComposePost from "./composer/ComposePost";
 
 function ComposeCard() {
-	const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-	const [publishButton, setPublishButton] = useState(false);
-	const enablePublishMode = (e) => {
+  const ref = useRef();
+  const [content, setContent] = useState("");
+  console.log(content);
+
+  const [file, setFile] = useState(null);
+
+  const [publishButton, setPublishButton] = useState(false);
+  const enablePublishMode = (e) => {
     e.target.value.length >= 1
       ? setPublishButton(true)
       : setPublishButton(false);
@@ -48,67 +54,18 @@ function ComposeCard() {
       <Card.Body>
         <div className="d-flex align-items-center">
           <div className="user-img">
-            <img src={user1} alt="user1" className="avatar-60 rounded-circle" />
+            <Avatar />
           </div>
-          <form className="post-text ms-3 w-100 " onClick={handleShow}>
-            <input
-              type="text"
-              className="form-control rounded"
-              placeholder="Write something here..."
-              onInput={enablePublishMode}
-              style={{ border: "none" }}
-            />
-          </form>
+          <div className="post-text ms-3 w-100 " onClick={handleShow}>
+            <ComposePost />
+          </div>
         </div>
         <hr />
-        <ul className=" post-opt-block d-flex list-inline m-0 p-0 flex-wrap">
-          <li className="me-3 mb-md-0 mb-2">
-            <Link to="#" className="btn btn-soft-primary">
-              <img src={img1} alt="icon" className="img-fluid me-2" />{" "}
-              Photo/Video
-            </Link>
-          </li>
-          <li className="me-3 mb-md-0 mb-2">
-            <Link to="#" className="btn btn-soft-primary">
-              <img src={img2} alt="icon" className="img-fluid me-2" /> Tag
-              Friend
-            </Link>
-          </li>
-          <li className="me-3">
-            <Link to="#" className="btn btn-soft-primary">
-              <img src={img3} alt="icon" className="img-fluid me-2" />{" "}
-              Feeling/Activity
-            </Link>
-          </li>
-          <li>
-            <button className=" btn btn-soft-primary">
-              <div className="card-header-toolbar d-flex align-items-center">
-                <Dropdown>
-                  <Dropdown.Toggle as="div">
-                    <i className="ri-more-fill h4"></i>
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item onClick={handleShow} href="#">
-                      Check in
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleShow} href="#">
-                      Live Video
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleShow} href="#">
-                      Gif
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleShow} href="#">
-                      Watch Party
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleShow} href="#">
-                      Play with Friend
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
-            </button>
-          </li>
-        </ul>
+        <BasicOptions
+          show={show}
+          showModal={handleShow}
+          closeModal={handleClose}
+        />
       </Card.Body>
       <Modal
         size="lg"
@@ -125,18 +82,25 @@ function ComposeCard() {
             <div className="user-img">
               <Avatar />
             </div>
-            <form
+            <div
               className="post-text ms-3 w-100 "
               data-bs-toggle="modal"
               data-bs-target="#post-modal"
             >
-              <input
-                type="text"
-                className="form-control rounded"
-                placeholder="Write something here..."
-                style={{ border: "none" }}
+              <ComposePost
+                ref={ref}
+                content={content}
+                setContent={setContent}
               />
-            </form>
+            </div>
+            <div>
+              {file && (
+                <div>
+                  <img src={URL.createObjectURL(file)} alt="" />
+                  <span onClick={() => setFile(null)}>X</span>
+                </div>
+              )}
+            </div>
           </div>
           <hr />
           <ul className="d-flex flex-wrap align-items-center list-inline m-0 p-0">
@@ -251,9 +215,7 @@ function ComposeCard() {
               </div>
             </div>
           </div>
-          <button type="submit" className="btn btn-primary d-block w-100 mt-3">
-            Post
-          </button>
+          <Publish file={file} publishButton={publishButton} />
         </Modal.Body>
       </Modal>
     </Card>
