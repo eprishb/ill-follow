@@ -74,15 +74,11 @@ function CreatePost() {
         onHide={handleClose}
         show={show}
       >
-        <Modal.Header className="d-flex justify-content-between" closeButton>
+        <Modal.Header className="d-flex justify-content-between">
           <Modal.Title id="post-modalLabel">Create Post</Modal.Title>
-          {/* <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={handleClose}
-          >
-            <i className="ri-close-fill"></i>
-          </button> */}
+          <Link to="#" className="lh-1" onClick={handleClose}>
+            <span className="material-symbols-outlined">close</span>
+          </Link>
         </Modal.Header>
         <Modal.Body>
           <div className="d-flex align-items-center">

@@ -40,8 +40,8 @@ function BasicOptions({ setFile, showFile, showModal, closeModal }) {
         <button className=" btn btn-soft-primary">
           <div className="card-header-toolbar d-flex align-items-center">
             <Dropdown>
-              <Dropdown.Toggle as="div">
-                <i className="ri-more-fill h4"></i>
+              <Dropdown.Toggle as="div" className="lh-1">
+                <span className="material-symbols-outlined">more_horiz</span>
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item onClick={showModal} href="#">
