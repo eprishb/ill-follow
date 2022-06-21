@@ -88,11 +88,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>
@@ -124,11 +124,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>
@@ -160,11 +160,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>
@@ -196,11 +196,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>
@@ -232,11 +232,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>
@@ -268,11 +268,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>
@@ -304,11 +304,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>
@@ -340,11 +340,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>
@@ -376,11 +376,11 @@ const StoreDetail = () => {
                                                     </div>
                                                     <div className="d-block line-height">
                                                         <span className=" text-warning">
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
-                                                            <i className="fa fa-star"></i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
+                                                            <i className="material-symbols-outlined md-18">star</i>
                                                         </span>                                             
                                                     </div>
                                                 </div>

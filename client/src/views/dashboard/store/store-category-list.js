@@ -100,11 +100,11 @@ const CatergoryList = () => {
                                     <Form.Check.Input type="radio"   name="bsradio" id="radio2" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio2" className=" mb-0">
                                        <span className="d-block line-height text-warning">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>
                                     </Form.Check.Label>
                                  </Form.Check>
@@ -115,10 +115,10 @@ const CatergoryList = () => {
                                     <Form.Check.Input type="radio"   name="bsradio" id="radio3" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio3" className=" mb-0">
                                        <span className="d-block line-height text-warning">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                           <i className="fas fa-star-half-alt"></i>
                                        </span> 
                                     </Form.Check.Label>
@@ -130,10 +130,10 @@ const CatergoryList = () => {
                                     <Form.Check.Input type="radio" name="bsradio" id="radio4" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio4" className=" mb-0">
                                        <span className="d-block line-height text-warning">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                           <i className="far fa-star"></i>
                                        </span>   
                                     </Form.Check.Label>
@@ -145,9 +145,9 @@ const CatergoryList = () => {
                                     <Form.Check.Input type="radio" name="bsradio" id="radio5" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio5" className=" mb-0">
                                        <span className="d-block line-height text-warning">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                           <i className="far fa-star"></i>
                                           <i className="far fa-star"></i>
                                        </span>  
@@ -160,8 +160,8 @@ const CatergoryList = () => {
                                     <Form.Check.Input type="radio" name="bsradio" id="radio6" defaultChecked/>
                                     <label htmlFor="radio6" className="form-check-label mb-0">
                                        <span className="d-block line-height text-warning">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                           <i className="far fa-star"></i>
                                           <i className="far fa-star"></i>
                                           <i className="far fa-star"></i>
@@ -175,7 +175,7 @@ const CatergoryList = () => {
                                     <Form.Check.Input type="radio" name="bsradio" id="radio7" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio7" className=" mb-0">
                                        <span className="d-block line-height text-warning">
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                           <i className="far fa-star"></i>
                                           <i className="far fa-star"></i>
                                           <i className="far fa-star"></i>
@@ -215,11 +215,11 @@ const CatergoryList = () => {
                                                 </div>
                                                 <div className="d-block line-height">
                                                    <span className="text-warning">
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
                                                    </span>                                             
                                                 </div>
                                              </div>
@@ -251,11 +251,11 @@ const CatergoryList = () => {
                                                 </div>
                                                 <div className="d-block line-height">
                                                    <span className="text-warning">
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
                                                    </span>                                             
                                                 </div>
                                              </div>
@@ -287,11 +287,11 @@ const CatergoryList = () => {
                                                 </div>
                                                 <div className="d-block line-height">
                                                    <span className="text-warning">
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
                                                    </span>                                             
                                                 </div>
                                              </div>
@@ -323,11 +323,11 @@ const CatergoryList = () => {
                                                 </div>
                                                 <div className="d-block line-height">
                                                    <span className="text-warning">
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
                                                    </span>                                             
                                                 </div>
                                              </div>
@@ -359,11 +359,11 @@ const CatergoryList = () => {
                                                 </div>
                                                 <div className="d-block line-height">
                                                    <span className="text-warning">
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
                                                    </span>                                             
                                                 </div>
                                              </div>
@@ -395,11 +395,11 @@ const CatergoryList = () => {
                                                 </div>
                                                 <div className="d-block line-height">
                                                    <span className="text-warning">
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
                                                    </span>                                             
                                                 </div>
                                              </div>
@@ -431,11 +431,11 @@ const CatergoryList = () => {
                                                 </div>
                                                 <div className="d-block line-height">
                                                    <span className="text-warning">
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
                                                    </span>                                             
                                                 </div>
                                              </div>
@@ -467,11 +467,11 @@ const CatergoryList = () => {
                                                 </div>
                                                 <div className="d-block line-height">
                                                    <span className="text-warning">
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
-                                                   <i className="fa fa-star"></i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
+                                                   <i className="material-symbols-outlined md-18">star</i>
                                                    </span>                                             
                                                 </div>
                                              </div>

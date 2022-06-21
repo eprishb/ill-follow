@@ -2,6 +2,7 @@ import React from 'react'
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import Card from '../../../components/Card'
 import {Link} from 'react-router-dom'
+import '../../../assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css'
 
 const lineawesome = [
     {

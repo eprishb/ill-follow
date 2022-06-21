@@ -14,6 +14,16 @@
       }  
     }   
 }
+.table.forum-table{
+    overflow: hidden;
+}
+.table.forum-table>:not(caption)>*>* {
+    padding: $spacer;
+}
+
+.forum-table.table>:not(:first-child) {
+    border-top: 0px solid currentColor;
+}
 @include media-breakpoint-down(md) {
     .table-responsive {
         #exampleInputSearch {

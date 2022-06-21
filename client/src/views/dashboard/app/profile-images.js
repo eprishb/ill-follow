@@ -1,6 +1,7 @@
-import React from 'react'
-import { Container, Row, OverlayTrigger, Tooltip} from 'react-bootstrap'
+import React,{useState} from 'react'
+import { Container, Row, OverlayTrigger, Tooltip, Col} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import FsLightbox from 'fslightbox-react';
 
 //profile-header
 import ProfileHeader from '../../../components/profile-header'
@@ -24,300 +25,613 @@ import img65 from '../../../assets/images/page-img/65.jpg'
 import img5 from '../../../assets/images/page-img/profile-bg5.jpg'
 
 const ProfileImages =() =>{
+   const [imageController, setImageController] = useState({
+      toggler: false,
+      slide: 1
+  });
+  
+  function imageOnSlide(number) {
+      setImageController({
+      toggler: !imageController.toggler,
+      slide: number
+      }); 
+  }
     return(
       <>
+            <FsLightbox
+                toggler={imageController.toggler}
+                sources={[img51,img52,img53,img54,img55,img56,img57,img58,img59,img60,img61,img62,img63,img64,img65]}
+                slide={imageController.slide}
+            />
         <ProfileHeader title="Your Photos" img={img5}/>
             <div id="content-page" className="content-page">
                <Container>
                   <Row>
-                     <div className="col-lg-4 col-md-6">
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(1)} to="#">
                               <img src={img51} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(2)} to="#">
                            <img src={img52} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(3)} to="#">
                               <img src={img53} className="img-fluid rounded" alt="Responsive "/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(4)} to="#">
                               <img src={img54} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(5)} to="#">
                               <img src={img55} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(6)} to="#">
                               <img src={img56} className="img-fluid rounded" alt="Responsive "/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(7)} to="#">
                               <img src={img57} className="img-fluid rounded" alt="Responsive "/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(8)} to="#">
                               <img src={img58} className="img-fluid rounded" alt="Responsive "/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(9)} to="#">
                               <img src={img59} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(10)} to="#">
                               <img src={img60} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(11)} to="#">
                               <img src={img61} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(12)} to="#">
                               <img src={img62} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(13)} to="#">
                               <img src={img63} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
+                           <Link onClick={() => imageOnSlide(14)} to="#">
                               <img src={img64} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
                         </div>
-                     </div>
-                     <div className="col-lg-4 col-md-6">
+                     </Col>
+                     <Col lg="4" md="6">
                         <div className="user-images position-relative overflow-hidden mb-3">
-                           <Link to="#">
-                              <img src={img65} className="img-fluid rounded" alt="Responsive "/>
+                           <Link onClick={() => imageOnSlide(15)} to="#">
+                              <img src={img65} className="img-fluid rounded" alt="Responsive"/>
                            </Link>
                            <div className="image-hover-data">
                               <div className="product-elements-icon">
                                  <ul className="d-flex align-items-center m-0 p-0 list-inline">
-                                    <li><Link to="#" className="ps-3 text-white"> 60 <i className="ri-thumb-up-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 30 <i className="ri-chat-3-line"></i> </Link></li>
-                                    <li><Link to="#" className="ps-3 text-white"> 10 <i className="ri-share-forward-line"></i> </Link></li>
+                                    <li className="">
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 60 
+                                          <i className="material-symbols-outlined md-14 ms-1">
+                                             thumb_up
+                                          </i> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 30 
+                                          <span className="material-symbols-outlined  md-14 ms-1">
+                                             chat_bubble_outline
+                                          </span> 
+                                       </Link>
+                                    </li>
+                                    <li>
+                                       <Link to="#" className="pe-3 text-white d-flex align-items-center"> 10 
+                                          <span className="material-symbols-outlined md-14 ms-1">
+                                             forward
+                                          </span>
+                                       </Link>
+                                    </li>
                                  </ul>
                               </div>
                            </div>
                            <OverlayTrigger placement="top" overlay={<Tooltip>Edit or Remove</Tooltip>}>
-                              <Link to="#" className="image-edit-btn"><i className="ri-edit-2-fill"></i></Link>
+                              <Link to="#" className="image-edit-btn material-symbols-outlined md-16">
+                                 drive_file_rename_outline
+                              </Link>
                            </OverlayTrigger>
-                           <Link to="#" className="image-edit-btn" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit or Remove">
-                              <i className="ri-edit-2-fill"></i>
-                           </Link>
                         </div>
-                     </div>
+                     </Col>
                   </Row>
                </Container>
             </div>

@@ -11,10 +11,10 @@
 .form-group.chat-search-data {
 	>i {
 		position: absolute;
-		top: 0.313rem;
+		top: 0.5rem;
 		left: 0.938rem;
 		color: $primary;
-		font-size: 1rem;
+
 	}
 }
 .chat-sidebar-name {
@@ -41,10 +41,10 @@
 }
 span.avatar-status {
 	position: absolute;
-	bottom: -0.5rem;
+	bottom: -0.7rem;
 	top: auto;
 	left: auto;
-	right: -0.25rem;
+	right: -.4rem;
 }
 .iq-chat-ui {
 	li {
@@ -219,7 +219,7 @@ span.avatar-status {
 			right: auto;
 			left: -0.438rem;
 			border-width:0.313rem 0.438rem 0.313rem 0;
-			border-color: transparent$white transparent transparent;
+			border-color: transparent $white transparent transparent;
 		}
 	}
 }
@@ -345,9 +345,12 @@ ul.user-status {
 button.close-btn-res {
 	display: none;
 }
-div.sidebar-toggle {
-	display: none;
+.chat-head{
+	div.sidebar-toggle {
+		display: none;
+	}
 }
+
 .chat-start{
 	span.iq-start-icon{
 		text-align: center;
@@ -412,13 +415,15 @@ div.sidebar-toggle {
         header {
             padding-left: 0.938rem;
         }
+		div.sidebar-toggle {
+			display: block;
+		}
     }
-    div.sidebar-toggle {
-        display: block;
-    }
+    
+	.chat-head{
     .sidebar-toggle {
         background: rgba($primary, .2);
-        padding: 0.938rem 0.625rem;
+        padding: 0.938rem 0.5rem;
         margin-right: 0.938rem;
         @if $enable-rounded == true {
 			@include radius-mixin($border-radius);
@@ -429,6 +434,7 @@ div.sidebar-toggle {
         text-align: center;
         color: $primary;
     }
+}
     #chat-user-detail-popup {
         overflow-y: scroll;
         padding-bottom: 1.25rem;

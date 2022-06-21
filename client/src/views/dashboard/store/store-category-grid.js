@@ -105,11 +105,11 @@ const CatergoryGrid = () => {
                                     <Form.Check.Input type="radio" name="bsradio" id="radio2" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio2" className=" mb-0">
                                        <span className=" text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>   
                                     </Form.Check.Label>
                                  </Form.Check>
@@ -120,11 +120,11 @@ const CatergoryGrid = () => {
                                     <Form.Check.Input type="radio"  name="bsradio" id="radio3" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio3" className=" mb-0">
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fas fa-star-half-alt"></i>
+                                       <i className="material-symbols-outlined md-18">star</i>
+                                       <i className="material-symbols-outlined md-18">star</i>
+                                       <i className="material-symbols-outlined md-18">star</i>
+                                       <i className="material-symbols-outlined md-18">star</i>
+                                       <i className="material-symbols-outlined md-18">star_half</i>
                                        </span>    
                                     </Form.Check.Label>
                                  </Form.Check>
@@ -135,11 +135,11 @@ const CatergoryGrid = () => {
                                     <Form.Check.Input type="radio"  name="bsradio" id="radio4" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio4" className="mb-0">
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="far fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>           
                                     </Form.Check.Label>
                                  </Form.Check>
@@ -150,11 +150,11 @@ const CatergoryGrid = () => {
                                     <Form.Check.Input type="radio"  name="bsradio" id="radio5" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio5" className=" mb-0">
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="far fa-star"></i>
-                                          <i className="far fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>     
                                     </Form.Check.Label>
                                  </Form.Check>
@@ -165,11 +165,11 @@ const CatergoryGrid = () => {
                                     <Form.Check.Input type="radio"  name="bsradio" id="radio6" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio6" className=" mb-0">
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="far fa-star"></i>
-                                          <i className="far fa-star"></i>
-                                          <i className="far fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span> 
                                     </Form.Check.Label>
                                  </Form.Check>
@@ -180,11 +180,11 @@ const CatergoryGrid = () => {
                                     <Form.Check.Input type="radio"  name="bsradio" id="radio7" defaultChecked/>
                                     <Form.Check.Label htmlFor="radio7" className="mb-0">
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="far fa-star"></i>
-                                          <i className="far fa-star"></i>
-                                          <i className="far fa-star"></i>
-                                          <i className="far fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span> 
                                     </Form.Check.Label>
                                  </Form.Check>
@@ -207,11 +207,11 @@ const CatergoryGrid = () => {
                                           </div>
                                        </div>
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>    
                                     </div>
                                     <div className="image-block position-relative">
@@ -241,11 +241,11 @@ const CatergoryGrid = () => {
                                           </div>
                                        </div>
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>      
                                     </div>
                                     <div className="image-block position-relative">
@@ -275,11 +275,11 @@ const CatergoryGrid = () => {
                                           </div>
                                        </div>
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>       
                                     </div>
                                     <div className="image-block position-relative">
@@ -309,11 +309,11 @@ const CatergoryGrid = () => {
                                           </div>
                                        </div>
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>   
                                     </div>
                                     <div className="image-block position-relative">
@@ -343,11 +343,11 @@ const CatergoryGrid = () => {
                                           </div>
                                        </div>
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>  
                                     </div>
                                     <div className="image-block position-relative">
@@ -377,11 +377,11 @@ const CatergoryGrid = () => {
                                           </div>
                                        </div>
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span> 
                                     </div>
                                     <div className="image-block position-relative">
@@ -411,11 +411,11 @@ const CatergoryGrid = () => {
                                           </div>
                                        </div>
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span> 
                                     </div>
                                     <div className="image-block position-relative">
@@ -445,11 +445,11 @@ const CatergoryGrid = () => {
                                           </div>
                                        </div>
                                        <span className="text-warning d-block line-height">
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
-                                          <i className="fa fa-star"></i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
+                                          <i className="material-symbols-outlined md-18">star</i>
                                        </span>  
                                     </div>
                                     <div className="image-block position-relative">

@@ -1,4 +1,21 @@
-// Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
+$icon-fill: 0 !default;
+$icon-weight: 200 !default;
+$icon-grade: 0 !default;
+$iocn-optical-size: 24 !default;
+$font-size-base: 0.875rem !default;
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' $icon-fill,
+  'wght' $icon-weight,
+  'GRAD' $icon-grade,
+  'opsz' $iocn-optical-size;
+}
+.material-symbols-outlined.filled{
+  font-variation-settings:
+  'FILL' 1,
+  'wght' $icon-weight,
+  'GRAD' $icon-grade,
+  'opsz' 20;
+  font-size: $font-size-base;
+}

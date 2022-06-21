@@ -68,7 +68,7 @@ const StoreCheckout = () => {
                                                                     </Row>
                                                                 </Col>
                                                                 <Col sm="2" className=" col-2">
-                                                                    <Link to="#" className="text-dark"><i className="ri-delete-bin-7-fill h5"></i></Link>
+                                                                    <Link to="#" className="text-dark material-symbols-outlined">delete</Link>
                                                                 </Col>
                                                             </Row>
                                                         </Col>
@@ -110,9 +110,7 @@ const StoreCheckout = () => {
                                                                     </Row>
                                                                 </Col>
                                                                 <Col sm="2" className=" col-2">
-                                                                    <Link to="#" className="text-dark">
-                                                                        <i className="ri-delete-bin-7-fill h5"></i>
-                                                                    </Link>
+                                                                <Link to="#" className="text-dark material-symbols-outlined">delete</Link>
                                                                 </Col>
                                                             </Row>
                                                         </Col>
@@ -154,9 +152,7 @@ const StoreCheckout = () => {
                                                                     </Row>
                                                                 </Col>
                                                                 <Col sm="2" className=" col-2">
-                                                                    <Link to="#" className="text-dark">
-                                                                        <i className="ri-delete-bin-7-fill h5"></i>
-                                                                    </Link>
+                                                                <Link to="#" className="text-dark material-symbols-outlined">delete</Link>
                                                                 </Col>
                                                             </Row>
                                                         </Col>
@@ -198,7 +194,7 @@ const StoreCheckout = () => {
                                                                     </Row>
                                                                 </Col>
                                                                 <Col sm="2" className="col-2">
-                                                                    <Link to="#" className="text-dark"><i className="ri-delete-bin-7-fill h5"></i></Link>
+                                                                <Link to="#" className="text-dark material-symbols-outlined">delete</Link>
                                                                 </Col>
                                                             </Row>
                                                         </Col>
@@ -236,19 +232,19 @@ const StoreCheckout = () => {
                                                 <ul className="p-0 m-0">
                                                     <li className="d-flex align-items-center">
                                                         <div className="iq-checkout-icon">
-                                                            <i className="ri-checkbox-line"></i>
+                                                            <i className="material-symbols-outlined">check_box</i>
                                                         </div>
                                                         <h6>Security policy (Safe and Secure Payment.)</h6>
                                                     </li>
                                                     <li className="d-flex align-items-center">
                                                         <div className="iq-checkout-icon">
-                                                            <i className="ri-truck-line"></i>
+                                                            <i className="material-symbols-outlined">local_shipping</i>
                                                         </div>
                                                         <h6>Delivery policy (Home Delivery.)</h6>
                                                     </li>
                                                     <li className="d-flex align-items-center">
                                                         <div className="iq-checkout-icon">
-                                                            <i className="ri-arrow-go-back-line"></i>
+                                                            <i className="material-symbols-outlined">keyboard_return</i>
                                                         </div>
                                                         <h6>Return policy (Easy Retyrn.)</h6>
                                                     </li>

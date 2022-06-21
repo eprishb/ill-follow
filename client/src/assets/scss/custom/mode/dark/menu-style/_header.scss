@@ -1,5 +1,11 @@
 .iq-top-navbar {
     background: $card-bg;
+    .iq-navbar{
+        background: $card-bg; 
+    }
+    &.menu-sticky{
+        background: $card-bg;
+    }
 }
 .iq-navbar-logo {
     a {

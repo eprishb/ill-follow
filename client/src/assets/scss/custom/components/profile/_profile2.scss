@@ -1,44 +1,41 @@
 
-.text-center{ 
-    text-align: center;
-}
-
 .card-header{
     border-bottom: unset;
 }
-
 .card{
     border-bottom: unset;
 }
-
 .profile-2{
     .content-page{
         margin-top: -4rem;
     }
 }
-
 .sub-image{
     height: 200px;
     width: 200px;
 }
+.social-item {
+    font-size: 11px;
+    color: $white;
+    padding: 7px 15px;
+    display: block;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    text-align: center;
+}
 
 .profile-image {
-    margin-top: -2.375rem!important;
     height: 150px;
     width: 150px;
 }
-
-
 .item-img{
     height: 30px;
     width: 30px;
 }
 .grid-container > div {
-    // background-color: rgba(255, 255, 255, 0.8);
-    // text-align: center;
     font-size: 12px;
   }
-  
+
 .item1 {
     grid-row: 1 / 3;
   }

@@ -2,6 +2,8 @@ import React from 'react'
 import {Container,Row,Col,Card,Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
+import '../../../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css'
+
 const Data_table = [
     {
         class: 'far fa-address-book',

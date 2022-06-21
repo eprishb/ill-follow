@@ -43,14 +43,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img1} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img1} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user05} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user05} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -73,14 +73,14 @@ const FriendList =() =>{
                                     <Card.Body className="card-body profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img2} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img2} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user06} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user06} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -103,14 +103,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img4} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img4} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user07} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user07} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -133,14 +133,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img5} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img5} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user08} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user08} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -163,14 +163,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img6} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img6} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user09} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user09} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -193,14 +193,14 @@ const FriendList =() =>{
                                     <div className="card-body profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img7} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img7} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user10} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user10} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -223,14 +223,14 @@ const FriendList =() =>{
                                     <div className="card-body profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img8} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img8} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user13} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user13} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -253,14 +253,14 @@ const FriendList =() =>{
                                     <div className="card-body profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img9} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img9} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user14} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user14} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -283,14 +283,14 @@ const FriendList =() =>{
                                     <div className="card-body profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img2} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img2} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user15} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user15} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -313,14 +313,14 @@ const FriendList =() =>{
                                     <div className="card-body profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img1} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img1} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user16} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user16} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -343,14 +343,14 @@ const FriendList =() =>{
                                     <div className="card-body profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img5} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img5} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user17} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user17} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -373,14 +373,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img8} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img8} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user18} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user18} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -403,14 +403,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img7} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img7} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user19} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user19} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -433,14 +433,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img9} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img9} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user07} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user07} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -463,14 +463,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img4} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img4} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user08} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user08} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>
@@ -493,14 +493,14 @@ const FriendList =() =>{
                                     <Card.Body className=" profile-page p-0">
                                         <div className="profile-header-image">
                                             <div className="cover-container">
-                                                <img src={img1} alt="profile-bg" className="rounded img-fluid w-100"/>
+                                                <img loading="lazy" src={img1} alt="profile-bg" className="rounded img-fluid w-100"/>
                                             </div>
                                             <div className="profile-info p-4">
                                                 <div className="user-detail">
                                                     <div className="d-flex flex-wrap justify-content-between align-items-start">
                                                         <div className="profile-detail d-flex">
                                                             <div className="profile-img pe-4">
-                                                                <img src={user09} alt="profile-img" className="avatar-130 img-fluid" />
+                                                                <img loading="lazy" src={user09} alt="profile-img" className="avatar-130 img-fluid" />
                                                             </div>
                                                             <div className="user-data-block">
                                                                 <h4>

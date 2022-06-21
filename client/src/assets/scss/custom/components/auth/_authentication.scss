@@ -5,12 +5,12 @@
 }
 .sign-in-page {
 	height: 100vh;
-	background: $primary;
-	background: rgba($primary,80);
-	background: -moz-linear-gradient(-45deg, rgba($primary,80) 0%, #0076e5 100%);
-	background: -webkit-linear-gradient(-45deg, rgba($primary,80) 0%, #0076e5 100%);
-	background: linear-gradient(135deg, rgba($primary,80) 0%, #0076e5 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba($primary,80)', endColorstr='#0076e5', GradientType=1);
+	background: var(--bs-primary);
+	background: rgba(var(--bs-primary-rgb),.8);
+	background: -moz-linear-gradient(-45deg, rgba(var(--bs-primary-rgb),.8) 0%, var(--bs-primary) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(var(--bs-primary-rgb),.8) 0%, var(--bs-primary) 100%);
+	background: linear-gradient(135deg, rgba(var(--bs-primary-rgb),.8) 0%, var(--bs-primary) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(var(--bs-primary-rgb),.8)', endColorstr='var(--bs-primary)', GradientType=1);
 	position: relative;
 	overflow: hidden;
 	height: 100vh;
@@ -58,8 +58,8 @@
 			font-size: 1.125rem;
 			line-height: 1.875rem;
 			display: inline-block;
-			background:rgba($primary,0.2);
-			color: $primary !important;
+			background:rgba(var(--bs-primary-rgb),.2);;
+			color: var(--bs-primary) !important;
             @if $enable-rounded == true {
                 @include radius-mixin($border-radius);
             }

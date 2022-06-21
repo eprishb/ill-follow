@@ -19,7 +19,7 @@
 			}
 			&:hover {
 				text-decoration: none;
-				color: $primary;
+				color: var(--bs-primary);
 			}
 		}
 		i {
@@ -29,7 +29,7 @@
 		li.active {
 			a {
 				text-decoration: none;
-				color: $primary;
+				color: var(--bs-primary);
 			}
 		}
 	}
@@ -53,7 +53,7 @@
 				}
 			}
 			>a {
-				color: $primary;
+				color: var(--bs-primary);
 				text-align: center;
 				line-height: 2.5rem;
 				display: inline-block;
@@ -66,11 +66,11 @@
 				@if $enable-transitions == true {
 					@include transition-mixin(all 0.3s ease-in-out);
 				}
-				background: rgba($primary,0.2);
+				background: rgba(var(--bs-primary-rgb),.2);;
 			}
 			a {
 				&:hover {
-					color: $primary;
+					color: var(--bs-primary);
 					text-decoration: none;
 				}
 			}
@@ -84,7 +84,7 @@
 		li.q-list {
 			a {
 				&:hover {
-					color: $primary;
+					color: var(--bs-primary);
 					text-decoration: none;
 				}
 			}
@@ -101,11 +101,11 @@
 	}
 	.search-link {
 		position: absolute;
-		top: 0;
+		top: 0.625rem;
 		right: 0.538rem;
 		font-size: 1.125rem;
 		line-height: 2.375rem;
-		color: $primary;
+		color: var(--bs-primary);
 		&:hover {
 			text-decoration: none;
 		}
@@ -149,12 +149,12 @@
 		}
 		li.iq-unread {
 			a {
-				color: $primary;
+				color: var(--bs-primary);
 				font-weight: 500;
 			}
 			li {
 				a {
-					color: $primary;
+					color: var(--bs-primary);
 				}
 			}
 		}
@@ -174,7 +174,7 @@
 		float: left;
 		color: $body-color;
 		margin-left: 0.625rem;
-		font-size: 1.125rem;
+		margin-top: .375rem;
 	}
 	.iq-email-title {
 		color: $body-color;
@@ -219,7 +219,7 @@
 .iq-email-sender-list {
 	.iq-social-media {
 		position: absolute;
-		line-height: 3.875rem;
+		line-height: 3.5rem;
 		right: -14.688rem;
 		top: 0;
 		background: $white;
@@ -243,8 +243,8 @@
 				@if $enable-rounded == true {
 					@include radius-mixin($border-radius);
 				}
-				color: $primary;
-				background: rgba($primary,0.2);
+				color: var(--bs-primary);
+				background: rgba(var(--bs-primary-rgb),.2);;
 			}
 		}
 	}
@@ -361,13 +361,13 @@ button.close-popup {
 
 .nav-pills {
 	.nav-link.active {
-		color: $primary;
-		background: rgba($primary,0.2);
+		color: var(--bs-primary);
+		background: rgba(var(--bs-primary-rgb),.2);;
 	}
 	.show {
 		>.nav-link {
-			color: $primary;
-			background: rgba($primary,0.2);
+			color:var(--bs-primary);
+			background: rgba(var(--bs-primary-rgb),.2);;
 		}
 	}
 }

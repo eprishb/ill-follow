@@ -22,7 +22,7 @@ const Calendar =() =>{
                 <div id="content-page" className="content-page">
                     <Container>
                         <Row className="row-eq-height">
-                            <Col md="4" lg="3">
+                            <Col md="4" lg="4">
                                 <Card className="mt-3">
                                     <Card.Body>
                                         <div className="input-group">
@@ -36,17 +36,17 @@ const Calendar =() =>{
                                             <h4 className="card-title ">Classification</h4>
                                         </div>
                                         <div className="card-header-toolbar d-flex align-items-center">
-                                            <Link to="#">
-                                                <i className="fa fa-plus  mr-0" aria-hidden="true"></i>
+                                            <Link to="#" className="material-symbols-outlined">
+                                                add
                                             </Link>
                                         </div>
                                     </Card.Header>
                                     <Card.Body>
                                         <ul className="m-0 p-0 job-classification list-inline">
-                                            <li><i className="ri-check-line bg-danger"></i>Meeting</li>
-                                            <li><i className="ri-check-line bg-success"></i>Business travel</li>
-                                            <li><i className="ri-check-line bg-warning"></i>Personal Work</li>
-                                            <li><i className="ri-check-line bg-info"></i>Team Project</li>
+                                            <li className="d-flex align-items-center"><i className="material-symbols-outlined md-18 bg-primary">check_circle</i>Meeting</li>
+                                            <li className="d-flex align-items-center"><i className="material-symbols-outlined md-18 bg-success">check_circle</i>Business travel</li>
+                                            <li className="d-flex align-items-center"><i className="material-symbols-outlined md-18 bg-warning">check_circle</i>Personal Work</li>
+                                            <li className="d-flex align-items-center"><i className="material-symbols-outlined md-18 bg-info">check_circle</i>Team Project</li>
                                         </ul>
                                     </Card.Body>
                                 </Card>
@@ -60,7 +60,7 @@ const Calendar =() =>{
                                         <ul className="m-0 p-0 today-schedule">
                                             <li className="d-flex">
                                                 <div className="schedule-icon">
-                                                    <i className="ri-checkbox-blank-circle-fill text-primary"></i>
+                                                    <i className="material-symbols-outlined text-primary md-18">fiber_manual_record</i>
                                                 </div>
                                                 <div className="schedule-text"> 
                                                     <span>Web Design</span>
@@ -69,7 +69,7 @@ const Calendar =() =>{
                                             </li>
                                             <li className="d-flex">
                                                 <div className="schedule-icon">
-                                                    <i className="ri-checkbox-blank-circle-fill text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-18">fiber_manual_record</i>
                                                 </div>
                                                 <div className="schedule-text"> 
                                                     <span>Participate in Design</span>
@@ -80,15 +80,15 @@ const Calendar =() =>{
                                     </Card.Body>
                                 </Card>
                             </Col>
-                            <Col md="8" lg="9">
+                            <Col md="8" lg="8">
                                 <Card className="mt-3">
                                     <Card.Header className="d-flex justify-content-between flex-wrap">
                                         <div className="header-title">
                                             <h4 className="card-title">Book Appointment</h4>
                                         </div>
                                         <div className="card-header-toolbar d-flex align-items-center mt-1 mt-md-0">
-                                            <Link to="#" className="btn btn-primary">
-                                                <i className="ri-add-line mr-2"></i>Book Appointment
+                                            <Link to="#" className="btn btn-primary d-flex align-items-center">
+                                                <i className="material-symbols-outlined me-1 md-18">add</i>Book Appointment
                                             </Link>
                                         </div>
                                     </Card.Header>

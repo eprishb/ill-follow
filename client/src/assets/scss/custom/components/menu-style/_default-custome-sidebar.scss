@@ -1,0 +1,45 @@
+.sidebar-default.sidebar-custome {
+    .navbar-nav {
+        .static-item {
+            .mini-icon {
+                display: none;
+            }
+        }
+        .nav-item {
+            transition: color 400ms ease;
+            position: relative;
+            margin-top: 2px;
+            .nav-link {
+                text-transform: capitalize;
+                &:not(.disabled) {
+                    .right-icon {
+                        transition: all 100ms ease-in-out;
+                    }
+                    color: $gray-600;
+                    &.active,&[aria-expanded=true]{
+                        @include sidebar-item-color-varients($primary ,rgba($primary,.1));
+                        .right-icon {
+                            transition: all 100ms ease-in-out;
+                            transform: rotate(90deg);
+                        }
+                    }
+                    &.active{
+                        &[aria-expanded=false]{
+                            .right-icon {
+                                transition: all 100ms ease-in-out;
+                                transform: rotate(0deg);
+                            }
+                        }   
+                    }
+                    &:hover:not(.active):not([aria-expanded=true]) {
+                        @include sidebar-nav-item-hover($primary);
+                    }
+                }
+            }
+            .sub-nav {
+                list-style: none;
+                padding: 0;
+            }
+        }
+    }
+}

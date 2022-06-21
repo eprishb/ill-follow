@@ -1,7 +1,7 @@
-import {createStore, combineReducers} from 'redux'
-import Mode from './mode/mode'
-export default createStore(
-    combineReducers({
-        mode: Mode
-    })
-)
+import { configureStore } from "@reduxjs/toolkit";
+import settingReducer from "./setting/reducers";
+export const Store = configureStore({
+  reducer: {
+    setting: settingReducer,
+  },
+});

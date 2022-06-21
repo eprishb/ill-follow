@@ -52,8 +52,8 @@ const BlogGrid =()=>{
                                                         <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                                     </Link>
                                                 </div>                                 
-                                                <div className="comment">
-                                                    <i className="ri-chat-3-line me-2"></i>7 comments
+                                                <div className="comment d-flex align-items-center">
+                                                    <i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments
                                                 </div>
                                             </div>
                                         </div>
@@ -74,9 +74,9 @@ const BlogGrid =()=>{
                                     </div>
                                     <h5 className="mb-2">Containing coronavirus spread comes</h5>
                                     <div className="d-flex align-items-center justify-content-between position-right-side">
-                                        <div className="like"><i className="ri-thumb-up-line pe-2"></i>20 like</div>
-                                        <div className="comments"><i className="las la-comment-alt pe-2"></i>351 Comments</div>
-                                        <div className="share"><i className="ri-share-forward-line pe-2"></i>share</div>
+                                        <div className="like d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">thumb_up</i>20 like</div>
+                                        <div className="comments d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">chat_bubble_outline</i>351 Comments</div>
+                                        <div className="share d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">share</i>share</div>
                                     </div>
                                 </div>
                             </Card.Body>
@@ -94,9 +94,9 @@ const BlogGrid =()=>{
                                     </div>
                                     <h5 className="mb-2">Containing coronavirus spread comes</h5>
                                     <div className="d-flex align-items-center justify-content-between position-right-side">
-                                        <div className="like"><i className="ri-thumb-up-line pe-2"></i>20 like</div>
-                                        <div className="comments"><i className="las la-comment-alt pe-2"></i>351 Comments</div>
-                                        <div className="share"><i className="ri-share-forward-line pe-2"></i>share</div>
+                                        <div className="like d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">thumb_up</i>20 like</div>
+                                        <div className="comments d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">chat_bubble_outline</i>351 Comments</div>
+                                        <div className="share d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">share</i>share</div>
                                     </div>
                                 </div>
                             </Card.Body>
@@ -127,7 +127,7 @@ const BlogGrid =()=>{
                                                         <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                                     </Link>
                                                 </div>                                 
-                                                <div className="comment"><i className="ri-chat-3-line me-2"></i>7 comments</div>
+                                                <div className="comment"><i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments</div>
                                             </div>
                                         </div>
                                     </Col>
@@ -171,7 +171,7 @@ const BlogGrid =()=>{
                                                     </Link>
                                                 </div>                                 
                                                 <div className="comment">
-                                                    <i className="ri-chat-3-line me-2"></i>7 comments
+                                                <i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments
                                                 </div>
                                             </div>
                                         </div>
@@ -192,9 +192,9 @@ const BlogGrid =()=>{
                                     </div>
                                     <h5 className="mb-2">Containing coronavirus spread comes</h5>
                                     <div className="d-flex align-items-center justify-content-between position-right-side">
-                                        <div className="like"><i className="ri-thumb-up-line pe-2"></i>20 like</div>
-                                        <div className="comments"><i className="las la-comment-alt pe-2"></i>351 Comments</div>
-                                        <div className="share"><i className="ri-share-forward-line pe-2"></i>share</div>
+                                        <div className="like d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">thumb_up</i>20 like</div>
+                                        <div className="comments d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">chat_bubble_outline</i>351 Comments</div>
+                                        <div className="share d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">share</i>share</div>
                                     </div>
                                 </div>
                             </Card.Body>
@@ -212,9 +212,9 @@ const BlogGrid =()=>{
                                     </div>
                                     <h5 className="mb-2">Containing coronavirus spread comes</h5>
                                     <div className="d-flex align-items-center justify-content-between position-right-side">
-                                        <div className="like"><i className="ri-thumb-up-line pe-2"></i>20 like</div>
-                                        <div className="comments"><i className="las la-comment-alt pe-2"></i>351 Comments</div>
-                                        <div className="share"><i className="ri-share-forward-line pe-2"></i>share</div>
+                                        <div className="like d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">thumb_up</i>20 like</div>
+                                        <div className="comments d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">chat_bubble_outline</i>351 Comments</div>
+                                        <div className="share d-flex align-items-center"><i className="material-symbols-outlined pe-2 md-18">share</i>share</div>
                                     </div>
                                 </div>
                             </Card.Body>
@@ -245,7 +245,7 @@ const BlogGrid =()=>{
                                                         <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                                     </Link>
                                                 </div>                                 
-                                                <div className="comment"><i className="ri-chat-3-line me-2"></i>7 comments</div>
+                                                <div className="comment"><i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments</div>
                                             </div>
                                         </div>
                                     </Col>

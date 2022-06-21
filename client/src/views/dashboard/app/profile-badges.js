@@ -37,8 +37,16 @@ const ProfileBadges =() =>{
                                     <div className="position-relative">
                                         <img src={img1} alt="profile-bg" className="rounded img-fluid"/>
                                         <ul className="header-nav list-inline d-flex flex-wrap justify-end p-0 m-0">
-                                            <li><Link to="#"><i className="ri-pencil-line"></i></Link></li>
-                                            <li><Link to="#"><i className="ri-settings-4-line"></i></Link></li>
+                                            <li>
+                                                <Link to="#" className="material-symbols-outlined">
+                                                    edit
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to="#" className="material-symbols-outlined">
+                                                    settings
+                                                </Link>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div className="user-detail text-center mb-3">

@@ -24,6 +24,7 @@ import Faq from "../views/dashboard/extrapages/faq";
 import PrivacyPolicy from "../views/dashboard/extrapages/privacy-policy";
 import TermsofService from "../views/dashboard/extrapages/terms-of-service";
 import BlankPage from "../views/dashboard/extrapages/blankpage";
+import Admin from "../views/dashboard/app/admin";
 
 // error page
 import Error404 from "../views/dashboard/errors/error404";
@@ -57,15 +58,11 @@ const DefaultRouter = () => {
 
           {/* extrapages */}
           <Route path="pages-faq/" element={<Faq />} />
-          <Route
-            path="privacy-policy/"
-            element={<PrivacyPolicy />}
-          />
-          <Route
-            path="terms-of-service/"
-            element={<TermsofService />}
-          />
+          <Route path="privacy-policy/" element={<PrivacyPolicy />} />
+          <Route path="terms-of-service/" element={<TermsofService />} />
           <Route path="blankpage/" element={<BlankPage />} />
+          <Route path="admin/" element={<Admin />} />
+
           <Route path="*" element={<Error404 />}></Route>
         </Routes>
       </CSSTransition>

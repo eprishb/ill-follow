@@ -1,7 +1,5 @@
 
 .iq-top-navbar {
-	box-shadow:$box-shadow;
-	padding: 0 0.938rem;
 	position: sticky;
 	top: 0;
 	min-height: 4.563rem;
@@ -10,15 +8,12 @@
 	right: 0;
 	width: 100%;
 	display: inline-block;
-	z-index: $zindex-dropdown;
 	background: $white;
-	margin: 0;
+	z-index: 1000;
 	@if $enable-transitions == true {
 		@include transition-mixin(all 0.3s ease-in-out);
 	}	
-	@if $enable-shadows == true {
-		@include shadow-mixin($box-shadow);
-	}
+	@include shadow-mixin($box-shadow-inset);
 	.navbar-expand-lg {
 		justify-content: space-between !important;
 	}
@@ -63,8 +58,8 @@
 }
 .breadcrumb-item+.breadcrumb-item {
 	&::before {
-		content: "\ea5f";
-		font-family: 'remixicon';
+		content: "\e88a";
+		font-family: 'Material Design Icons';
 		font-size:$font-size-base;
 		vertical-align: sub;
 		color:$body-color;
@@ -73,6 +68,7 @@
 .navbar-list {
 	margin: 0;
 	padding: 0;
+	
 	li {
 		list-style-type: none;
 		position: relative;
@@ -97,7 +93,6 @@
 			font-size:1.125rem;
 			padding: 0 0.938rem;
 			line-height: 4.563rem;
-			color:$primary;
 			display: block;
 			min-height: 4.688rem;
 			>img {
@@ -128,7 +123,9 @@
 		}
 	}
 }
-
+.navbar-light .navbar-brand {
+    color: var(--bs-primary);
+}
 .iq-breadcrumb {
 	display: none;
 }
@@ -190,15 +187,14 @@
 	}
 }
 .iq-search-bar {
-	padding: 0 0.938rem;
 	.searchbox {
 		width: 30rem;
 		position: relative;
 		.search-link {
 			position: absolute;
-			right: 0.938rem;
-			top: 0px;
-			font-size: 1rem;
+			right: 0.6rem;
+			top: 0.5rem;
+			display: flex;
 		}
 	}
 	.search-input {
@@ -208,11 +204,10 @@
 		@include radius-mixin($border-radius);
 		border: none;
 		border: 1px solid $border-color;
-		background: rgba($primary, .2);
 	}
 }
 .iq-navbar-logo {
-	padding: 0;
+	padding: 1em;
 	width: auto;
 	position: relative;
 	background:$white;
@@ -369,69 +364,29 @@
 .members-search {
 	.searchbox {
 		.search-link {
-			top: 0.313rem;
+			top: 0.6rem;
 		}
 	}
 }
 @include media-breakpoint-down(xl) {
 	.iq-search-bar{
+		padding-left: 0rem;
 		.searchbox {
-			width: 21.875rem;
+			width: 15rem;
 		}
 	} 
 	.iq-top-navbar {
 		width: 100%;
 		left: 0;
 		right: 0;
+		margin-left: 0;
 		.iq-navbar-custom {
 			.navbar-breadcrumb {
 				display: none;
 			}
 		}
 	}
-	body.sidebar-main {
-		.iq-top-navbar {
-			width:100%;
-			right: 0;
-			.iq-sidebar-logo {
-				a {
-					span {
-						opacity: 1;
-						display: inline-block;
-					}
-				}
-			}
-		}
-		.iq-sidebar {
-			width: 16.25rem;
-			left: 0;
-			z-index: $zindex-dropdown;
-			top: 4.5rem;
-			.iq-sidebar-menu {
-				.iq-menu {
-					li {
-						a {
-							span {
-								display: inline-block;
-								opacity: 1;
-							}
-						}
-					}
-				}
-			}
-		}
-		.iq-sidebar-menu {
-			.iq-menu {
-				li {
-					a {
-						.iq-arrow-right {
-							display: inline-block;
-						}
-					}
-				}
-			}
-		}
-	}
+
 	.iq-top-navbar.fixed-header {
 		width: 100%;
 		left: 0;
@@ -446,23 +401,9 @@
 	}
 }
 @include media-breakpoint-down(lg) {
-	.navbar-nav.navbar-list {
-		flex-direction: row;
-	}
 	.iq-top-navbar {
 		.navbar {
 			position: relative;
-		}
-		.navbar-toggler {
-			position: static;
-			color:$primary;
-			background:rgba($primary, .2);
-			border: none;
-			padding: 0.313rem 0.625rem;
-			@if $enable-rounded == true {
-				@include radius-mixin($border-radius);
-			}
-			font-size: 1.5rem;
 		}
 		.iq-navbar-custom {
 			.iq-menu-bt {
@@ -483,29 +424,17 @@
 		}
 	}
 	.navbar-nav.navbar-list {
-		flex-direction: row;
+		flex-direction: column-reverse;
 	}
 
 	div.sidebar-toggle {
 		display: block;
 	}
-	.sidebar-toggle {
-		background:rgba($primary, .2);
-		padding: 0.938rem 0.625rem;
-		margin-right:0.938rem;
-		@if $enable-rounded == true {
-			@include radius-mixin($border-radius);
-		}
-		height: 2.5rem;
-		width: 2.5rem;
-		line-height: 1.063rem;
-		text-align: center;
-		color:$primary;
-	}
+
 	.navbar-list {
 		li {
 			.caption {
-				display: none;
+				margin-left: 1rem;
 			}
 			img {
 				margin-right: 0 !important;
@@ -516,8 +445,17 @@
 					padding-right: 0.938rem;
 				}
 			}
+			>a {
+				font-size: 1.125rem;
+				padding: 0.5rem 0rem;
+				line-height: 3rem;
+				display: block;
+				min-height: 0;
+				border-bottom: 1px solid $body-bg;
+			}
 		}
 	}
+	
 
 }
 @include media-breakpoint-down(md) {
@@ -536,7 +474,19 @@
 		margin-top: 0.813rem;
 	}
 	.navbar-nav.navbar-list {
-		flex-direction: row;
+		flex-direction: column;
+	}
+	.navbar-list {
+		li {
+			>a {
+				font-size: 1.125rem;
+				padding: 0.5rem 0rem;
+				line-height: 3rem;
+				display: block;
+				min-height: 0;
+				border-bottom: 1px solid $body-bg;
+			}
+		}
 	}
 	.iq-sub-card.iq-sub-card-big {
 		display: block !important;
@@ -560,19 +510,6 @@
 			}
 		}
 	}
-	body.sidebar-main {
-		.iq-top-navbar {
-			.iq-sidebar-logo {
-				a {
-					span {
-						opacity: 0;
-						display: none;
-					}
-				}
-			}
-		}
-	}
-	
 	.iq-search-bar {
 		padding: 0 0.938rem;
 		width: 100%;

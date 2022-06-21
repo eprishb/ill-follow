@@ -48,3 +48,12 @@ ul {
         }
     }
 }
+ul{
+    &.media-story{
+        li>{
+            i{
+                border-color: rgba($white,.1);
+            }
+        }
+    }
+}

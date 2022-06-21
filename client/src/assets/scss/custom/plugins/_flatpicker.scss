@@ -129,6 +129,16 @@
         display: none;
     }
 }
+.flatpickr-calendar.inline {
+    display: block;
+    position: relative;
+    top: 2px;
+    margin: 0 auto;
+    box-shadow: none;
+}
+.flatpickr-calendar{
+    box-shadow: none;
+}
 @media(max-width:1399px) {
 .flatpickr-calendar{
     width: 265px !important;
@@ -144,7 +154,7 @@
 }
 @media(max-width:1300px) {
     .flatpickr-calendar{
-        width: 300px !important;
+        width: 270px !important;
     }  
 }
 

@@ -153,8 +153,12 @@
     transition-duration: 580ms;
     -webkit-transition-duration: 580ms;
     -webkit-transform: translate3d(-50.86291px, 20.62064px, 0);
-    transform: translate3d(-50.86291px, 20.62064px, 0);
+    transform: translate3d(-8.86291px, 20.62064px, 0);
   }
+  .iq-float-menu-item.dropbtn.bg-warning {
+    transform: translate3d(39.13709px, 0.62064px, 0);
+    box-shadow: none;
+}
   
   .iq-float-menu-open:checked ~ .iq-float-menu-item:nth-child(4) {
     transition-duration: 480ms;
@@ -172,6 +176,6 @@
   }
 
 //   .iq-float-menu .iq-float-menu-open-button{box-shadow:  0px 2px 2px var(--iq-primary-shadow-1) , 0px 4px 8px var( --iq-primary-shadow-2);}
-.iq-float-menu .iq-float-menu-item.bg-info{ box-shadow: 0 2px 10px 0 #00cfde6e;}
-.iq-float-menu .iq-float-menu-item.bg-danger{box-shadow: 0 2px 10px 0 #ff292978;}
-.iq-float-menu .iq-float-menu-item.bg-warning{box-shadow: 0 2px 10px 0 #fad02e85;}
+.iq-float-menu .iq-float-menu-item.bg-info{ box-shadow: 0 2px 10px 0 rgba(0,207,222,18%)}
+.iq-float-menu .iq-float-menu-item.bg-danger{box-shadow: 0 2px 10px 0 rgba(255,41,41,18%)}
+.iq-float-menu .iq-float-menu-item.bg-warning{box-shadow: 0 2px 10px 0 rgba(250,208,46,18%)}

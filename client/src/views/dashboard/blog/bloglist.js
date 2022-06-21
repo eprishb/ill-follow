@@ -39,7 +39,7 @@ const BlogList = () => {
                                     </div>
                                  </div>
                                  <h5 className="mb-2">Containing coronavirus spread comes</h5>
-                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1">Read More <i className="ri-arrow-right-s-line"></i></Link>
+                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1" className="d-flex align-items-center">Read More <i className="material-symbols-outlined md-14 filled">arrow_forward_ios</i></Link>
                                  <div className="group-smile mt-4 d-flex flex-wrap align-items-center justify-content-between position-right-side">
                                     <div className="iq-media-group">
                                        <Link to="#" className="iq-media">
@@ -55,7 +55,7 @@ const BlogList = () => {
                                           <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                        </Link>
                                     </div>                                 
-                                    <div className="comment"><i className="ri-chat-3-line me-2"></i>7 comments</div>
+                                    <div className="comment d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments</div>
                                  </div>
                               </div>
                            </Col>
@@ -73,7 +73,7 @@ const BlogList = () => {
                                     <Link to="#" tabIndex="-1">4 Month ago</Link>
                                  </div>
                                  <h5 className="mb-2">Containing coronavirus spread comes</h5>
-                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1">Read More <i className="ri-arrow-right-s-line"></i></Link>
+                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1" className="d-flex align-items-center">Read More<i className="material-symbols-outlined md-14 filled">arrow_forward_ios</i></Link>
                                  <div className="group-smile mt-4 d-flex flex-wrap align-items-center justify-content-between position-right-side">
                                     <div className="iq-media-group">
                                        <Link to="#" className="iq-media">
@@ -89,7 +89,7 @@ const BlogList = () => {
                                           <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                        </Link>
                                     </div>                                 
-                                    <div className="comment"><i className="ri-chat-3-line me-2"></i>7 comments</div>
+                                    <div className="comment d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments</div>
                                  </div>
                               </div>
                            </Col>
@@ -118,7 +118,7 @@ const BlogList = () => {
                                     </div>
                                  </div>
                                  <h5 className="mb-2">Containing coronavirus spread comes</h5>
-                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1">Read More <i className="ri-arrow-right-s-line"></i></Link>
+                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1" className="d-flex align-items-center">Read More <i className="material-symbols-outlined md-14 filled">arrow_forward_ios</i></Link>
                                  <div className="group-smile mt-4 d-flex flex-wrap align-items-center justify-content-between position-right-side">
                                     <div className="iq-media-group">
                                        <Link to="#" className="iq-media">
@@ -134,8 +134,8 @@ const BlogList = () => {
                                           <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                        </Link>
                                     </div>                                 
-                                    <div className="comment">
-                                       <i className="ri-chat-3-line me-2"></i>7 comments
+                                    <div className="comment d-flex align-items-center">
+                                    <i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments
                                     </div>
                                  </div>
                               </div>
@@ -154,7 +154,7 @@ const BlogList = () => {
                                     <Link to="#" tabIndex="-1">4 Month ago</Link>
                                  </div>
                                  <h5 className="mb-2">Containing coronavirus spread comes</h5>
-                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1">Read More <i className="ri-arrow-right-s-line"></i></Link>
+                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1" className="d-flex align-items-center">Read More <i className="material-symbols-outlined md-14 filled">arrow_forward_ios</i></Link>
                                  <div className="group-smile mt-4 d-flex flex-wrap align-items-center justify-content-between position-right-side">
                                     <div className="iq-media-group">
                                        <Link to="#" className="iq-media">
@@ -170,7 +170,7 @@ const BlogList = () => {
                                           <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                        </Link>
                                     </div>                                 
-                                    <div className="comment"><i className="ri-chat-3-line me-2"></i>7 comments</div>
+                                    <div className="comment d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments</div>
                                  </div>
                               </div>
                            </Col>
@@ -201,7 +201,7 @@ const BlogList = () => {
                                     </div>
                                  </div>
                                  <h5 className="mb-2">Containing coronavirus spread comes</h5>
-                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1">Read More <i className="ri-arrow-right-s-line"></i></Link>
+                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1" className="d-flex align-items-center">Read More <i className="material-symbols-outlined md-14 filled">arrow_forward_ios</i></Link>
                                  <div className="group-smile mt-4 d-flex flex-wrap align-items-center justify-content-between position-right-side">
                                     <div className="iq-media-group">
                                        <Link to="#" className="iq-media">
@@ -217,7 +217,7 @@ const BlogList = () => {
                                           <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                        </Link>
                                     </div>                                 
-                                    <div className="comment"><i className="ri-chat-3-line me-2"></i>7 comments</div>
+                                    <div className="comment d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments</div>
                                  </div>
                               </div>
                            </Col>
@@ -235,7 +235,7 @@ const BlogList = () => {
                                     <Link to="#" tabIndex="-1">4 Month ago</Link>
                                  </div>
                                  <h5 className="mb-2">Containing coronavirus spread comes</h5>
-                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1">Read More <i className="ri-arrow-right-s-line"></i></Link>
+                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1" className="d-flex align-items-center">Read More <i className="material-symbols-outlined md-14 filled">arrow_forward_ios</i></Link>
                                  <div className="group-smile mt-4 d-flex flex-wrap align-items-center justify-content-between position-right-side">
                                     <div className="iq-media-group">
                                        <Link to="#" className="iq-media">
@@ -251,7 +251,7 @@ const BlogList = () => {
                                           <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                        </Link>
                                     </div>                                 
-                                    <div className="comment"><i className="ri-chat-3-line me-2"></i>7 comments</div>
+                                    <div className="comment d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments</div>
                                  </div>
                               </div>
                            </Col>
@@ -281,7 +281,7 @@ const BlogList = () => {
                                     </div>
                                  </div>
                                  <h5 className="mb-2">Containing coronavirus spread comes</h5>
-                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1">Read More <i className="ri-arrow-right-s-line"></i></Link>
+                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1" className="d-flex align-items-center">Read More <i className="material-symbols-outlined md-14 filled">arrow_forward_ios</i></Link>
                                  <div className="group-smile mt-4 d-flex flex-wrap align-items-center justify-content-between position-right-side">
                                     <div className="iq-media-group">
                                        <Link to="#" className="iq-media">
@@ -297,8 +297,8 @@ const BlogList = () => {
                                           <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                        </Link>
                                     </div>                                 
-                                    <div className="comment">
-                                       <i className="ri-chat-3-line me-2"></i>7 comments
+                                    <div className="comment d-flex align-items-center">
+                                    <i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments
                                     </div>
                                  </div>
                               </div>
@@ -317,7 +317,7 @@ const BlogList = () => {
                                     <Link to="#" tabIndex="-1">4 Month ago</Link>
                                  </div>
                                  <h5 className="mb-2">Containing coronavirus spread comes</h5>
-                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1">Read More <i className="ri-arrow-right-s-line"></i></Link>
+                                 <p>In the blogpost, the IMF experts observed, "Success in containing the virus comes at the price of slowing economic activity."</p> <Link to="#" tabIndex="-1" className="d-flex align-items-center">Read More <i className="material-symbols-outlined md-14 filled">arrow_forward_ios</i></Link>
                                  <div className="group-smile mt-4 d-flex flex-wrap align-items-center justify-content-between position-right-side">
                                     <div className="iq-media-group">
                                        <Link to="#" className="iq-media">
@@ -333,8 +333,8 @@ const BlogList = () => {
                                           <Image className="img-fluid rounded-circle" src={icon4} alt=""/>
                                        </Link>
                                     </div>                                 
-                                    <div className="comment">
-                                       <i className="ri-chat-3-line me-2"></i>7 comments
+                                    <div className="comment d-flex align-items-center">
+                                    <i className="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>7 comments
                                     </div>
                                  </div>
                               </div>

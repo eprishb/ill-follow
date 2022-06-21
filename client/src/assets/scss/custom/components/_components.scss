@@ -1,5 +1,7 @@
 // navbar
 @import "./navbar/top-navbar";
+@import "./navbar/navbar";
+@import "./navbar/nav-tabs";
 
 // Custom Card identify by card
 @import "./card/card";
@@ -95,8 +97,10 @@
 @import "./countdown/countdown";
 
 // Buttons
+@import "./button/border-btn";
 @import "./button/soft-btn";
 @import "./button/icon-btn";
+@import "./button/fixed-btn";
 @import "./floating/floating-btn";
 
 // weather
@@ -108,3 +112,12 @@
 
 //game
 @import "./game/game";
+
+//ui kit
+@import "./ui-kit/ui-kit";
+
+//menu style
+@import "./menu-style/index";
+
+//chart
+@import "./charts/admin";

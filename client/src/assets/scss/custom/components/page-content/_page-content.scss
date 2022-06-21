@@ -32,12 +32,13 @@
 		@if $enable-rounded == true {
 			@include radius-mixin(20px);
 		}
-	}
+
+    }
 }
 
 .content-page {
     overflow: hidden;
-    padding:1rem 1rem 0;
+    padding:1rem .5rem 0rem .5rem;
     min-height: 100vh;
 	@if $enable-transitions == true {
 		@include transition-mixin(all 0.3s ease-in-out);
@@ -64,15 +65,9 @@
 	}
     line-height: normal;
 }
-
-
-
-@include media-breakpoint-up(xl) {
-	 .container, .container-lg, .container-md, .container-sm, .container-xl { max-width: 62.5rem; }
-	// .container, .container-lg, .container-md, .container-sm, .container-xl { max-width: 75.5rem; }
-
+@media (min-width:1200px) {
+	.container, .container-lg, .container-md, .container-sm, .container-xl { max-width: 62.5rem; }
 }
-
 @include media-breakpoint-down(md) {
 	.iq-birthday-block .d-flex {
 		display: block !important;
@@ -85,4 +80,3 @@
 		width: auto;
 	}
 }
-	

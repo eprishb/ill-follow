@@ -13,7 +13,7 @@
 .nav-rounded{
     .nav-item{
         .nav-link{
-            padding: .5rem;
+            padding: 1rem;
             border-radius: 50rem;
         }
     }
@@ -26,8 +26,8 @@
 }
 .card{
     &.cardhover:hover{
-        border:2px solid $primary;
-        border-color:$primary;
+        border:2px solid var(--bs-primary);
+        border-color:var(--bs-primary);
         transition: all 150ms ease;
     }
 

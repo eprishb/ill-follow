@@ -36,18 +36,18 @@ li {
     &:hover {
         .iq-email-sender-info {
             .iq-email-title {
-                color: $primary;
+                color: var(--bs-primary);
             }
             .iq-star-toggle {
-                color: $primary;
+                color: var(--bs-primary);
             }
         }
         .iq-email-content {
             .iq-email-subject {
-                color: $primary;
+                color: var(--bs-primary);
             }
             .iq-email-date {
-                color: $primary;
+                color: var(--bs-primary);
             }
         } 
     }
@@ -59,7 +59,7 @@ li {
             color: $body-color;
 
             &:hover {
-                color: $primary;
+                color: var(--bs-primary);
             }
 		}
 	}

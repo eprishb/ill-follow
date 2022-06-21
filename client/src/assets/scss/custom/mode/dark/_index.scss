@@ -5,10 +5,12 @@
     @import "./menu-style/header";
     @import "./menu-style/right-sidebar";
     @import "./menu-style/sidebar";
+    @import "./menu-style/default-sidebar";
     @import "./menu-style/footer";
     @import "./components/alert/alert";
     @import "./components/button-group/button-group";
     @import "./components/button/soft-btn";
+    @import "./components/button/floating-button";
     @import "./components/dropdown/dropdown";
     @import "./components/form/form-control";
     @import "./components/group/group";
@@ -26,4 +28,7 @@
     @import "./components/store/checkout";
     @import "./components/popover/popover";
     @import "./components/loader/_loader.scss";
+    @import "./components/offcanvas/offcanvas";
+    @import "./components/navbar/navbar";
+ 
 }

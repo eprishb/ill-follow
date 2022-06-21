@@ -117,23 +117,23 @@ const EmailCompose = () => {
                                     <Form.Control as="textarea" className="textarea" rows={5} defaultValue="Next, use our Get Started docs to setup Tiny!"/>
                                 </Col>
                             </Row>
-                            <Form.Group className="form-group d-flex flex-wrap align-items-center justify-content-between mb-0">
+                            <Form.Group className="form-group d-flex justify-content-between align-items-center compose-bottom pt-3 m-0">
                                 <div className="d-flex flex-wrap flex-grow-1 align-items-center">
                                     <div className="send-btn pl-3 mb-2">
                                         <button type="button" className="btn btn-primary">Send</button>
                                     </div>
                                     <div className="send-panel mb-2">
-                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded" htmlFor="file"> <Form.Control type="file" id="file" style={{display: "none"}}/><Link to="#"> <i className="ri-attachment-line text-primary"></i></Link> </Form.Label>
-                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"> <Link to="#"> <i className="ri-map-pin-user-line text-primary"></i></Link>  </Form.Label>
-                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"> <Link to="#"> <i className="ri-drive-line text-primary"></i></Link>  </Form.Label>
-                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"> <Link to="#"> <i className="ri-camera-line text-primary"></i></Link>  </Form.Label>
-                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"> <Link to="#"> <i className="ri-user-smile-line text-primary"></i></Link>  </Form.Label>
+                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded" htmlFor="file"> <Form.Control type="file" id="file" style={{display: "none"}}/><Link to="#" className="material-symbols-outlined writ-icon text-primary">attachment</Link> </Form.Label>
+                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"> <Link to="#" className="material-symbols-outlined text-primary">place</Link></Form.Label>
+                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"> <Link to="#" className="material-symbols-outlined text-primary">add_to_drive</Link>  </Form.Label>
+                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"> <Link to="#" className="material-symbols-outlined text-primary">photo_camera</Link>  </Form.Label>
+                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"> <Link to="#" className="material-symbols-outlined text-primary">sentiment_satisfied</Link> </Form.Label>
                                     </div>
                                 </div>
                                 <div className="d-flex mr-3 align-items-center">
                                     <div className="send-panel float-right">
-                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded" ><Link to="#"><i className="ri-settings-2-line text-primary"></i></Link></Form.Label>
-                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"><Link to="#">  <i className="ri-delete-bin-line text-primary"></i></Link>  </Form.Label>
+                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded" ><Link to="#" className="material-symbols-outlined text-primary">settings</Link></Form.Label>
+                                        <Form.Label className="ms-2 mb-0 bg-soft-primary rounded"><Link to="#" className="material-symbols-outlined">delete</Link>  </Form.Label>
                                     </div>
                                 </div>
                             </Form.Group>

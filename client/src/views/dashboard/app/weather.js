@@ -107,49 +107,49 @@ const Weather = () => {
                                  <li className="text-center p-4">
                                     <p className="mb-0">Sunday</p>
                                     <div className="weather-icon mt-3 mb-3 font-size-20">
-                                       <i className="ri-snowy-line"></i>
+                                       <i className="material-symbols-outlined md-18">thunderstorm</i>
                                     </div>
                                     <p className="mb-0">13 °  7 °</p>
                                  </li>
                                  <li className="text-center p-4">
                                     <p className="mb-0">Monday</p>
                                     <div className="weather-icon mt-3 mb-3 font-size-20">
-                                       <i className="ri-snowy-line"></i>
+                                    <i className="material-symbols-outlined md-18">thunderstorm</i>
                                     </div>
                                     <p className="mb-0">11 ° 6 °</p>
                                  </li>
                                  <li className="text-center p-4">
                                     <p className="mb-0">Tuesday</p>
                                     <div className="weather-icon mt-3 mb-3 font-size-20">
-                                       <i className="ri-sun-cloudy-line"></i>
+                                       <i className="material-symbols-outlined md-18">filter_drama</i>
                                     </div>
                                     <p className="mb-0">12 °  8 °</p>
                                  </li>
                                  <li className="text-center p-4">
                                     <p className="mb-0">Wednesday</p>
                                     <div className="weather-icon mt-3 mb-3 font-size-20">
-                                       <i className="ri-showers-line"></i>
+                                       <i className="material-symbols-outlined md-18">thunderstorm</i>
                                     </div>
                                     <p className="mb-0">12 °  7 °</p>
                                  </li>
                                  <li className="text-center p-4">
                                     <p className="mb-0">Thursday</p>
                                     <div className="weather-icon mt-3 mb-3 font-size-20">
-                                       <i className="ri-sun-cloudy-line"></i>
+                                       <i className="material-symbols-outlined md-18">thunderstorm</i>
                                     </div>
                                     <p className="mb-0">11 °  6 °</p>
                                  </li>
                                  <li className="text-center p-4">
                                     <p className="mb-0">Fryday</p>
                                     <div className="weather-icon mt-3 mb-3 font-size-20">
-                                       <i className="ri-heavy-showers-line"></i>
+                                       <i className="material-symbols-outlined md-18">thunderstorm</i>
                                     </div>
                                     <p className="mb-0">11 °  8 °</p>
                                  </li>
                                  <li className="text-center p-4">
                                     <p className="mb-0">Satuarday</p>
                                     <div className="weather-icon mt-3 mb-3 font-size-20">
-                                       <i className="ri-sun-line"></i>
+                                       <i className="material-symbols-outlined md-18">light_mode</i>
                                     </div>
                                     <p className="mb-0">13 °  5 °</p>
                                  </li>

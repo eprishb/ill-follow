@@ -1,8 +1,8 @@
 .fc-unthemed {
 	.fc-toolbar {
 		.fc-button {
-			background: rgba($primary,0.2);
-			color:$primary;
+			background: rgba(var(--bs-primary-rgb), .2);
+			color:var(--bs-primary);
 			border: none;
 			text-transform: capitalize;
 			@if $enable-rounded == true {
@@ -10,16 +10,16 @@
             }
 			&:active {
 				color: $white;
-				background-color:$primary;
+				background-color:var(--bs-primary);
 			}
 			&:focus {
 				color: $white;
-				background-color:$primary;
+				background-color:var(--bs-primary);
 			}
 		}
 		.fc-button.fc-button-active {
 			color: $white;
-			background-color:$primary;
+			background-color:var(--bs-primary);
 		}
 	}
 }
@@ -68,17 +68,17 @@
 	}
 	.flatpickr-day.today {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 		&:hover {
 			color: $white;
-			border-color:$primary;
-			background:$primary;
+			border-color:var(--bs-primary);
+			background:var(--bs-primary);
 		}
 		&:focus {
 			color: $white;
-			border-color:$primary;
-			background:$primary;
+			border-color:var(--bs-primary);
+			background:var(--bs-primary);
 		}
 	}
 	.flatpickr-months {
@@ -95,7 +95,7 @@
 			font-size: 0.75rem;
 			&:hover {
 				background: transparent;
-				color:$primary;
+				color:var(--bs-primary);
 			}
 		}
 		input.cur-year {
@@ -112,157 +112,157 @@
 	}
 	.flatpickr-day.selected {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 		&:focus {
 			color: $white;
-			border-color:$primary;
-			background:$primary;
+			border-color:var(--bs-primary);
+			background:var(--bs-primary);
 		}
 		&:hover {
 			color: $white;
-			border-color:$primary;
-			background:$primary;
+			border-color:var(--bs-primary);
+			background:var(--bs-primary);
 		}
 	}
 	.flatpickr-day.startRange {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 		&:focus {
 			color: $white;
-			border-color:$primary;
-			background:$primary;
+			border-color:var(--bs-primary);
+			background:var(--bs-primary);
 		}
 		&:hover {
 			color: $white;
-			border-color:$primary;
-			background:$primary;
+			border-color:var(--bs-primary);
+			background:var(--bs-primary);
 		}
 	}
 	.flatpickr-day.endRange {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 		&:focus {
 			color: $white;
-			border-color:$primary;
-			background:$primary;
+			border-color:var(--bs-primary);
+			background:var(--bs-primary);
 		}
 		&:hover {
 			color: $white;
-			border-color:$primary;
-			background:$primary;
+			border-color:var(--bs-primary);
+			background:var(--bs-primary);
 		}
 	}
 	.flatpickr-day.selected.inRange {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.startRange.inRange {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.endRange.inRange {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.selected.prevMonthDay {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.startRange.prevMonthDay {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.endRange.prevMonthDay {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.selected.nextMonthDay {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.startRange.nextMonthDay {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.endRange.nextMonthDay {
 		color: $white;
-		border-color:$primary;
-		background:$primary;
+		border-color:var(--bs-primary);
+		background:var(--bs-primary);
 	}
 	.flatpickr-day.inRange {
-		background: rgba($primary,0.2);
-		color:$primary;
+		background: rgba(var(--bs-primary-rgb), .2);
+		color:var(--bs-primary);
 		border-color: transparent;
 	}
 	.flatpickr-day.prevMonthDay.inRange {
-		background: rgba($primary,0.2);
-		color:$primary;
+		background: rgba(var(--bs-primary-rgb), .2);
+		color:var(--bs-primary);
 		border-color: transparent;
 	}
 	.flatpickr-day.nextMonthDay.inRange {
-		background: rgba($primary,0.2);
-		color:$primary;
+		background: rgba(var(--bs-primary-rgb), .2);
+		color:var(--bs-primary);
 		border-color: transparent;
 	}
 	.flatpickr-day.today.inRange {
-		background: rgba($primary,0.2);
-		color:$primary;
+		background: rgba(var(--bs-primary-rgb), .2);
+		color:var(--bs-primary);
 		border-color: transparent;
 	}
 	.flatpickr-day.prevMonthDay.today.inRange {
-		background: rgba($primary,0.2);
-		color:$primary;
+		background: rgba(var(--bs-primary-rgb), .2);
+		color:var(--bs-primary);
 		border-color: transparent;
 	}
 	.flatpickr-day.nextMonthDay.today.inRange {
-		background: rgba($primary,0.2);
-		color:$primary;
+		background: rgba(var(--bs-primary-rgb), .2);
+		color:var(--bs-primary);
 		border-color: transparent;
 	}
 	.flatpickr-day {
 		&:hover {
-			background: rgba($primary,0.2);
-			color:$primary;
+			background: rgba(var(--bs-primary-rgb), .2);
+			color:var(--bs-primary);
 			border-color: transparent;
 		}
 		&:focus {
-			background: rgba($primary,0.2);
-			color:$primary;
+			background: rgba(var(--bs-primary-rgb), .2);
+			color:var(--bs-primary);
 			border-color: transparent;
 		}
 	}
 	.flatpickr-day.prevMonthDay {
 		&:hover {
-			background: rgba($primary,0.2);
-			color:$primary;
+			background: rgba(var(--bs-primary-rgb), .2);
+			color:var(--bs-primary);
 			border-color: transparent;
 		}
 		&:focus {
-			background: rgba($primary,0.2);
-			color:$primary;
+			background: rgba(var(--bs-primary-rgb), .2);
+			color:var(--bs-primary);
 			border-color: transparent;
 		}
 	}
 	.flatpickr-day.nextMonthDay {
 		&:hover {
-			background: rgba($primary,0.2);
-			color:$primary;
+			background: rgba(var(--bs-primary-rgb), .2);
+			color:var(--bs-primary);
 			border-color: transparent;
 		}
 		&:focus {
-			background: rgba($primary,0.2);
-			color:$primary;
+			background: rgba(var(--bs-primary-rgb), .2);
+			color:var(--bs-primary);
 			border-color: transparent;
 		}
 	}
@@ -280,128 +280,128 @@
 	.flatpickr-day.selected {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 		&:focus {
 			color: $white;
 			text-decoration: none;
-			background:$primary;
+			background:var(--bs-primary);
 			text-decoration: none;
-			border-color:$primary;
+			border-color:var(--bs-primary);
 		}
 		&:hover {
 			color: $white;
 			text-decoration: none;
-			background:$primary;
+			background:var(--bs-primary);
 			text-decoration: none;
-			border-color:$primary;
+			border-color:var(--bs-primary);
 		}
 	}
 	.flatpickr-day.startRange {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 		&:focus {
 			color: $white;
 			text-decoration: none;
-			background:$primary;
+			background:var(--bs-primary);
 			text-decoration: none;
-			border-color:$primary;
+			border-color:var(--bs-primary);
 		}
 		&:hover {
 			color: $white;
 			text-decoration: none;
-			background:$primary;
+			background:var(--bs-primary);
 			text-decoration: none;
-			border-color:$primary;
+			border-color:var(--bs-primary);
 		}
 	}
 	.flatpickr-day.endRange {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 		&:focus {
 			color: $white;
 			text-decoration: none;
-			background:$primary;
+			background:var(--bs-primary);
 			text-decoration: none;
-			border-color:$primary;
+			border-color:var(--bs-primary);
 		}
 		&:hover {
 			color: $white;
 			text-decoration: none;
-			background:$primary;
+			background:var(--bs-primary);
 			text-decoration: none;
-			border-color:$primary;
+			border-color:var(--bs-primary);
 		}
 	}
 	.flatpickr-day.selected.inRange {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-day.startRange.inRange {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-day.endRange.inRange {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-day.selected.prevMonthDay {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-day.startRange.prevMonthDay {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-day.endRange.prevMonthDay {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-day.selected.nextMonthDay {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-day.startRange.nextMonthDay {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-day.endRange.nextMonthDay {
 		color: $white;
 		text-decoration: none;
-		background:$primary;
+		background:var(--bs-primary);
 		text-decoration: none;
-		border-color:$primary;
+		border-color:var(--bs-primary);
 	}
 	.flatpickr-days {
 		width: 100%;

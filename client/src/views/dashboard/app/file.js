@@ -23,8 +23,8 @@ const File = () => {
                                 </div>
                                 <div className="card-header-toolbar d-flex align-items-center">
                                     <Dropdown>
-                                        <Dropdown.Toggle as="span" className="dropdown-btoggle text-primary" id="dropdownMenuButton5" data-bs-toggle="dropdown">
-                                            <i className="ri-more-2-fill h4"></i>
+                                        <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                            more_horiz
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu className="dropdown-menu-right" aria-labelledby="dropdownMenuButton5">
                                             <Dropdown.Item href="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -100,12 +100,16 @@ const File = () => {
                                                     <div className="flex align-items-center list-user-action">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Download</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-download-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    file_download
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Delete</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-delete-bin-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    delete
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                     </div>
@@ -131,10 +135,18 @@ const File = () => {
                                                 <td>
                                                     <div className="flex align-items-center list-user-action">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Download</Tooltip>}>
-                                                            <Link to="#"><i className="ri-download-line"></i></Link>
+                                                            <Link to="#">
+                                                                <i className="material-symbols-outlined">
+                                                                    file_download
+                                                                </i>
+                                                            </Link>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Delete</Tooltip>}>
-                                                            <Link to="#"><i className="ri-delete-bin-line"></i></Link>
+                                                            <Link to="#">
+                                                                <i className="material-symbols-outlined">
+                                                                    delete
+                                                                </i>
+                                                            </Link>
                                                         </OverlayTrigger>
                                                     </div>
                                                 </td>
@@ -160,12 +172,16 @@ const File = () => {
                                                     <div className="flex align-items-center list-user-action">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Download</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-download-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    file_download
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Delete</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-delete-bin-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    delete
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                     </div>
@@ -192,12 +208,16 @@ const File = () => {
                                                     <div className="flex align-items-center list-user-action">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Download</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-download-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    file_download
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Delete</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-delete-bin-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    delete
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                     </div>
@@ -224,12 +244,16 @@ const File = () => {
                                                     <div className="flex align-items-center list-user-action">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Download</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-download-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    file_download
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Delete</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-delete-bin-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    delete
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                     </div>
@@ -256,12 +280,16 @@ const File = () => {
                                                     <div className="flex align-items-center list-user-action">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Download</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-download-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    file_download
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Delete</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-delete-bin-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    delete
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                     </div>
@@ -288,12 +316,16 @@ const File = () => {
                                                     <div className="flex align-items-center list-user-action">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Download</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-download-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    file_download
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Delete</Tooltip>}>
                                                             <Link to="#">
-                                                                <i className="ri-delete-bin-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    delete
+                                                                </i>
                                                             </Link>
                                                         </OverlayTrigger>
                                                     </div>

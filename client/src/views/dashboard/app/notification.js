@@ -43,12 +43,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-primary rounded">
-                                          <i className="ri-award-line"></i>
+                                       <i className="material-symbols-outlined md-18">
+                                          military_tech
+                                       </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -81,12 +83,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-danger rounded">
-                                          <i className="ri-heart-line"></i>
+                                       <i className="material-symbols-outlined md-18">
+                                          favorite_border
+                                       </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -119,12 +123,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-primary rounded">
-                                          <i className="ri-award-line"></i>
+                                          <i className="material-symbols-outlined md-18">
+                                             military_tech
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -157,12 +163,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-success rounded">
-                                          <i className="ri-chat-4-line"></i>
+                                          <i className="material-symbols-outlined md-16">
+                                             chat_bubble_outline
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -195,12 +203,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-success rounded">
-                                          <i className="ri-chat-4-line"></i>
+                                          <i className="material-symbols-outlined md-16">
+                                             chat_bubble_outline
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -233,12 +243,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-warning rounded">
-                                          <i className="ri-reply-line"></i>
+                                       <i className="material-symbols-outlined md-18">
+                                          reply
+                                       </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -271,12 +283,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-info rounded">
-                                          <i className="ri-share-line"></i>
+                                       <i className="material-symbols-outlined md-18">
+                                          share
+                                       </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -309,12 +323,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-danger rounded">
-                                          <i className="las la-birthday-cake"></i>
+                                          <i className="material-symbols-outlined md-18">
+                                              cake
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -347,12 +363,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-warning rounded">
-                                          <i className="ri-reply-line"></i>
+                                          <i className="material-symbols-outlined md-18">
+                                             reply
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -385,12 +403,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-danger rounded">
-                                          <i className="ri-heart-line"></i>
+                                          <i className="material-symbols-outlined md-18">
+                                             favorite_border
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -423,12 +443,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-info rounded">
-                                          <i className="ri-share-line"></i>
+                                       <i className="material-symbols-outlined md-18">
+                                          share
+                                       </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -461,12 +483,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-primary rounded">
-                                          <i className="ri-award-line"></i>
+                                          <i className="material-symbols-outlined md-18">
+                                             military_tech
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -499,12 +523,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-success rounded">
-                                          <i className="ri-chat-4-line"></i>
+                                          <i className="material-symbols-outlined md-16">
+                                             chat_bubble_outline
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -537,12 +563,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-success rounded">
-                                          <i className="ri-chat-4-line"></i>
+                                          <i className="material-symbols-outlined md-16">
+                                             chat_bubble_outline
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>
@@ -575,12 +603,14 @@ const Notification = () => {
                                     </div>
                                     <div className="d-flex align-items-center">
                                        <Link to="#" className="me-3 iq-notify bg-soft-primary rounded">
-                                          <i className="ri-award-line"></i>
+                                          <i className="material-symbols-outlined md-18 ">
+                                             military_tech
+                                          </i>
                                        </Link>
                                        <div className="card-header-toolbar d-flex align-items-center">
                                           <Dropdown>
-                                             <Dropdown.Toggle as="span" className="dropdown-toggle" data-bs-toggle="dropdown">
-                                                <i className="ri-more-fill h4"></i>
+                                             <Dropdown.Toggle as="span" className="material-symbols-outlined">
+                                                more_horiz
                                              </Dropdown.Toggle>
                                              <Dropdown.Menu className="dropdown-menu-right">
                                                 <Dropdown.Item to="#"><i className="ri-eye-fill me-2"></i>View</Dropdown.Item>

@@ -32,57 +32,57 @@ const Pricing = () => {
                                             <tr>
                                                 <th className="text-center" scope="row">Email support</th>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th className="text-center" scope="row">UI Kit</th>
                                                 <td className="text-center"></td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th className="text-center" scope="row">100% support</th>
                                                 <td className="text-center"></td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th className="text-center" scope="row">Advance form</th>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -91,7 +91,7 @@ const Pricing = () => {
                                                 <td className="text-center"></td>
                                                 <td className="text-center"></td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -99,10 +99,10 @@ const Pricing = () => {
                                                 <td className="text-center"></td>
                                                 <td className="text-center"></td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                                 <td className="text-center">
-                                                    <i className="ri-check-line ri-2x text-success"></i>
+                                                    <i className="material-symbols-outlined text-success md-32">check</i>
                                                 </td>
                                             </tr>
                                             <tr>

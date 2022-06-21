@@ -8,6 +8,18 @@
 .dropdown-item {
   padding: .45rem 1.5rem;
 }
+.dropdown-item.active {
+	color: $white;
+	text-decoration:none;
+	background-color:rgba(var(--bs-primary-rgb), .2);
+}
+.dropdown-item {
+	&:active {
+		color: $white;
+		text-decoration: none;
+		background-color:rgba(var(--bs-primary-rgb), .2);
+	}
+}
 
 @keyframes fade {
     0% { 
@@ -135,12 +147,12 @@
 			}
 		}
 		>.dropdown-menu {
-			background-color:$primary;
+			background-color:var(--bs-primary);
 			>a {
 				color:$white;
 				padding:0.125rem 0.625rem;
 				&:hover{
-					color: $primary;
+					color: var(--bs-primary);
 				}
 				&:focus{
 					background-color:$white !important;
@@ -166,12 +178,12 @@
 			}
 		}
 		>.dropdown-menu {
-			background-color:$primary;
+			background-color:var(--bs-primary);
 			>a {
 				color:$white;
 				padding:0.125rem 0.625rem;
 				&:hover{
-					color: $primary;
+					color: var(--bs-primary);
 				}
 				&:focus{
 					background-color:$white !important;
@@ -223,7 +235,7 @@
 .comment-block {
 	&:hover {
 		a {
-			color: $primary;
+			color: var(--bs-primary);
 			@if $enable-transitions == true {
 				@include transition-mixin(all 0.45s ease-in-out);
 			}
@@ -235,7 +247,7 @@
 		color: $secondary;
 		cursor: pointer;
 		&:hover {
-			color: $primary;
+			color: var(--bs-primary);
 		}
 	}
 }

@@ -36,25 +36,25 @@ const Email = () => {
                                 <Card.Body>
                                     <div>
                                         <div className="iq-email-list">
-                                            <Button variant="primary" className="btn-lg btn-block mb-3 p-2 w-100" data-target="#compose-email-popup" data-toggle="modal"><i className="ri-send-plane-line me-2"></i>New Message</Button>
+                                            <Button variant="primary" className="btn-lg btn-block mb-3 p-2 w-100 d-flex align-items-center" data-target="#compose-email-popup" data-toggle="modal"><i className="material-symbols-outlined me-2 writ-icon">send</i>New Message</Button>
                                             <Nav variant="pills" className="iq-email-ui nav flex-column ">
-                                                <Nav.Link  role="button" eventKey="first"  to="#mail-inbox"><div className="d-flex align-items-center justify-content-between"><span><i className="ri-mail-line"></i>Inbox</span><span className="badge bg-primary ms-2">4</span></div></Nav.Link>
-                                                <Nav.Link  role="button" eventKey="second" to="#mail-starred"><i className="ri-star-line"></i>Starred</Nav.Link>
-                                                <Nav.Link  role="button" eventKey="third" to="#mail-snoozed"><i className="ri-time-line"></i>Snoozed</Nav.Link>
-                                                <Nav.Link  role="button" eventKey="forth" to="#mail-draft"><i className="ri-file-list-2-line"></i>Draft</Nav.Link>
-                                                <Nav.Link  role="button" eventKey="fifth" to="#mail-sent"><i className="ri-mail-send-line"></i>Sent Mail</Nav.Link>
-                                                <Nav.Link  role="button" eventKey="six" to="#mail-trash"><i className="ri-delete-bin-line"></i>Trash</Nav.Link>
-                                                <Nav.Link  role="button" eventKey="seven" to="#mail-important"><i className="ri-bookmark-line"></i>Important</Nav.Link>
-                                                <Nav.Link  role="button" eventKey="eight" to="#mail-spam"><i className="ri-spam-line"></i>Spam</Nav.Link>
+                                                <Nav.Link  role="button" eventKey="first"  to="#mail-inbox"><div className="d-flex align-items-center justify-content-between"><span className="d-flex align-items-center"><i className="material-symbols-outlined md-18">mail</i>Inbox</span><span className="badge bg-primary ms-2">4</span></div></Nav.Link>
+                                                <Nav.Link  role="button" eventKey="second" to="#mail-starred" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">star_border</i>Starred</Nav.Link>
+                                                <Nav.Link  role="button" eventKey="third" to="#mail-snoozed" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">watch_later</i>Snoozed</Nav.Link>
+                                                <Nav.Link  role="button" eventKey="forth" to="#mail-draft" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">article</i>Draft</Nav.Link>
+                                                <Nav.Link  role="button" eventKey="fifth" to="#mail-sent" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">forward_to_inbox</i>Sent Mail</Nav.Link>
+                                                <Nav.Link  role="button" eventKey="six" to="#mail-trash" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">delete_outline</i>Trash</Nav.Link>
+                                                <Nav.Link  role="button" eventKey="seven" to="#mail-important" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">turned_in_not</i>Important</Nav.Link>
+                                                <Nav.Link  role="button" eventKey="eight" to="#mail-spam" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">report_gmailerrorred</i>Spam</Nav.Link>
                                             </Nav>
                                             <h6 className="mt-4 mb-3">Labels</h6>
                                             <ul className="iq-email-ui iq-email-label list-inline p-0 m-0">
-                                                <li><Link to="#"><i className="ri-focus-fill text-primary"></i>Personal</Link></li>
-                                                <li><Link to="#"><i className="ri-focus-fill text-danger"></i>Company</Link></li>
-                                                <li><Link to="#"><i className="ri-focus-fill text-success"></i>Important</Link></li>
-                                                <li><Link to="#"><i className="ri-focus-fill text-info"></i>Private</Link></li>
-                                                <li><Link to="#"><i className="ri-focus-fill text-warning"></i>Private</Link></li>
-                                                <li><Link to="#"><i className="ri-add-circle-line"></i>Add New Labels</Link></li>
+                                                <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18 text-primary">trip_origin</i>Personal</Link></li>
+                                                <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18 text-danger">trip_origin</i>Company</Link></li>
+                                                <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18 text-success">trip_origin</i>Important</Link></li>
+                                                <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18 text-info">trip_origin</i>Private</Link></li>
+                                                <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18 text-warning">trip_origin</i>Private</Link></li>
+                                                <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">add_circle_outline</i>Add New Labels</Link></li>
                                             </ul>
                                             <div className="iq-progress-bar-linear d-inline-block w-100">
                                                 <h6 className="mt-4 mb-3">Storage</h6>
@@ -81,7 +81,7 @@ const Email = () => {
                                                                 <Form.Check className="d-flex align-items-center form-check">
                                                                     <Form.Check.Input type="checkbox" className="form-check-input" id="customCheck1"/>
                                                                     <Form.Check.Label className="form-check-label" htmlFor="customCheck1">
-                                                                        <i className="ri-arrow-down-s-line"></i>
+                                                                        <i className="material-symbols-outlined">expand_more</i>
                                                                     </Form.Check.Label>
                                                                 </Form.Check>
                                                             </Dropdown.Toggle>
@@ -94,27 +94,27 @@ const Email = () => {
                                                     </li>
                                                     <li className="me-1">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Reload</Tooltip>} >
-                                                            <Link to="#"><i className="ri-restart-line"></i></Link>
+                                                            <Link to="#" className="d-flex align-items-center justify-content-center"><i className="material-symbols-outlined md-16">refresh</i></Link>
                                                         </OverlayTrigger>
                                                     </li>
                                                     <li className="me-1">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Archive</Tooltip>} className="me-1">
-                                                            <Link to="#"><i className="ri-mail-open-line"></i></Link>
+                                                            <Link to="#" className="d-flex align-items-center justify-content-center"><i className="material-symbols-outlined md-16">drafts</i></Link>
                                                         </OverlayTrigger>
                                                     </li>
                                                     <li className="me-1">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Delete</Tooltip>} className="me-1">
-                                                            <Link to="#"><i className="ri-delete-bin-line"></i></Link>
+                                                            <Link to="#" className="d-flex align-items-center justify-content-center"><i className="material-symbols-outlined md-16">delete</i></Link>
                                                         </OverlayTrigger>
                                                     </li>
                                                     <li className="me-1">
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Inbox</Tooltip>} className="me-1">
-                                                            <Link to="#"><i className="ri-mail-unread-line"></i></Link>
+                                                            <Link to="#" className="d-flex align-items-center justify-content-center"><i className="material-symbols-outlined md-16">mark_email_unread</i></Link>
                                                         </OverlayTrigger>
                                                     </li>
                                                     <li>
                                                         <OverlayTrigger placement="top" overlay={<Tooltip>Zoom</Tooltip>} >
-                                                            <Link to="#"><i className="ri-drag-move-2-line"></i></Link>
+                                                            <Link to="#" className="d-flex align-items-center justify-content-center"><i className="material-symbols-outlined md-16">zoom_out_map</i></Link>
                                                         </OverlayTrigger>
                                                     </li>
                                                 </ul>
@@ -138,17 +138,17 @@ const Email = () => {
                                                         </li>
                                                         <li className="me-1" >
                                                             <OverlayTrigger placement="top" overlay={<Tooltip>Previous</Tooltip>} className="me-1">
-                                                                <Link to="#"><i className="ri-arrow-left-s-line"></i></Link>
+                                                                <Link to="#" className="d-flex align-items-center justify-content-center"><i className="material-symbols-outlined">keyboard_arrow_left</i></Link>
                                                             </OverlayTrigger>
                                                         </li>
                                                         <li className="me-1" >
                                                             <OverlayTrigger placement="top" overlay={<Tooltip>Next</Tooltip>} className="me-1">
-                                                                <Link to="#"><i className="ri-arrow-right-s-line"></i></Link>
+                                                                <Link to="#" className="d-flex align-items-center justify-content-center"><i className="material-symbols-outlined">keyboard_arrow_right</i></Link>
                                                             </OverlayTrigger>
                                                         </li>
                                                         <li className="me-0" >
                                                             <OverlayTrigger placement="top" overlay={<Tooltip>Setting</Tooltip>} className="me-1">
-                                                                <Link to="#"><i className="ri-list-settings-line"></i></Link>
+                                                                <Link to="#" className="d-flex align-items-center justify-content-center"><i className="material-symbols-outlined">settings</i></Link>
                                                             </OverlayTrigger>
                                                         </li>
                                                     </ul>
@@ -168,7 +168,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle text-warning"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle text-warning md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -180,10 +180,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">08:00 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div> 
                                                         <EmailAppDetail  show={show1 === '1' ? 'true' : ''} onclick={setShow1} />
@@ -197,7 +197,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk1"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Deray Billings (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -209,10 +209,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">08:15 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show2 === '2' ? 'true' : ''} onclick={setShow2} />
@@ -226,7 +226,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk2"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Lauren Drury (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -238,10 +238,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show3 === '3' ? 'true' : ''} onclick={setShow3} />
@@ -255,7 +255,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk3"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -267,10 +267,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show4 === '4' ? 'true' : ''} onclick={setShow4} />
@@ -284,7 +284,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk4"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -296,10 +296,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show5 === '5' ? 'true' : ''} onclick={setShow5} />
@@ -313,7 +313,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk017"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle text-warning"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20 text-warning">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -325,10 +325,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show6 === '6' ? 'true' : ''} onclick={setShow6} />
@@ -342,7 +342,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk6"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -354,10 +354,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show7 === '7' ? 'true' : ''} onclick={setShow7} />
@@ -371,7 +371,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk7"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Deray Billings (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -383,10 +383,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show8 === '8' ? 'true' : ''} onclick={setShow8} />
@@ -400,7 +400,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk8"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle text-warning"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20 text-warning">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Lauren Drury (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -412,10 +412,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show9 === '9' ? 'true' : ''} onclick={setShow9} />
@@ -429,7 +429,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk9"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -441,10 +441,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show10 === '10' ? 'true' : ''} onclick={setShow10} />
@@ -458,7 +458,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk011"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -470,10 +470,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show11 === '11' ?  'true' : ''} onclick={setShow11} />
@@ -487,7 +487,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk11"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -499,10 +499,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show12 === '12' ? 'true' : ''} onclick={setShow12} />
@@ -516,7 +516,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk12"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -528,10 +528,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show13 === '13' ? 'true' : ''} onclick={setShow13} />
@@ -545,7 +545,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk13"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Deray Billings (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -557,10 +557,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show14 === '14' ? 'true' : ''} onclick={setShow14} />
@@ -574,7 +574,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk14"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Lauren Drury (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -586,10 +586,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show15 === '15' ? 'true' : ''} onclick={setShow15} />
@@ -603,7 +603,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk15"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -615,10 +615,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>                                    
                                                         <EmailAppDetail  show={show16 === '16' ? 'true' : ''} onclick={setShow16} />
@@ -632,7 +632,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk16"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -644,10 +644,10 @@ const Email = () => {
                                                             <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>                                    
                                                         <EmailAppDetail  show={show17 === '17' ? 'true' : ''} onclick={setShow17} />
@@ -661,7 +661,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk17"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -673,10 +673,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show18 === '18' ? 'true' : ''} onclick={setShow18} />
@@ -694,7 +694,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk02"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Lauren Drury (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -706,10 +706,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -723,7 +723,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk03"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -735,10 +735,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -752,7 +752,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk04"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -764,10 +764,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -781,7 +781,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk5"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle text-warning"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20 text-warning">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -793,10 +793,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -810,7 +810,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk018"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -822,10 +822,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -843,7 +843,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk004"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -855,10 +855,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -872,7 +872,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk012"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle text-warning"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20 text-warning">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -884,10 +884,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -901,7 +901,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk024"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -913,10 +913,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -934,7 +934,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk09"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -946,10 +946,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -963,7 +963,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk013"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -975,10 +975,10 @@ const Email = () => {
                                                             <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -992,7 +992,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk014"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1004,10 +1004,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1021,7 +1021,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk019"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1033,10 +1033,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1050,7 +1050,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk025"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Deray Billings (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1062,10 +1062,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1083,7 +1083,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk015"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1095,10 +1095,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1112,7 +1112,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk020"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1124,10 +1124,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1141,7 +1141,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk026"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Deray Billings (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1153,10 +1153,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1170,7 +1170,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk027"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Lauren Drury (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1182,10 +1182,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1199,7 +1199,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk032"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1211,10 +1211,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1228,7 +1228,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk037"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1240,10 +1240,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1261,7 +1261,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk028"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Lauren Drury (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1273,10 +1273,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1290,7 +1290,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk033"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1302,10 +1302,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1319,7 +1319,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk038"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1331,10 +1331,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1352,7 +1352,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk029"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1364,10 +1364,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1381,7 +1381,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk034"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Deray Billings (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1393,10 +1393,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1410,7 +1410,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk035"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle text-warning"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20 text-warning">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Lauren Drury (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1422,10 +1422,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1439,7 +1439,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk009"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1451,10 +1451,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1468,7 +1468,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk010"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1480,10 +1480,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#"><i className="material-symbols-outlined">delete_forever</i></Link></li>
+                                                                <li><Link to="#"><i className="material-symbols-outlined">mail_outline</i></Link></li>
+                                                                <li><Link to="#"><i className="material-symbols-outlined">article</i></Link></li>
+                                                                <li><Link to="#"><i className="material-symbols-outlined">watch_later</i></Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1497,7 +1497,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk016"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1509,10 +1509,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1530,7 +1530,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk021"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Jopour Xiong (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1542,10 +1542,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1559,7 +1559,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk023"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Deray Billings (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1570,10 +1570,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1587,7 +1587,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk030"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Lauren Drury (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1598,10 +1598,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1615,7 +1615,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk031"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Fabian Ros (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1626,10 +1626,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1643,7 +1643,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk036"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Dixa Horton (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1655,10 +1655,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />
@@ -1672,7 +1672,7 @@ const Email = () => {
                                                                         <Form.Check.Label className="form-check-label" htmlFor="mailk040"></Form.Check.Label>
                                                                     </Form.Check>
                                                                 </div>
-                                                                <span className="ri-star-line iq-star-toggle"></span>
+                                                                <span className="material-symbols-outlined iq-star-toggle md-20">star_border</span>
                                                                 <Link to="#" className="iq-email-title">Megan Allen (Me)</Link>
                                                             </div>
                                                             <div className="iq-email-content">
@@ -1684,10 +1684,10 @@ const Email = () => {
                                                                 <div className="iq-email-date">11:49 am</div>
                                                             </div>
                                                             <ul className="iq-social-media list-inline">
-                                                                <li><Link to="#"><i className="ri-delete-bin-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-mail-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-file-list-2-line"></i></Link></li>
-                                                                <li><Link to="#"><i className="ri-time-line"></i></Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">delete_forever</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">mail_outline</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">article</Link></li>
+                                                                <li><Link to="#" className="material-symbols-outlined">watch_later</Link></li>
                                                             </ul>
                                                         </div>
                                                         <EmailAppDetail  show={show} onclick={setShow} />

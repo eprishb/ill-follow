@@ -5,9 +5,7 @@
     @import "../../../bootstrap/utilities/api";
 
     //menu
-    @import "./menu-style/header";
-    @import "./menu-style/right-sidebar";
-    @import "./menu-style/sidebar";
+    @import "./menu-style/index";
 
     //pages
     @import "./pages/footer";
@@ -34,6 +32,7 @@
     @import "./components/group/group";
     @import "./components/form/form-control";
     @import "./components/button-group/button-group";
+    @import "./components/button-group/btn-fixed";
     @import "./components/form/form-wizard";
 
 }

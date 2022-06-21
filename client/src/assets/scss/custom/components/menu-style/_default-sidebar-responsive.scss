@@ -1,0 +1,9 @@
+@include media-breakpoint-down(xl) {
+    .sidebar {
+        &.sidebar-default {
+            &.sidebar-mini {
+                transform: translateX(-102%);
+            }
+        }
+    }
+}

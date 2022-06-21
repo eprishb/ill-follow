@@ -13,8 +13,8 @@
 	box-shadow:$box-shadow;
 	position: fixed;
 	z-index: $zindex-dropdown;
-	top: 4.688rem;
-	width: 250px;
+	// top: 4.688rem;
+	width: 16.2rem;
 	height: 100%;
 	background: $white;
 	@if $enable-transitions == true {
@@ -246,7 +246,7 @@
 	position: relative;
 }
 
-body.sidebar-main {
+.sidebar-main {
 	.iq-sidebar {
 		.iq-menu {
 			li {
@@ -314,7 +314,7 @@ body.sidebar-main {
 		}
 	}
 }
-body.sidebar-main {
+.sidebar-main {
 	.iq-menu-bt-sidebar {
 		.iq-menu-bt {
 			@include opacity-mixin(1);
@@ -345,9 +345,11 @@ body.sidebar-main {
 		@include transition-mixin(all 0.3s ease-in-out);
 	}
 }
-
+// .sidebar-mini{
+// 	background-color: $dark !important;
+// }
 @media (min-width:1500px) {
-	body.sidebar-main {
+	.sidebar-main {
 		.iq-sidebar {
 			width: 80px;
 			.iq-sidebar-menu {
@@ -363,6 +365,11 @@ body.sidebar-main {
 							}
 						}
 					}
+				}
+			}
+			.iq-navbar-logo{
+				span{
+					display: none;
 				}
 			}
 		}
@@ -391,7 +398,7 @@ body.sidebar-main {
 					}
 				}
 			}
-		}
+		}		
 	}
 	.sidebar-main {
 		.iq-sidebar {
@@ -409,7 +416,7 @@ body.sidebar-main {
 	.iq-sidebar {
 		width: 80px;
 	}
-	body.sidebar-main {
+	.sidebar-main {
 		.iq-sidebar {
 			width: 250px;
 			.iq-sidebar-menu {
@@ -524,7 +531,7 @@ body.sidebar-main {
 		z-index: 99;
 		left: -260px;
 	}
-	body.sidebar-main {
+	.sidebar-main {
 		.iq-sidebar {
 			width: 260px;
 			left: 0;

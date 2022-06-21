@@ -27,44 +27,63 @@ const Todo = () => {
                                 <div className="iq-todo-page">
                                     <Form className="position-relative">
                                         <Form.Group className="form-group mb-0">
-                                        <Form.Control type="text" className="form-control todo-search" id="exampleInputEmail002"  placeholder="Search"/>
-                                        <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
+                                            <Form.Control type="text" className="form-control todo-search" id="exampleInputEmail002"  placeholder="Search"/>
+                                            <Link className="search-link" to="#">
+                                                <span className="material-symbols-outlined lh-1">
+                                                    search
+                                                </span>
+                                            </Link>
                                         </Form.Group>
                                     </Form>
-                                    <div className="add-new-project mt-3 mb-3">
-                                        <Link to="#" className="d-block nrw-project"><i className="ri-add-line me-2"></i>add Project</Link>
+                                    <div className="add-new-project mt-3 mb-3 d-flex align-items-center">
+                                        <Link to="#" className="d-block nrw-project d-flex align-items-center"><i className="material-symbols-outlined me-2">add</i>add Project</Link>
                                     </div>
                                     <ul className="todo-task-list p-0 m-0">
                                         <li>
-                                        <Link to="#"  onClick={() => setOpen1(!open1)} aria-controls="example-collapse-text" aria-expanded={open1}  ><i className="ri-stack-fill me-2"></i> Secrat Project</Link>
-                                        <Collapse in={open1}>
-                                        <ul id="todotask1-collapse" to="#todotask1" className="sub-task   mt-2 p-0">
-                                            <li className="active"><Link to="#"><i className="ri-checkbox-blank-circle-fill text-success"></i> All Task </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-warning"></i> People </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-danger"></i> Files <span className="badge bg-danger float-end">44</span> </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-primary"></i> Statistics </Link></li>
-                                        </ul>
-                                        </Collapse>
+                                            <Link to="/dashboard/app/todo" onClick={() => setOpen1(!open1)} className="d-flex align-items-center">
+                                                <i className="material-symbols-outlined md-14 me-2">
+                                                    filter_none
+                                                </i> 
+                                                    Secrat Project
+                                            </Link>
+                                            <Collapse in={open1}>
+                                                <ul id="todotask1-collapse" to="#todotask1" className="sub-task   mt-2 p-0">
+                                                    <li className="active"><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-primary md-18 me-1">fiber_manual_record </i> All Task </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-warning md-18 me-1"> fiber_manual_record </i> People </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center justify-content-between"><div className="d-flex align-items-center"><i className="material-symbols-outlined text-danger md-18 me-1">fiber_manual_record</i> Files </div><span className="badge bg-danger float-end">44</span> </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-primary md-18 me-1">fiber_manual_record</i> Statistics </Link></li>
+                                                </ul>
+                                            </Collapse>
                                         </li>
                                         <li>
-                                        <Link to="#" onClick={() => setOpen2(!open2)} aria-controls="example-collapse-text" aria-expanded={open1}><i className="ri-stack-fill me-2"></i> Bnie Mobile App</Link>
-                                        <Collapse in={open2}>
-                                        <ul id="todotask2-collapse" to="#todotask2" className="sub-task  mt-2 p-0">
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-success"></i> All Task </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-warning"></i> People </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-danger"></i> Files <span className="badge bg-danger float-end">20</span> </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-primary"></i> Statistics </Link></li>
-                                        </ul>
-                                        </Collapse>
+                                            <Link to="#" className="d-flex align-items-center" onClick={() => setOpen2(!open2)} aria-controls="example-collapse-text" aria-expanded={open1}>
+                                                <i className="material-symbols-outlined md-14 me-2">
+                                                    filter_none
+                                                </i> 
+                                                    Bnie Mobile App
+                                            </Link>
+                                            <Collapse in={open2}>
+                                                <ul id="todotask2-collapse" to="#todotask2" className="sub-task  mt-2 p-0">
+                                                    <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-primary md-18 me-1">fiber_manual_record </i> All Task </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-warning md-18 me-1"> fiber_manual_record </i> People </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center justify-content-between"><div className="d-flex align-items-center"><i className="material-symbols-outlined text-danger md-18 me-1">fiber_manual_record</i> Files </div><span className="badge bg-danger float-end">20</span> </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-primary md-18 me-1">fiber_manual_record</i> Statistics </Link></li>
+                                                </ul>
+                                            </Collapse>
                                         </li>
                                         <li>
-                                        <Link to="#" onClick={() => setOpen3(!open3)} aria-controls="example-collapse-text" aria-expanded={open1}><i className="ri-stack-fill me-2"></i> New Portfolio Site</Link>
+                                        <Link to="#" className="d-flex align-items-center" onClick={() => setOpen3(!open3)} aria-controls="example-collapse-text" aria-expanded={open1}>
+                                            <i className="material-symbols-outlined md-14 me-2">
+                                                filter_none
+                                            </i>
+                                             New Portfolio Site
+                                            </Link>
                                         <Collapse in={open3}>
                                         <ul id="todotask3-collapse" to="#todo-task3" className="sub-task  mt-2 p-0">
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-success"></i> All Task </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-warning"></i> People </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-danger"></i> Files <span className="badge bg-danger float-end">10</span> </Link></li>
-                                            <li><Link to="#"><i className="ri-checkbox-blank-circle-fill text-primary"></i> Statistics </Link></li>
+                                        <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-primary md-18 me-1">fiber_manual_record </i> All Task </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-warning md-18 me-1"> fiber_manual_record </i> People </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center justify-content-between"><div className="d-flex align-items-center"><i className="material-symbols-outlined text-danger md-18 me-1">fiber_manual_record</i> Files </div><span className="badge bg-danger float-end">10</span> </Link></li>
+                                                    <li><Link to="#" className="d-flex align-items-center"><i className="material-symbols-outlined text-primary md-18 me-1">fiber_manual_record</i> Statistics </Link></li>
                                         </ul>
                                         </Collapse>
 
@@ -86,7 +105,7 @@ const Todo = () => {
                                             </div>
                                             <div className="todo-notification d-flex align-items-center  mt-2 mt-md-0">
                                                 <div className="notification-icon position-relative d-flex align-items-center me-3">
-                                                    <Link to="#"><i className="ri-notification-3-line"></i></Link>
+                                                    <Link to="#" className="material-symbols-outlined md-18">notifications</Link>
                                                     <span className="bg-danger text-white">5</span>
                                                 </div>
                                                 <button type="button" className="btn bg-soft-success">Add Task</button>
@@ -247,8 +266,12 @@ const Todo = () => {
                                         <div className="iq-todo-right">
                                             <Form className="position-relative">
                                                 <Form.Group className="form-group mb-0">
-                                                    <Form.Control type="text" className="form-control todo-search" id="exampleInputEmail001" placeholder="Search"/>
-                                                    <Link className="search-link" to="#"><i className="ri-search-line"></i></Link>
+                                                    <Form.Control type="text" className="form-control todo-search" id="exampleInputEmail002"  placeholder="Search"/>
+                                                    <Link className="search-link" to="#">
+                                                        <span className="material-symbols-outlined lh-1">
+                                                            search
+                                                        </span>
+                                                    </Link>
                                                 </Form.Group>
                                             </Form>
                                             <div className="iq-todo-friendlist mt-3">
@@ -264,13 +287,13 @@ const Todo = () => {
                                                             </div>
                                                             <div className="card-header-toolbar d-flex align-items-center">
                                                                 <Dropdown>
-                                                                    <Dropdown.Toggle as="span"className="dropdown-toggle text-primary" id="dropdownMenuButton41" data-bs-toggle="dropdown">
-                                                                        <i className="ri-more-2-line h4"></i>
+                                                                    <Dropdown.Toggle as="span">
+                                                                        <i className="material-symbols-outlined md-18">more_vert</i>
                                                                     </Dropdown.Toggle>
                                                                     <Dropdown.Menu className="dropdown-menu-right">
-                                                                        <Dropdown.Item href="#"><i className="ri-user-unfollow-line me-2"></i>Unfollow</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-close-circle-line me-2"></i>Unfriend</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-lock-line me-2"></i>block</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">person</i>Unfollow</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">cancel</i>Unfriend</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">lock</i>block</Dropdown.Item>
                                                                     </Dropdown.Menu>
                                                                 </Dropdown>
                                                             </div>
@@ -287,13 +310,13 @@ const Todo = () => {
                                                             </div>
                                                             <div className="card-header-toolbar d-flex align-items-center">
                                                                 <Dropdown>
-                                                                    <Dropdown.Toggle as="span" className="dropdown-toggle text-primary" id="dropdownMenuButton42" data-bs-toggle="dropdown">
-                                                                        <i className="ri-more-2-line h4"></i>
+                                                                    <Dropdown.Toggle as="span">
+                                                                        <i className="material-symbols-outlined md-18">more_vert</i>
                                                                     </Dropdown.Toggle>
-                                                                    <Dropdown.Menu className="dropdown-menu dropdown-menu-right">
-                                                                        <Dropdown.Item href="#"><i className="ri-user-unfollow-line me-2"></i>Unfollow</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-close-circle-line me-2"></i>Unfriend</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-lock-line me-2"></i>block</Dropdown.Item>
+                                                                    <Dropdown.Menu className="dropdown-menu-right">
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">person</i>Unfollow</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">cancel</i>Unfriend</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">lock</i>block</Dropdown.Item>
                                                                     </Dropdown.Menu>
                                                                 </Dropdown>
                                                             </div>
@@ -310,13 +333,13 @@ const Todo = () => {
                                                             </div>
                                                             <div className="card-header-toolbar d-flex align-items-center">
                                                                 <Dropdown>
-                                                                    <Dropdown.Toggle as="span" className="dropdown-toggle text-primary" id="dropdownMenuButton43" data-bs-toggle="dropdown">
-                                                                        <i className="ri-more-2-line h4"></i>
+                                                                    <Dropdown.Toggle as="span">
+                                                                        <i className="material-symbols-outlined md-18">more_vert</i>
                                                                     </Dropdown.Toggle>
                                                                     <Dropdown.Menu className="dropdown-menu-right">
-                                                                        <Dropdown.Item href="#"><i className="ri-user-unfollow-line me-2"></i>Unfollow</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-close-circle-line me-2"></i>Unfriend</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-lock-line me-2"></i>block</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">person</i>Unfollow</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">cancel</i>Unfriend</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">lock</i>block</Dropdown.Item>
                                                                     </Dropdown.Menu>
                                                                 </Dropdown>
                                                             </div>
@@ -333,13 +356,13 @@ const Todo = () => {
                                                             </div>
                                                             <div className="card-header-toolbar d-flex align-items-center">
                                                                 <Dropdown>
-                                                                    <Dropdown.Toggle as="span" className="dropdown-toggle text-primary" id="dropdownMenuButton44" data-bs-toggle="dropdown">
-                                                                        <i className="ri-more-2-line h4"></i>
+                                                                    <Dropdown.Toggle as="span">
+                                                                        <i className="material-symbols-outlined md-18">more_vert</i>
                                                                     </Dropdown.Toggle>
                                                                     <Dropdown.Menu className="dropdown-menu-right">
-                                                                        <Dropdown.Item href="#"><i className="ri-user-unfollow-line me-2"></i>Unfollow</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-close-circle-line me-2"></i>Unfriend</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-lock-line me-2"></i>block</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">person</i>Unfollow</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">cancel</i>Unfriend</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">lock</i>block</Dropdown.Item>
                                                                     </Dropdown.Menu>
                                                                 </Dropdown>
                                                             </div>
@@ -356,13 +379,13 @@ const Todo = () => {
                                                             </div>
                                                             <div className="card-header-toolbar d-flex align-items-center">
                                                                 <Dropdown>
-                                                                    <Dropdown.Toggle as="span" className="dropdown-toggle text-primary" id="dropdownMenuButton45" data-bs-toggle="dropdown">
-                                                                        <i className="ri-more-2-line h4"></i>
+                                                                    <Dropdown.Toggle as="span">
+                                                                        <i className="material-symbols-outlined md-18">more_vert</i>
                                                                     </Dropdown.Toggle>
                                                                     <Dropdown.Menu className="dropdown-menu-right">
-                                                                        <Dropdown.Item href="#"><i className="ri-user-unfollow-line me-2"></i>Unfollow</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-close-circle-line me-2"></i>Unfriend</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-lock-line me-2"></i>block</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">person</i>Unfollow</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">cancel</i>Unfriend</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">lock</i>block</Dropdown.Item>
                                                                     </Dropdown.Menu>
                                                                 </Dropdown>
                                                             </div>
@@ -379,13 +402,13 @@ const Todo = () => {
                                                             </div>
                                                             <div className="card-header-toolbar d-flex align-items-center">
                                                                 <Dropdown>
-                                                                    <Dropdown.Toggle as="span" className="dropdown-toggle text-primary" id="dropdownMenuButton46" data-bs-toggle="dropdown">
-                                                                        <i className="ri-more-2-line h4"></i>
+                                                                    <Dropdown.Toggle as="span">
+                                                                        <i className="material-symbols-outlined md-18">more_vert</i>
                                                                     </Dropdown.Toggle>
                                                                     <Dropdown.Menu className="dropdown-menu-right">
-                                                                        <Dropdown.Item href="#"><i className="ri-user-unfollow-line me-2"></i>Unfollow</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-close-circle-line me-2"></i>Unfriend</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-lock-line me-2"></i>block</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">person</i>Unfollow</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">cancel</i>Unfriend</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">lock</i>block</Dropdown.Item>
                                                                     </Dropdown.Menu>
                                                                 </Dropdown>
                                                             </div>
@@ -402,13 +425,13 @@ const Todo = () => {
                                                             </div>
                                                             <div className="card-header-toolbar d-flex align-items-center">
                                                                 <Dropdown>
-                                                                    <Dropdown.Toggle as="span" className="dropdown-toggle text-primary" id="dropdownMenuButton47" data-bs-toggle="dropdown">
-                                                                        <i className="ri-more-2-line h4"></i>
+                                                                    <Dropdown.Toggle as="span">
+                                                                        <i className="material-symbols-outlined md-18">more_vert</i>
                                                                     </Dropdown.Toggle>
                                                                     <Dropdown.Menu className="dropdown-menu-right">
-                                                                        <Dropdown.Item href="#"><i className="ri-user-unfollow-line me-2"></i>Unfollow</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-close-circle-line me-2"></i>Unfriend</Dropdown.Item>
-                                                                        <Dropdown.Item href="#"><i className="ri-lock-line me-2"></i>block</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined md-18">person</i>Unfollow</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">cancel</i>Unfriend</Dropdown.Item>
+                                                                        <Dropdown.Item href="#" className="d-flex align-items-center"><i className="material-symbols-outlined me-2 md-18">lock</i>block</Dropdown.Item>
                                                                     </Dropdown.Menu>
                                                                 </Dropdown>
                                                             </div>

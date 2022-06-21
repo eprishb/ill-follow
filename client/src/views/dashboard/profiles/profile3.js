@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
-import { Container,Row,Col,Nav,Tab, Dropdown } from 'react-bootstrap'
+import { Container,Row,Col,Nav,Tab, Dropdown, Modal, Button} from 'react-bootstrap'
 import Card from '../../../components/Card'
+import CustomToggle from '../../../components/dropdowns'
+import FsLightbox from 'fslightbox-react';
 
 import imgpp1 from '../../../assets/images/page-img/profile-bg1.jpg'
 import imgpp2 from '../../../assets/images/user/11.png'
@@ -22,10 +24,6 @@ import imgpp16 from '../../../assets/images/user/15.jpg'
 import imgpp17 from '../../../assets/images/user/16.jpg'
 import imgpp18 from '../../../assets/images/user/17.jpg'
 import imgpp19 from '../../../assets/images/user/18.jpg'
-import imgpp20 from '../../../assets/images/user/1.jpg'
-import imgpp21 from '../../../assets/images/small/07.png'
-import imgpp22 from '../../../assets/images/small/08.png'
-import imgpp23 from '../../../assets/images/small/09.png'
 import imgpp24 from '../../../assets/images/user/05.jpg'
 import imgpp25 from '../../../assets/images/user/06.jpg'
 import imgpp26 from '../../../assets/images/user/07.jpg'
@@ -46,6 +44,19 @@ import imgpp40 from '../../../assets/images/icon/10.png'
 import imgpp41 from '../../../assets/images/icon/11.png'
 import imgpp42 from '../../../assets/images/icon/12.png'
 import imgpp43 from '../../../assets/images/icon/13.png'
+import user9 from '../../../assets/images/user/1.jpg'
+import small1 from '../../../assets/images/small/07.png'
+import small2 from '../../../assets/images/small/08.png'
+import small3 from '../../../assets/images/small/09.png'
+import small4 from '../../../assets/images/small/10.png'
+import small5 from '../../../assets/images/small/11.png'
+import small6 from '../../../assets/images/small/12.png'
+import small7 from '../../../assets/images/small/13.png'
+import small8 from '../../../assets/images/small/14.png'
+import user1 from '../../../assets/images/user/1.jpg'
+import small07 from '../../../assets/images/small/07.png'
+import small08 from '../../../assets/images/small/08.png'
+import small09 from '../../../assets/images/small/09.png'
 
 // sweet-alert
 import Swal from 'sweetalert2'
@@ -53,6 +64,10 @@ import Swal from 'sweetalert2'
 
 
 const Profile3=()=>{
+    const [show, setShow] = useState(false);
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
+
     const questionAlert = () => {
         const swalWithBootstrapButtons = Swal.mixin({
           customClass: {
@@ -109,9 +124,27 @@ const Profile3=()=>{
           }
         })
       }
-      
+
+    // fsLightbox
+    const [imageController, setImageController] = useState({
+        toggler: false,
+        slide: 1
+    });
+    
+    function imageOnSlide(number) {
+        setImageController({
+        toggler: !imageController.toggler,
+        slide: number
+        }); 
+    }
+
     return(
         <>
+            <FsLightbox
+                toggler={imageController.toggler}
+                sources={[imgpp5,imgpp6,imgpp7,imgpp8,imgpp9,imgpp10,imgpp11,imgpp12,imgpp13]}
+                slide={imageController.slide}
+            />
         <Container>
         <Row>
             <Col sm="12">
@@ -119,14 +152,14 @@ const Profile3=()=>{
             <Card.Body className="profile-page p-0">
                <div className="profile-header">
                   <div className="position-relative">
-                     <img src={imgpp1} alt="profile-bg" className="rounded img-fluid"/>
+                     <img loading="lazy" src={imgpp1} alt="profile-bg" className="rounded img-fluid"/>
                      <ul className="header-nav list-inline d-flex flex-wrap justify-end p-0 m-0">
                         <li><Link to="#"><i className="ri-pencil-line"></i></Link></li>
                      </ul>
                   </div>
                   <div className="user-detail text-center mb-3">
                      <div className="profile-img">
-                        <img src={imgpp2} alt="profile-img" className="avatar-130 img-fluid"/>
+                        <img loading="lazy" src={imgpp2} alt="profile-img" className="avatar-130 img-fluid"/>
                      </div>
                      <div className="profile-detail">
                         <h3 className="">Bni Cyst</h3>
@@ -136,22 +169,22 @@ const Profile3=()=>{
                      <div className="social-links">
                         <ul className="social-data-block d-flex align-items-center justify-content-between list-inline p-0 m-0">
                            <li className="text-center pe-3">
-                              <Link to="#"><img src={imgpp38} className="img-fluid rounded" alt="facebook"/></Link>
+                              <Link to="#"><img loading="lazy" src={imgpp38} className="img-fluid rounded" alt="facebook"/></Link>
                            </li>
                            <li className="text-center pe-3">
-                              <Link to="#"><img src={imgpp39} className="img-fluid rounded" alt="Twitter"/></Link>
+                              <Link to="#"><img loading="lazy" src={imgpp39} className="img-fluid rounded" alt="Twitter"/></Link>
                            </li>
                            <li className="text-center pe-3">
-                              <Link to="#"><img src={imgpp40} className="img-fluid rounded" alt="Instagram"/></Link>
+                              <Link to="#"><img loading="lazy" src={imgpp40} className="img-fluid rounded" alt="Instagram"/></Link>
                            </li>
                            <li className="text-center pe-3">
-                              <Link to="#"><img src={imgpp41} className="img-fluid rounded" alt="Google plus"/></Link>
+                              <Link to="#"><img loading="lazy" src={imgpp41} className="img-fluid rounded" alt="Google plus"/></Link>
                            </li>
                            <li className="text-center pe-3">
-                              <Link to="#"><img src={imgpp42} className="img-fluid rounded" alt="You tube"/></Link>
+                              <Link to="#"><img loading="lazy" src={imgpp42} className="img-fluid rounded" alt="You tube"/></Link>
                            </li>
                            <li className="text-center md-pe-3 pe-0">
-                              <Link to="#"><img src={imgpp43} className="img-fluid rounded" alt="linkedin"/></Link>
+                              <Link to="#"><img loading="lazy" src={imgpp43} className="img-fluid rounded" alt="linkedin"/></Link>
                            </li>
                         </ul>
                      </div>
@@ -178,292 +211,427 @@ const Profile3=()=>{
          </Card>
             </Col>
         </Row>
-        <Tab.Container defaultActiveKey="f1">
-        <Row>
-        
-            <Col className="col-md-6 col-lg-6">
-                <Nav variant="tabs" className=" tab-nav-pane  mb-0">
-                <Nav.Item as="li" className="pb-0 mb-0"><Nav.Link eventKey="f1" data-bs-toggle="tab" className="font-weight-bold text-uppercase ms-3" data-bs-target="#Posts" href="#Posts">Posts</Nav.Link></Nav.Item>
-                <Nav.Item as="li" className="pb-0 mb-0"><Nav.Link eventKey="f2" data-bs-toggle="tab" className="font-weight-bold text-uppercase ms-3" data-bs-target="#Abouts" href="#Abouts">About</Nav.Link></Nav.Item>
-                <Nav.Item as="li" className="pb-0 mb-0"><Nav.Link eventKey="f3" data-bs-toggle="tab" className="font-weight-bold text-uppercase ms-3" data-bs-target="#Friends" href="#Friends">Friends</Nav.Link></Nav.Item>
-                <Nav.Item as="li" className="pb-0 mb-0"><Nav.Link eventKey="f4" data-bs-toggle="tab" className="font-weight-bold text-uppercase ms-3" data-bs-target="#Photos" href="#Photos">Photos</Nav.Link></Nav.Item>
-                </Nav>
+        <Row className="mt-1">
+            <Col lg="4" md="4">
+                <Card>
+                    <Card.Body className="p-0">
+                        <div className="user-tabing">
+                            <Tab.Container defaultActiveKey="f1"> 
+                                <Nav  variant="pills" className="d-flex align-items-center justify-content-center profile-feed-items p-0 m-0">
+                                    <Col sm="3" as="li" className="nav-item col-12 p-0">
+                                        <Nav.Link eventKey="f1" href="#Posts">Posts</Nav.Link>
+                                    </Col>
+                                    <Col sm="3" as="li" className="nav-item col-12 p-0">
+                                        <Nav.Link eventKey="f2" href="#Abouts">About</Nav.Link>
+                                    </Col>
+                                    <Col sm="3" as="li" className="nav-item col-12 p-0">
+                                        <Nav.Link eventKey="f3" href="#Friends">Friends</Nav.Link>
+                                    </Col>
+                                    <Col sm="3" as="li" className="nav-item col-12 p-0">
+                                        <Nav.Link eventKey="f4" href="#Photos">Photos</Nav.Link>
+                                    </Col>
+                                </Nav>
+                                <Tab.Content>              
+                                    <Tab.Pane eventKey="f1" className="fade show" id="Posts" role="tabpanel">
+                                        <Card>
+                                            <Card.Body>
+                                                <h5>Intro</h5>
+                                                <span><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" trokelinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg><span className="ms-2">Joined August 2012</span></span>
+                                                <div className="mt-2">
+                                                <div className="d-grid gap-2">
+                                                        <button className="btn btn-primary" type="button">Edit Details</button>
+                                                        <button className="btn btn-primary" type="button">Add Hobbies</button>
+                                                        <button className="btn btn-primary" type="button">Add Featured</button>
+                                                    </div>
+                                                </div>
+                                            </Card.Body>
+                                        </Card>
+                                        <Card>
+                                        <div className="card-header d-flex justify-content-between">
+                                            <div className="header-title">
+                                                <h4 className="card-title">Life Event</h4>
+                                            </div>
+                                            <div className="card-header-toolbar d-flex align-items-center">
+                                                <p className="m-0"><Link to="javacsript:void();"> Create </Link></p>
+                                            </div>
+                                        </div>
+                                        <Card.Body>
+                                            <Row>
+                                                <Col sm="12">
+                                                    <div className="event-post position-relative">
+                                                    <Link to="#"><img loading="lazy" src={imgpp3} alt="gallary-img" className="img-fluid rounded"/></Link>
+                                                    <div className="job-icon-position">
+                                                        <div className="job-icon bg-primary p-2 d-inline-block rounded-circle material-symbols-outlined text-white">
+                                                            local_mall
+                                                        </div>
+                                                    </div>
+                                                    <div className="card-body text-center p-2">
+                                                        <h5>Started New Job at Apple</h5>
+                                                        <p>January 24, 2019</p>
+                                                    </div>
+                                                    </div>
+                                                </Col>
+                                                <Col sm="12">
+                                                    <div className="event-post position-relative">
+                                                    <Link to="#"><img loading="lazy" src={imgpp4} alt="gallary-img" className="img-fluid rounded"/></Link>
+                                                    <div className="job-icon-position">
+                                                        <div className="job-icon bg-primary p-2 d-inline-block rounded-circle material-symbols-outlined text-white">
+                                                            local_mall
+                                                        </div>
+                                                    </div>
+                                                    <div className="card-body text-center p-2">
+                                                        <h5>Freelance Photographer</h5>
+                                                        <p className="mb-0">January 24, 2019</p>
+                                                    </div>
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                        </Card.Body>
+                                        </Card>
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="f2" className="fade show" id="Photos" role="tabpanel">
+                                        <Card>
+                                            <Card.Body>
+                                                <h4>Contact Information</h4>
+                                                <hr/>
+                                                <Row>
+                                                    <Col className="col-3">
+                                                    <h6>Email</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">Bnijohn@gmail.com</p>
+                                                    </Col>
+                                                    <Col className="col-3">
+                                                    <h6>Mobile</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">(001) 4544 565 456</p>
+                                                    </Col>
+                                                    <Col className="col-3">
+                                                    <h6>Address</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">United States of America</p>
+                                                    </Col>
+                                                </Row>
+                                                <h4 className="mt-3">Websites and Social Links</h4>
+                                                <hr/>
+                                                <Row>
+                                                    <Col className="col-3">
+                                                    <h6>Website</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">www.bootstrap.com</p>
+                                                    </Col>
+                                                    <Col className="col-3">
+                                                    <h6>Social Link</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">www.bootstrap.com</p>
+                                                    </Col>
+                                                </Row>
+                                                <hr/>
+                                                <h4 className="mt-3">Basic Information</h4>
+                                                <hr/>
+                                                <Row>
+                                                    <Col className="col-3">
+                                                    <h6>Birth Date</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">24 January</p>
+                                                    </Col>
+                                                    <Col className="col-3">
+                                                    <h6>Birth Year</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">1994</p>
+                                                    </Col>
+                                                    <Col className="col-3">
+                                                    <h6>Gender</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">Female</p>
+                                                    </Col>
+                                                    <Col className="col-3">
+                                                    <h6>interested in</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">Designing</p>
+                                                    </Col>
+                                                    <Col className="col-3">
+                                                    <h6>language</h6>
+                                                    </Col>
+                                                    <Col className="col-9">
+                                                    <p className="mb-0">English, French</p>
+                                                    </Col>
+                                                </Row>
+                                            </Card.Body>
+                                        </Card>
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="f3" className="fade show" id="Abouts" role="tabpanel">
+                                        <Card>
+                                            <Card.Body>
+                                                <ul className="request-list list-inline m-0 p-0">
+                                                    <li className="d-flex align-items-center  flex-wrap">
+                                                        <div className="user-img img-fluid flex-shrink-0">
+                                                        <img loading="lazy" src={imgpp14} alt="story-img" className="rounded-circle avatar-40"/>
+                                                        </div>
+                                                        <div className="flex-grow-1 ms-3">
+                                                            <h6>Paul Misunday</h6>
+                                                            <p className="mb-0">6  friends</p>
+                                                        </div>
+                                                        <div className="d-flex align-items-center mt-2 mt-md-0">
+                                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
+                                                                                                
+                                                        </div>
+                                                    </li>
+                                                    <li className="d-flex align-items-center  flex-wrap">
+                                                        <div className="user-img img-fluid flex-shrink-0">
+                                                        <img loading="lazy" src={imgpp15} alt="story-img" className="rounded-circle avatar-40"/>
+                                                        </div>
+                                                        <div className="flex-grow-1 ms-3">
+                                                            <h6>Reanne Carnation</h6>
+                                                            <p className="mb-0">12  friends</p>
+                                                        </div>
+                                                        <div className="d-flex align-items-center mt-2 mt-md-0">
+                                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
+                                                                                                
+                                                        </div>
+                                                    </li>
+                                                    <li className="d-flex align-items-center  flex-wrap">
+                                                        <div className="user-img img-fluid flex-shrink-0">
+                                                        <img loading="lazy" src={imgpp16} alt="story-img" className="rounded-circle avatar-40"/>
+                                                        </div>
+                                                        <div className="flex-grow-1 ms-3">
+                                                            <h6>Reanne Carnation</h6>
+                                                            <p className="mb-0">12  friends</p>
+                                                        </div>
+                                                        <div className="d-flex align-items-center mt-2 mt-md-0">
+                                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
+                                                                                                
+                                                        </div>
+                                                    </li>
+                                                    <li className="d-flex align-items-center  flex-wrap">
+                                                        <div className="user-img img-fluid flex-shrink-0">
+                                                        <img loading="lazy" src={imgpp17} alt="story-img" className="rounded-circle avatar-40"/>
+                                                        </div>
+                                                        <div className="flex-grow-1 ms-3">
+                                                            <h6>Reanne Carnation</h6>
+                                                            <p className="mb-0">12  friends</p>
+                                                        </div>
+                                                        <div className="d-flex align-items-center mt-2 mt-md-0">
+                                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
+                                                                                                
+                                                        </div>
+                                                    </li>
+                                                    <li className="d-flex align-items-center  flex-wrap">
+                                                        <div className="user-img img-fluid flex-shrink-0">
+                                                        <img loading="lazy" src={imgpp18} alt="story-img" className="rounded-circle avatar-40"/>
+                                                        </div>
+                                                        <div className="flex-grow-1 ms-3">
+                                                            <h6>Reanne Carnation</h6>
+                                                            <p className="mb-0">15  friends</p>
+                                                        </div>
+                                                        <div className="d-flex align-items-center mt-2 mt-md-0">
+                                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
+                                                                                                
+                                                        </div>
+                                                    </li>
+                                                    <li className="d-flex align-items-center  flex-wrap">
+                                                        <div className="user-img img-fluid flex-shrink-0">
+                                                        <img loading="lazy" src={imgpp19} alt="story-img" className="rounded-circle avatar-40"/>
+                                                        </div>
+                                                        <div className="flex-grow-1 ms-3">
+                                                            <h6>Reanne Carnation</h6>
+                                                            <p className="mb-0">21  friends</p>
+                                                        </div>
+                                                        <div className="d-flex align-items-center mt-2 mt-md-0">
+                                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
+                                                                                                
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </Card.Body>
+                                        </Card>
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="f4" className="fade show" id="Friends" role="tabpanel">
+                                        <Card>
+                                        <div className="card-header d-flex justify-content-between">
+                                            <div className="header-title">
+                                                <h4 className="card-title">Photos</h4>
+                                            </div>
+                                            <div className="card-header-toolbar d-flex align-items-center">
+                                                <p className="m-0"><Link to="javacsript:void();">Add Photo </Link></p>
+                                            </div>
+                                        </div>
+                                        <Card.Body>
+                                            <ul className="profile-img-gallary p-0 m-0 list-unstyled">
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(1)} loading="lazy" src={imgpp5} alt="gallary-img" className="img-fluid"/></Link></li>
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(2)} loading="lazy" src={imgpp6} alt="gallary-img" className="img-fluid"/></Link></li>
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(3)} loading="lazy" src={imgpp7} alt="gallary-img" className="img-fluid"/></Link></li>
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(4)} loading="lazy" src={imgpp8} alt="gallary-img" className="img-fluid"/></Link></li>
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(5)} loading="lazy" src={imgpp9} alt="gallary-img" className="img-fluid"/></Link></li>
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(6)} loading="lazy" src={imgpp10} alt="gallary-img" className="img-fluid"/></Link></li>
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(7)} loading="lazy" src={imgpp11} alt="gallary-img" className="img-fluid"/></Link></li>
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(8)} loading="lazy" src={imgpp12} alt="gallary-img" className="img-fluid"/></Link></li>
+                                                <li className=""><Link to="#"><img onClick={() => imageOnSlide(9)} loading="lazy" src={imgpp13} alt="gallary-img" className="img-fluid"/></Link></li>
+                                            </ul>
+                                        </Card.Body>
+                                        </Card>
+                                    </Tab.Pane>
+                                </Tab.Content>
+                            </Tab.Container>                   
+                        </div> 
+                    </Card.Body>
+                </Card>
             </Col>
-            <Col className="col-md-6 col-lg-6">
-            </Col>
-            </Row>
-            <Row mt="1">
-            
-                <Col className="col-md-5 col-lg-5">
-                <Tab.Content>              
-                    <Tab.Pane eventKey="f1" className="fade show" id="Posts" role="tabpanel">
-                        <Card>
+            <Col lg="8" md="8">
+                <Card>
+                    <Card.Header className="d-flex justify-content-between">
+                        <div className="header-title">
+                            <h4 className="card-title">Create Post</h4>
+                        </div>
+                    </Card.Header>
+                    <Card.Body>
+                        <Tab.Container defaultActiveKey="first">
+                        <Card id="post-modal-data" >
                             <Card.Body>
-                                <h5>Intro</h5>
-                                <span><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" trokelinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg><span className="ms-2">Joined August 2012</span></span>
-                                <div className="mt-2">
-                                <div className="d-grid gap-2">
-                                        <button className="btn btn-primary" type="button">Edit Details</button>
-                                        <button className="btn btn-primary" type="button">Add Hobbies</button>
-                                        <button className="btn btn-primary" type="button">Add Featured</button>
+                                <div className="d-flex align-items-center">
+                                    <div className="user-img">
+                                    <img loading="lazy" src={user1} alt="userimg" className="avatar-60 rounded-circle"/>
                                     </div>
+                                    <form className="post-text ms-3 w-100 " onClick={handleShow}>
+                                    <input type="text" className="form-control rounded" placeholder="Write something here..." style={{border:"none"}}/>
+                                    </form>
                                 </div>
-                            </Card.Body>
-                        </Card>
-                        <Card>
-                           <div className="card-header d-flex justify-content-between">
-                              <div className="header-title">
-                                 <h4 className="card-title">Life Event</h4>
-                              </div>
-                              <div className="card-header-toolbar d-flex align-items-center">
-                                 <p className="m-0"><Link to="javacsript:void();"> Create </Link></p>
-                              </div>
-                           </div>
-                           <Card.Body>
-                              <Row>
-                                 <Col sm="12">
-                                    <div className="event-post position-relative">
-                                       <Link to="#"><img src={imgpp3} alt="gallary-img" className="img-fluid rounded"/></Link>
-                                       <div className="job-icon-position">
-                                          <div className="job-icon bg-primary p-2 d-inline-block rounded-circle"><i className="ri-briefcase-line text-white"></i></div>
-                                       </div>
-                                       <div className="card-body text-center p-2">
-                                          <h5>Started New Job at Apple</h5>
-                                          <p>January 24, 2019</p>
-                                       </div>
-                                    </div>
-                                 </Col>
-                                 <Col sm="12">
-                                    <div className="event-post position-relative">
-                                       <Link to="#"><img src={imgpp4} alt="gallary-img" className="img-fluid rounded"/></Link>
-                                       <div className="job-icon-position">
-                                          <div className="job-icon bg-primary p-2 d-inline-block rounded-circle"><i className="ri-briefcase-line text-white"></i></div>
-                                       </div>
-                                       <div className="card-body text-center p-2">
-                                          <h5>Freelance Photographer</h5>
-                                          <p className="mb-0">January 24, 2019</p>
-                                       </div>
-                                    </div>
-                                 </Col>
-                              </Row>
-                           </Card.Body>
-                        </Card>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="f2" className="fade show" id="Photos" role="tabpanel">
-                         <Card>
-                            <Card.Body>
-                                <h4>Contact Information</h4>
                                 <hr/>
-                                <Row>
-                                    <Col className="col-3">
-                                       <h6>Email</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">Bnijohn@gmail.com</p>
-                                    </Col>
-                                    <Col className="col-3">
-                                       <h6>Mobile</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">(001) 4544 565 456</p>
-                                    </Col>
-                                    <Col className="col-3">
-                                       <h6>Address</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">United States of America</p>
-                                    </Col>
-                                 </Row>
-                                 <h4 className="mt-3">Websites and Social Links</h4>
-                                 <hr/>
-                                 <Row>
-                                    <Col className="col-3">
-                                       <h6>Website</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">www.bootstrap.com</p>
-                                    </Col>
-                                    <Col className="col-3">
-                                       <h6>Social Link</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">www.bootstrap.com</p>
-                                    </Col>
-                                 </Row>
-                                 <hr/>
-                                 <h4 className="mt-3">Basic Information</h4>
-                                 <hr/>
-                                 <Row>
-                                    <Col className="col-3">
-                                       <h6>Birth Date</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">24 January</p>
-                                    </Col>
-                                    <Col className="col-3">
-                                       <h6>Birth Year</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">1994</p>
-                                    </Col>
-                                    <Col className="col-3">
-                                       <h6>Gender</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">Female</p>
-                                    </Col>
-                                    <Col className="col-3">
-                                       <h6>interested in</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">Designing</p>
-                                    </Col>
-                                    <Col className="col-3">
-                                       <h6>language</h6>
-                                    </Col>
-                                    <Col className="col-9">
-                                       <p className="mb-0">English, French</p>
-                                    </Col>
-                                 </Row>
-
-                            </Card.Body>
-                        </Card>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="f3" className="fade show" id="Abouts" role="tabpanel">
-                    <Card>
-                            <Card.Body>
-                                <ul className="request-list list-inline m-0 p-0">
-                                    <li className="d-flex align-items-center  flex-wrap">
-                                        <div className="user-img img-fluid flex-shrink-0">
-                                        <img src={imgpp14} alt="story-img" className="rounded-circle avatar-40"/>
-                                        </div>
-                                        <div className="flex-grow-1 ms-3">
-                                            <h6>Paul Misunday</h6>
-                                            <p className="mb-0">6  friends</p>
-                                        </div>
-                                        <div className="d-flex align-items-center mt-2 mt-md-0">
-                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
-                                                                                
-                                        </div>
-                                    </li>
-                                    <li className="d-flex align-items-center  flex-wrap">
-                                        <div className="user-img img-fluid flex-shrink-0">
-                                        <img src={imgpp15} alt="story-img" className="rounded-circle avatar-40"/>
-                                        </div>
-                                        <div className="flex-grow-1 ms-3">
-                                            <h6>Reanne Carnation</h6>
-                                            <p className="mb-0">12  friends</p>
-                                        </div>
-                                        <div className="d-flex align-items-center mt-2 mt-md-0">
-                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
-                                                                                
-                                        </div>
-                                    </li>
-                                    <li className="d-flex align-items-center  flex-wrap">
-                                        <div className="user-img img-fluid flex-shrink-0">
-                                        <img src={imgpp16} alt="story-img" className="rounded-circle avatar-40"/>
-                                        </div>
-                                        <div className="flex-grow-1 ms-3">
-                                            <h6>Reanne Carnation</h6>
-                                            <p className="mb-0">12  friends</p>
-                                        </div>
-                                        <div className="d-flex align-items-center mt-2 mt-md-0">
-                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
-                                                                                
-                                        </div>
-                                    </li>
-                                    <li className="d-flex align-items-center  flex-wrap">
-                                        <div className="user-img img-fluid flex-shrink-0">
-                                        <img src={imgpp17} alt="story-img" className="rounded-circle avatar-40"/>
-                                        </div>
-                                        <div className="flex-grow-1 ms-3">
-                                            <h6>Reanne Carnation</h6>
-                                            <p className="mb-0">12  friends</p>
-                                        </div>
-                                        <div className="d-flex align-items-center mt-2 mt-md-0">
-                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
-                                                                                
-                                        </div>
-                                    </li>
-                                    <li className="d-flex align-items-center  flex-wrap">
-                                        <div className="user-img img-fluid flex-shrink-0">
-                                        <img src={imgpp18} alt="story-img" className="rounded-circle avatar-40"/>
-                                        </div>
-                                        <div className="flex-grow-1 ms-3">
-                                            <h6>Reanne Carnation</h6>
-                                            <p className="mb-0">15  friends</p>
-                                        </div>
-                                        <div className="d-flex align-items-center mt-2 mt-md-0">
-                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
-                                                                                
-                                        </div>
-                                    </li>
-                                    <li className="d-flex align-items-center  flex-wrap">
-                                        <div className="user-img img-fluid flex-shrink-0">
-                                        <img src={imgpp19} alt="story-img" className="rounded-circle avatar-40"/>
-                                        </div>
-                                        <div className="flex-grow-1 ms-3">
-                                            <h6>Reanne Carnation</h6>
-                                            <p className="mb-0">21  friends</p>
-                                        </div>
-                                        <div className="d-flex align-items-center mt-2 mt-md-0">
-                                            <Link to="#" className="me-3 btn btn-primary rounded">Follow</Link>
-                                                                                
+                                <ul className=" post-opt-block d-flex list-inline m-0 p-0 flex-wrap">
+                                    <li className="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3 mb-md-0 mb-2"><img loading="lazy" src={small07} alt="icon" className="img-fluid me-2"/> Photo/Video</li>
+                                    <li className="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3 mb-md-0 mb-2"><img loading="lazy" src={small08} alt="icon" className="img-fluid me-2"/> Tag Friend</li>
+                                    <li className="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3"><img loading="lazy" src={small09} alt="icon" className="img-fluid me-2"/> Feeling/Activity</li>
+                                    <li className="bg-soft-primary rounded p-2 pointer text-center">
+                                        <div className="card-header-toolbar d-flex align-items-center">
+                                            <Dropdown>
+                                                <Dropdown.Toggle as={CustomToggle}  id="post-option"  >
+                                                <span className="material-symbols-outlined">
+                                                more_horiz  
+                                                </span>
+                                                </Dropdown.Toggle>
+                                                <Dropdown.Menu className=" dropdown-menu-right" aria-labelledby="post-option" >
+                                                    <Dropdown.Item onClick={handleShow}  href="#" >Check in</Dropdown.Item>
+                                                    <Dropdown.Item onClick={handleShow}  href="#" >Live Video</Dropdown.Item>
+                                                    <Dropdown.Item onClick={handleShow}  href="#" >Gif</Dropdown.Item>
+                                                    <Dropdown.Item onClick={handleShow}  href="#" >Watch Party</Dropdown.Item>
+                                                    <Dropdown.Item onClick={handleShow}  href="#" >Play with Friend</Dropdown.Item>
+                                                </Dropdown.Menu>
+                                            </Dropdown>
                                         </div>
                                     </li>
                                 </ul>
                             </Card.Body>
-                        </Card>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="f4" className="fade show" id="Friends" role="tabpanel">
-                    <Card>
-                           <div className="card-header d-flex justify-content-between">
-                              <div className="header-title">
-                                 <h4 className="card-title">Photos</h4>
-                              </div>
-                              <div className="card-header-toolbar d-flex align-items-center">
-                                 <p className="m-0"><Link to="javacsript:void();">Add Photo </Link></p>
-                              </div>
-                           </div>
-                           <Card.Body>
-                              <ul className="profile-img-gallary p-0 m-0 list-unstyled">
-                                 <li className=""><Link to="#"><img src={imgpp5} alt="gallary-img" className="img-fluid"/></Link></li>
-                                 <li className=""><Link to="#"><img src={imgpp6} alt="gallary-img" className="img-fluid"/></Link></li>
-                                 <li className=""><Link to="#"><img src={imgpp7} alt="gallary-img" className="img-fluid"/></Link></li>
-                                 <li className=""><Link to="#"><img src={imgpp8} alt="gallary-img" className="img-fluid"/></Link></li>
-                                 <li className=""><Link to="#"><img src={imgpp9} alt="gallary-img" className="img-fluid"/></Link></li>
-                                 <li className=""><Link to="#"><img src={imgpp10} alt="gallary-img" className="img-fluid"/></Link></li>
-                                 <li className=""><Link to="#"><img src={imgpp11} alt="gallary-img" className="img-fluid"/></Link></li>
-                                 <li className=""><Link to="#"><img src={imgpp12} alt="gallary-img" className="img-fluid"/></Link></li>
-                                 <li className=""><Link to="#"><img src={imgpp13} alt="gallary-img" className="img-fluid"/></Link></li>
-                              </ul>
-                           </Card.Body>
-                        </Card>
-                    </Tab.Pane>
-                    </Tab.Content>
-                </Col>
-                <Col className="col-md-7 col-lg-7">
-                <Tab.Container defaultActiveKey="first">
-                    <Card>
-                        <Card.Body>
-                            <div className="d-flex">
-                                <div className="user-img">
-                                    <img src={imgpp20} alt="userimg" className="avatar-40 rounded-circle"/>
+                            <Modal show={show} onHide={handleClose} size="lg">
+                            <Modal.Header className="d-flex justify-content-between">
+                                <h5 className="modal-title" id="post-modalLabel">Create Post</h5>
+                                <Link className="lh-1" to="#" onClick={handleClose}><span className="material-symbols-outlined">close</span></Link>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <div className="d-flex align-items-center">
+                                    <div className="user-img">
+                                        <img loading="lazy" src={user9} alt="userimg" className="avatar-60 rounded-circle img-fluid"/>
+                                    </div>
+                                    <form className="post-text ms-3 w-100" action="">
+                                        <input type="text" className="form-control rounded" placeholder="Write something here..." style={{border: "none"}}/>
+                                    </form>
                                 </div>
-                                <div className="input-group ms-2">
-                                    <input type="text" className="form-control profilesearch" placeholder="What's on your mind?" aria-label="What's on your mind?" aria-describedby="btnGroupAddon"/>
+                                <hr/>
+                                <ul className="d-flex flex-wrap align-items-center list-inline m-0 p-0">
+                                    <li className="col-md-6 mb-3">
+                                        <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link><img loading="lazy" src={small1} alt="icon" className="img-fluid"/> Photo/Video</div>
+                                    </li>
+                                    <li className="col-md-6 mb-3">
+                                        <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link><img loading="lazy" src={small2} alt="icon" className="img-fluid"/> Tag Friend</div>
+                                    </li>
+                                    <li className="col-md-6 mb-3">
+                                        <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link><img loading="lazy" src={small3} alt="icon" className="img-fluid"/> Feeling/Activity</div>
+                                    </li>
+                                    <li className="col-md-6 mb-3">
+                                        <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link><img loading="lazy" src={small4} alt="icon" className="img-fluid"/> Check in</div>
+                                    </li>
+                                    <li className="col-md-6 mb-3">
+                                        <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link><img loading="lazy" src={small5} alt="icon" className="img-fluid"/> Live Video</div>
+                                    </li>
+                                    <li className="col-md-6 mb-3">
+                                        <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link><img loading="lazy" src={small6} alt="icon" className="img-fluid"/> Gif</div>
+                                    </li>
+                                    <li className="col-md-6 mb-3">
+                                        <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link><img loading="lazy" src={small7} alt="icon" className="img-fluid"/> Watch Party</div>
+                                    </li>
+                                    <li className="col-md-6 mb-3">
+                                        <div className="bg-soft-primary rounded p-2 pointer me-3"><Link to="#"></Link><img loading="lazy" src={small8} alt="icon" className="img-fluid"/> Play with Friends</div>
+                                    </li>
+                                </ul>
+                                <hr/>
+                                <div className="other-option">
+                                    <div className="d-flex align-items-center justify-content-between">
+                                        <div className="d-flex align-items-center">
+                                            <div className="user-img me-3">
+                                                <img loading="lazy" src={user9} alt="userimg" className="avatar-60 rounded-circle img-fluid"/>
+                                            </div>
+                                            <h6>Your Story</h6>
+                                        </div>
+                                        <div className="card-post-toolbar">
+                                            <Dropdown>
+                                                <Dropdown.Toggle className="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                                    <span className="btn btn-primary">Friend</span>
+                                                </Dropdown.Toggle>
+                                                <Dropdown.Menu clemassName="dropdown-menu m-0 p-0">
+                                                    <Dropdown.Item className="dropdown-item p-3" href="#">
+                                                        <div className="d-flex align-items-top">
+                                                            <i className="ri-save-line h4"></i>
+                                                            <div className="data ms-2">
+                                                                <h6>Public</h6>
+                                                                <p className="mb-0">Anyone on or off Facebook</p>
+                                                            </div>
+                                                        </div>
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item className="dropdown-item p-3" href="#">
+                                                        <div className="d-flex align-items-top">
+                                                            <i className="ri-close-circle-line h4"></i>
+                                                            <div className="data ms-2">
+                                                                <h6>Friends</h6>
+                                                                <p className="mb-0">Your Friend on facebook</p>
+                                                            </div>
+                                                        </div>
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item className="dropdown-item p-3" href="#">
+                                                        <div className="d-flex align-items-top">
+                                                            <i className="ri-user-unfollow-line h4"></i>
+                                                            <div className="data ms-2">
+                                                                <h6>Friends except</h6>
+                                                                <p className="mb-0">Don't show to some friends</p>
+                                                            </div>
+                                                        </div>
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item className="dropdown-item p-3" href="#">
+                                                        <div className="d-flex align-items-top">
+                                                            <i className="ri-notification-line h4"></i>
+                                                            <div className="data ms-2">
+                                                                <h6>Only Me</h6>
+                                                                <p className="mb-0">Only me</p>
+                                                            </div>
+                                                        </div>
+                                                    </Dropdown.Item>
+                                                </Dropdown.Menu>
+                                            </Dropdown>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <hr/>
-                            <ul className="post-opt-block d-flex list-inline m-0 p-0 flex-wrap justify-content-around">
-                                <li className="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3 mb-md-0 mb-2"><img src={imgpp21} alt="icon" className="img-fluid me-2"/> Photo/Video</li>
-                                <li className="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3 mb-md-0 mb-2"><img src={imgpp22} alt="icon" className="img-fluid me-2"/> Live Video </li>
-                                <li className="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3"><img src={imgpp23} alt="icon" className="img-fluid me-2"/> Life Events</li>
-                            </ul>
-                        </Card.Body>
-                    </Card>
+                                <Button variant="primary" className="d-block w-100 mt-3">Post</Button>
+                            </Modal.Body>
+                            </Modal>
+                        </Card>
                     <Card>
                         <Card.Body>
                             <div className="d-flex align-items-center justify-content-between flex-wrap">
@@ -509,7 +677,7 @@ const Profile3=()=>{
                                     <ul className="request-list list-inline m-0 p-0">
                                         <li className="d-flex align-items-center  justify-content-between flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp24} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp24} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                             <h6>Jaques Amole</h6>
@@ -525,7 +693,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center  justify-content-between flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp25} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp25} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Lucy Tania</h6>
@@ -541,7 +709,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp26} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp26} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Val Adictorian</h6>
@@ -557,7 +725,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp27} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp27} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Manny Petty</h6>
@@ -570,7 +738,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center  flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp28} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp28} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Marsha Mello</h6>
@@ -583,7 +751,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center  flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp29} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp29} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Caire Innet</h6>
@@ -596,7 +764,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center  flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp30} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp30} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Gio Metric</h6>
@@ -609,7 +777,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center  flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp31} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp31} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Chris P. Cream</h6>
@@ -622,7 +790,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center  flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp32} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp32} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Paul Misunday</h6>
@@ -635,7 +803,7 @@ const Profile3=()=>{
                                         </li>
                                         <li className="d-flex align-items-center  flex-wrap">
                                             <div className="user-img img-fluid flex-shrink-0">
-                                            <img src={imgpp33} alt="story-img" className="rounded-circle avatar-40"/>
+                                            <img loading="lazy" src={imgpp33} alt="story-img" className="rounded-circle avatar-40"/>
                                             </div>
                                             <div className="flex-grow-1 ms-3">
                                                 <h6>Reanne Carnation</h6>
@@ -660,7 +828,7 @@ const Profile3=()=>{
                                         <Card.Body>
                                             <div className="iq-badges text-left">
                                                 <div className="badges-icon">
-                                                    <img className="avatar-80 rounded" src={imgpp34} alt=""/>
+                                                    <img loading="lazy" className="avatar-80 rounded" src={imgpp34} alt=""/>
                                                 </div>
                                                 <h5 className="mb-2">Gold User</h5>
                                                 <p>Richard McClintock, a Latin professor consectetur.</p>
@@ -674,7 +842,7 @@ const Profile3=()=>{
                                         <Card.Body>
                                             <div className="iq-badges text-left">
                                                 <div className="badges-icon">
-                                                    <img className="avatar-80 rounded" src={imgpp35} alt=""/>
+                                                    <img loading="lazy" className="avatar-80 rounded" src={imgpp35} alt=""/>
                                                 </div>
                                                 <h5 className="mb-2">Gold User</h5>
                                                 <p>Richard McClintock, a Latin professor consectetur.</p>
@@ -690,7 +858,7 @@ const Profile3=()=>{
                                         <Card.Body>
                                             <div className="iq-badges text-left">
                                                 <div className="badges-icon">
-                                                    <img className="avatar-80 rounded" src={imgpp34} alt=""/>
+                                                    <img loading="lazy" className="avatar-80 rounded" src={imgpp34} alt=""/>
                                                 </div>
                                                 <h5 className="mb-2">Gold User</h5>
                                                 <p>Richard McClintock, a Latin professor consectetur.</p>
@@ -704,7 +872,7 @@ const Profile3=()=>{
                                         <Card.Body>
                                             <div className="iq-badges text-left">
                                                 <div className="badges-icon">
-                                                    <img className="avatar-80 rounded" src={imgpp35} alt=""/>
+                                                    <img loading="lazy" className="avatar-80 rounded" src={imgpp35} alt=""/>
                                                 </div>
                                                 <h5 className="mb-2">Gold User</h5>
                                                 <p>Richard McClintock, a Latin professor consectetur.</p>
@@ -723,7 +891,7 @@ const Profile3=()=>{
                             <div className="d-flex  justify-content-between">
                                 <div className="me-3">
                                     <div className="iq-profile-avatar status-online">
-                                        <img className="rounded-circle avatar-50" src={imgpp36} alt=""/>
+                                        <img loading="lazy" className="rounded-circle avatar-50" src={imgpp36} alt=""/>
                                     </div>
                                 </div>
                                 <div className="w-100">
@@ -791,14 +959,15 @@ const Profile3=()=>{
                                 </div>
                             </div>
                             <div className="user-post mt-2">
-                                <Link to="#"><img src={imgpp37} alt="post-img" className="img-fluid w-100"/></Link>
+                                <Link to="#"><img loading="lazy" src={imgpp37} alt="post-img" className="img-fluid w-100"/></Link>
                             </div>
                         </Card.Body>
                     </Card>
                     </Tab.Container>
-                </Col>
-            </Row>
-        </Tab.Container>
+                    </Card.Body>
+                </Card>
+            </Col>
+        </Row>
         </Container>
         </>
     )

@@ -25,7 +25,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm1} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img src={imgm1} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "  loading="lazy"/>
                         <h5>Gmail</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -51,7 +51,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm2} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm2} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Google Calendar</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -77,7 +77,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm3} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm3} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>HubSpot for WordPress</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -109,7 +109,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Channelyze</h5>
                         <small>Built by Channelyze Ltd</small>
                         <div className="mt-2">
@@ -127,7 +127,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Showpad by Elixir Solutions</h5>
                         <small>Built by Elixir Solutions</small>
                         <div className="mt-2">
@@ -145,7 +145,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Ion by Rock Content</h5>
                         <small>Built by Rock Content</small>
                         <div className="mt-2">
@@ -169,7 +169,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Alexa Helper</h5>
                         <small>Built by Voicify</small>
                         <div className="mt-1">
@@ -187,7 +187,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Magento 2 Sync by Unific</h5>
                         <small>Built by Unific | HubSpot Ecommerce Integrations</small>
                         <div className="mt-1">
@@ -205,7 +205,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Pendo for HubSpot</h5>
                         <small>Built by Pendo</small>
                         <div className="mt-1">
@@ -229,7 +229,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm5} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm5} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Facebook Messenger</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -256,7 +256,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Airtable</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -283,7 +283,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm6} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm6} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Mailchimp</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -315,7 +315,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>360NRS</h5>
                         <small>Built by Net Real Solutions</small>
                         <div className="mt-2">
@@ -341,7 +341,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Aloware</h5>
                         <small>Built by Aloware</small>
                         <div className="mt-2">
@@ -367,7 +367,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>SMS for HubSpot</h5>
                         <small>Built by MessageMedia</small>
                         <div className="mt-2">
@@ -399,7 +399,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                       <img  src={imgm7} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                       <img  loading="lazy"  src={imgm7} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Google Contacts</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -425,7 +425,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm6} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm6} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Mailchimp</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -451,7 +451,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Stripe</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -483,7 +483,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Databox</h5>
                         <small>Built by Databox, Inc</small>
                         <div className="mt-2">
@@ -509,7 +509,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Forminator</h5>
                         <small>Built by WPMU DEV</small>
                         <div className="mt-2">
@@ -535,7 +535,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Lucky Orange</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2"><p>Improve customer experience with recordings</p>
@@ -566,7 +566,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Wistia</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -592,7 +592,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm6} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm6} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Mailchimp</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">
@@ -618,7 +618,7 @@ const Market1=()=>{
                       {/* <div className="job-icon bg-primary px-3 py-2 mb-2 d-inline-block rounded-circle">
                           <i className="ri-briefcase-line text-white"></i>
                       </div> */}
-                      <img  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
+                      <img  loading="lazy"  src={imgm4} alt="mimg" className="avatar avatar-25 job-icon mb-2 d-inline-block "/>
                         <h5>Stripe</h5>
                         <small>Built by HubSpot</small>
                         <div className="mt-2">

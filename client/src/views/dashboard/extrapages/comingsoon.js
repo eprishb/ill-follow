@@ -46,9 +46,9 @@ const ComingSoon = () => {
                 clearInterval(timeinterval)
             }
         }
-      
-        updateClock()
         const timeinterval = setInterval(updateClock, 1000)
+        updateClock()
+       
     }
       
         let time = document.querySelector('.countdown').getAttribute('data-date')
@@ -58,6 +58,7 @@ const ComingSoon = () => {
     
         const deadline = new Date(time)
         initializeClock('.countdown', deadline)
+        
     
     }
 )
@@ -73,7 +74,7 @@ const ComingSoon = () => {
                                 </Link>
                                 <h2 className="mt-4 mb-1">Stay tunned, we're launching very soon</h2>
                                 <p>We are working very hard to give you the best experience possible!</p>
-                                <ul className="countdown row list-inline d-flex align-items-center" data-date="Feb 02 2022 20:20:22">
+                                <ul className="countdown row list-inline d-flex align-items-center" data-date="jun 02 2022 20:20:22">
                                     <Col as="li" md="6" xl="3">
                                         <Card>
                                             <Card.Body>

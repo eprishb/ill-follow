@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
-import {Container, Row, Col, Form, Tab, Nav, Button} from 'react-bootstrap'
+import {Container, Row, Col, Form, Tab, Nav, Button,Dropdown} from 'react-bootstrap'
 import Card from '../../../components/Card'
+import CustomToggle from '../../../components/dropdowns'
 
 //img
 import user1 from '../../../assets/images/user/1.jpg'
@@ -16,6 +17,7 @@ import user10 from '../../../assets/images/user/10.jpg'
 const Chat=()=>{
     const [show, setShow] = useState('')
     const [show1, setShow1] = useState('')
+    const [show2, setShow2] = useState('')
     const ChatSidebar =() =>{
         document.getElementsByClassName('scroller')[0].classList.add('show')
     } 
@@ -37,20 +39,19 @@ const Chat=()=>{
                                                 <div className="chat-search pt-3 ps-3">
                                                     <div className="d-flex align-items-center">
                                                         <div className="chat-profile me-3">
-                                                            <img src={user1} alt="chat-user" className="avatar-60 " onClick={() => setShow1('true')}/>
+                                                            <img loading="lazy" src={user1} alt="chat-user" className="avatar-60 " onClick={() => setShow1('true')}/>
                                                         </div>
                                                         <div className="chat-caption">
                                                             <h5 className="mb-0">Bni Jordan</h5>
                                                             <p className="m-0">Web Designer</p>
                                                         </div>
-                                                        <Button type="submit" onClick={ChatSidebarClose} variant=" close-btn-res p-3"><i className="ri-close-fill"></i></Button>
                                                     </div>
                                                     <div id="user-detail-popup" className={`scroller ${show1 === 'true' ? 'show' : '' }`}>
                                                         <div className="user-profile">
-                                                            <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill" onClick={() => setShow1('false')}></i></Button>
+                                                            <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow1('false')}>close</i></Button>
                                                             <div className="user text-center mb-4">
                                                                 <Link className="avatar m-0" to="">
-                                                                    <img src={user1} alt="avatar"/>
+                                                                    <img loading="lazy" src={user1} alt="avatar"/>
                                                                 </Link>
                                                                 <div className="user-name mt-4">
                                                                     <h4 className="text-center">Bni Jordan</h4>
@@ -76,7 +77,9 @@ const Chat=()=>{
                                                     <div className="chat-searchbar mt-4">
                                                         <Form.Group className="form-group chat-search-data m-0">
                                                             <input type="text" className="form-control round" id="chat-search" placeholder="Search"/>
-                                                            <i className="ri-search-line"></i>
+                                                                <i className="material-symbols-outlined">
+                                                                    search
+                                                                </i>
                                                         </Form.Group>
                                                     </div>
                                                 </div>
@@ -87,8 +90,8 @@ const Chat=()=>{
                                                         <Nav.Link eventKey="first" onClick={() => setShow('first')}    href="#chatbox1">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user5} alt="chatuserimage" className="avatar-50 "/>
-                                                                    <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
+                                                                    <img loading="lazy" src={user5} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <span className="avatar-status"><i className="material-symbols-outlined text-success  md-14 filled">circle</i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
                                                                     <h6 className="mb-0">Team Discussions</h6>
@@ -105,7 +108,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="second"  onClick={() => setShow('second')}    href="#chatbox2">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user6} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user6} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -126,7 +129,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="third" onClick={() => setShow('third')} href="#chatbox3">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user7} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user7} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-warning"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -140,7 +143,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="forth" onClick={() => setShow('forth')} href="#chatbox4">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user8} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user8} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -154,7 +157,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="five" onClick={() => setShow('five')} href="#chatbox5">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user9} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user9} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-info"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -171,7 +174,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="six" onClick={() => setShow('six')} href="#chatbox6">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user10} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user10} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-dark"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -185,7 +188,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="seven" onClick={() => setShow('seven')} href="#chatbox7">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user5} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user5} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -199,7 +202,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="eight" onClick={() => setShow('eight')} href="#chatbox8">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user6} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user6} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-primary"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -213,7 +216,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="nine" onClick={() => setShow('nine')} href="#chatbox9">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user7} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user7} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-danger"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -227,7 +230,7 @@ const Chat=()=>{
                                                         <Nav.Link  eventKey="ten" onClick={() => setShow('ten')} href="#chatbox10">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="avatar me-2">
-                                                                    <img src={user8} alt="chatuserimage" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user8} alt="chatuserimage" className="avatar-50 "/>
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-warning"></i></span>
                                                                 </div>
                                                                 <div className="chat-sidebar-name">
@@ -244,7 +247,7 @@ const Chat=()=>{
                                                 <Tab.Content>
                                                     <Tab.Pane eventKey="start" className="tab-pane fade show" id="default-block" role="tabpanel">
                                                         <div className="chat-start">
-                                                            <span className="iq-start-icon text-primary"><i className="ri-message-3-line"></i></span>
+                                                            <span className="iq-start-icon text-primary"><i className="material-symbols-outlined md-42">sms</i></span>
                                                             <Button id="chat-start" onClick={ChatSidebar} bsPrefix="btn bg-white mt-3">Start
                                                             Conversation!</Button>
                                                         </div>
@@ -257,17 +260,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user5} alt="avatar" className="avatar-50 "/>
-                                                                        <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
+                                                                        <img loading="lazy" src={user5} alt="avatar" className="avatar-50 "  onClick={() => setShow2('true')}/>
+                                                                        <span className="avatar-status"><i className="material-symbols-outlined text-success  md-14 filled">circle</i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Team Discussions</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div  className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`}>
                                                                     <div className="user-profile">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user mb-4  text-center">
                                                                             <Link className="avatar m-0" to="">
-                                                                                <img src={user5} alt="avatar"/>
+                                                                                <img loading="lazy" src={user5} alt="avatar"/>
                                                                             </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Bni Jordan</h4>
@@ -306,23 +309,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer pe-0" id="dropdownMenuButton02" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton02">
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -330,7 +335,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -343,7 +348,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user5} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user5} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -357,7 +362,7 @@ const Chat=()=>{
                                                             <div className="chat chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -371,7 +376,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user5} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user5} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -384,7 +389,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -397,7 +402,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user5} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user5} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -410,7 +415,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -428,7 +433,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" variant="primary d-flex align-items-center px-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" variant="primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -440,17 +445,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user6} alt="avatar" className="avatar-50 "/>
+                                                                        <img loading="lazy" src={user6} alt="avatar" className="avatar-50 " onClick={() => setShow2('true')}/>
                                                                         <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Announcement</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller" >
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`} >
                                                                     <div className="user-profile">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user mb-4 text-center">
                                                                                 <Link className="avatar m-0" to="">
-                                                                                    <img src={user6} alt="avatar"/>
+                                                                                    <img loading="lazy" src={user6} alt="avatar"/>
                                                                                 </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Mark Jordan</h4>
@@ -489,22 +494,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-bs-toggle Row-hide-ar cursor-pointer" id="dropdownMenuButton01" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton02">                                                       <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -512,7 +520,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -525,7 +533,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user6} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user6} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -539,7 +547,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -553,7 +561,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user6} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user6} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -566,7 +574,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -579,7 +587,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user6} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user6} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -592,7 +600,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -610,7 +618,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" className=" primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" className=" primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -622,17 +630,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user7} alt="avatar" className="avatar-50 "/>
+                                                                        <img loading="lazy" src={user7} alt="avatar" className="avatar-50 " onClick={() => setShow2('true')}/>
                                                                         <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Designer</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`} >
                                                                     <div className="user-profile ">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user text-center mb-4">
                                                                             <Link className="avatar m-0" to="">
-                                                                                <img src={user7} alt="avatar"/>
+                                                                                <img loading="lazy" src={user7} alt="avatar"/>
                                                                             </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Paige Turner</h4>
@@ -671,23 +679,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex ">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -695,7 +705,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -708,7 +718,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user7} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user7} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -722,7 +732,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -736,7 +746,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user7} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user7} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -749,7 +759,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -762,7 +772,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user7} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user7} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -775,7 +785,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -793,7 +803,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" variant="primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" variant="primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -805,17 +815,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user8} alt="avatar" className="avatar-50 "/>
+                                                                        <img loading="lazy" src={user8} alt="avatar" className="avatar-50 " onClick={() => setShow2('true')}/>
                                                                         <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Developer</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`}>
                                                                     <div className="user-profile ">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user mb-4 text-center">
                                                                                 <Link className="avatar m-0" to="">
-                                                                                    <img src={user8} alt="avatar"/>
+                                                                                    <img loading="lazy" src={user8} alt="avatar"/>
                                                                                 </Link>
                                                                                 <div className="user-name mt-4">
                                                                                     <h4>Barb Ackue</h4>
@@ -854,23 +864,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton2">
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -878,7 +890,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -891,7 +903,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user8} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user8} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -905,7 +917,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -919,7 +931,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user8} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user8} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -932,7 +944,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -945,7 +957,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user8} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user8} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -958,7 +970,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -976,7 +988,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" variant="primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" variant="primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -988,17 +1000,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                 <div className="avatar chat-user-profile m-0 me-3">
-                                                                    <img src={user9} alt="avatar" className="avatar-50 "/>
+                                                                    <img loading="lazy" src={user9} alt="avatar" className="avatar-50 "  />
                                                                     <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                 </div>
                                                                 <h5 className="mb-0">Testing Team</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`}>
                                                                     <div className="user-profile ">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user mb-4 text-center">
                                                                             <Link className="avatar m-0" to="">
-                                                                                <img src={user9} alt="avatar"/>
+                                                                                <img loading="lazy" src={user9} alt="avatar"/>
                                                                             </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Peta Saireya</h4>
@@ -1037,23 +1049,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton3">
-                                                                                <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                                <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                                <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -1061,7 +1075,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -1074,7 +1088,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user9} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user9} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -1088,7 +1102,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -1102,7 +1116,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user9} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user9} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -1115,7 +1129,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -1128,7 +1142,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user9} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user9} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -1141,7 +1155,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -1159,7 +1173,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" className=" primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" className=" primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -1171,17 +1185,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user10} alt="avatar" className="avatar-50 "/>
+                                                                        <img loading="lazy" src={user10} alt="avatar" className="avatar-50 " onClick={() => setShow2('true')}/>
                                                                         <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Paul Molive</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`}>
                                                                     <div className="user-profile ">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user mb-4 text-center">
                                                                             <Link className="avatar m-0" to="">
-                                                                                <img src={user10} alt="avatar"/>
+                                                                                <img loading="lazy" src={user10} alt="avatar"/>
                                                                             </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Paul Molive</h4>
@@ -1220,23 +1234,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone  bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone  bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video  bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video  bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete  bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete  bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown  bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton4">
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -1244,7 +1260,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -1257,7 +1273,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user10} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user10} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -1271,7 +1287,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -1285,7 +1301,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user10} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user10} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -1298,7 +1314,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -1311,7 +1327,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user10} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user10} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -1324,7 +1340,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -1342,7 +1358,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" variant="primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" variant="primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -1354,17 +1370,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user5} alt="avatar" className="avatar-50 "/>
+                                                                        <img loading="lazy" src={user5} alt="avatar" className="avatar-50 " onClick={() => setShow2('true')}/>
                                                                         <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Paige Turner</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`}>
                                                                     <div className="user-profile ">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user text-center mb-4">
                                                                              <Link className="avatar m-0" to="">
-                                                                                <img src={user5} alt="avatar"/>
+                                                                                <img loading="lazy" src={user5} alt="avatar"/>
                                                                             </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Paige Turner</h4>
@@ -1403,23 +1419,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                    <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                    <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                    <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton5">
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -1427,7 +1445,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -1440,7 +1458,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user5} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user5} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -1454,7 +1472,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -1468,7 +1486,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user5} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user5} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -1481,7 +1499,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -1494,7 +1512,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user5} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user5} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -1507,7 +1525,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -1525,7 +1543,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" className=" primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" className=" primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -1537,17 +1555,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user6} alt="avatar" className="avatar-50 "/>
+                                                                        <img loading="lazy" src={user6} alt="avatar" className="avatar-50 " onClick={() => setShow2('true')}/>
                                                                         <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Barb Ackue</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`}>
                                                                     <div className="user-profile">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user text-center mb-4">
                                                                             <Link className="avatar m-0" to="">
-                                                                                <img src={user6} alt="avatar"/>
+                                                                                <img loading="lazy" src={user6} alt="avatar"/>
                                                                             </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Barb Ackue</h4>
@@ -1586,23 +1604,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer" id="dropdownMenuButton6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton6">
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -1610,7 +1630,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -1623,7 +1643,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user6} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user6} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -1637,7 +1657,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                    <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                    <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -1651,7 +1671,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user6} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user6} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -1664,7 +1684,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -1677,7 +1697,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user6} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user6} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -1690,7 +1710,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -1708,7 +1728,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" variant="primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" variant="primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -1720,17 +1740,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user7} alt="avatar" className="avatar-50 "/>
+                                                                        <img loading="lazy" src={user7} alt="avatar" className="avatar-50 " onClick={() => setShow2('true')}/>
                                                                         <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Maya Didas</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`}>
                                                                     <div className="user-profile ">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="user text-center mb-4">
                                                                             <Link className="avatar m-0" to="">
-                                                                                <img src={user7} alt="avatar"/>
+                                                                                <img loading="lazy" src={user7} alt="avatar"/>
                                                                             </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Maya Didas</h4>
@@ -1769,23 +1789,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer" id="dropdownMenuButton7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton7">
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -1793,7 +1815,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -1806,7 +1828,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user7} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user7} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -1820,7 +1842,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -1834,7 +1856,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user7} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user7} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -1847,7 +1869,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -1860,7 +1882,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user7} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user7} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -1873,7 +1895,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -1891,7 +1913,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" variant="primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" variant="primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
@@ -1903,17 +1925,17 @@ const Chat=()=>{
                                                                         <i className="ri-menu-3-line"></i>
                                                                     </div>
                                                                     <div className="avatar chat-user-profile m-0 me-3">
-                                                                        <img src={user8} alt="avatar" className="avatar-50 "/>
+                                                                        <img loading="lazy" src={user8} alt="avatar" className="avatar-50 " onClick={() => setShow2('true')} />
                                                                         <span className="avatar-status"><i className="ri-checkbox-blank-circle-fill text-success"></i></span>
                                                                     </div>
                                                                     <h5 className="mb-0">Monty Carlo</h5>
                                                                 </div>
-                                                                <div className="chat-user-detail-popup scroller">
+                                                                <div className={`chat-user-detail-popup scroller ${show2 === 'true' ? 'show' : '' }`}>
                                                                     <div className="user-profile ">
-                                                                        <Button type="submit" variant=" close-popup p-3"><i className="ri-close-fill"></i></Button>
+                                                                    <Button type="submit" onClick={ChatSidebarClose} variant=" close-popup p-3"><i className="material-symbols-outlined md-18" onClick={() => setShow2('false')}>close</i></Button>
                                                                         <div className="text-center user mb-4">
                                                                             <Link className="avatar m-0" to="">
-                                                                                <img src={user8} alt="avatar"/>
+                                                                                <img loading="lazy" src={user8} alt="avatar"/>
                                                                             </Link>
                                                                             <div className="user-name mt-4">
                                                                                 <h4>Monty Carlo</h4>
@@ -1952,23 +1974,25 @@ const Chat=()=>{
                                                                     </div>
                                                                 </div>
                                                                 <div className="chat-header-icons d-flex">
-                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary">
-                                                                        <i className="ri-phone-line"></i>
+                                                                    <Link to="#" className="chat-icon-phone bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">phone</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-video bg-soft-primary">
-                                                                        <i className="ri-vidicon-line"></i>
+                                                                    <Link to="#" className="chat-icon-video bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">videocam</i>
                                                                     </Link>
-                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary">
-                                                                        <i className="ri-delete-bin-line"></i>
+                                                                    <Link to="#" className="chat-icon-delete bg-soft-primary d-flex justify-content-center align-items-center">
+                                                                        <i className="material-symbols-outlined md-18">delete</i>
                                                                     </Link>
-                                                                    <span className="dropdown bg-soft-primary">
-                                                                        <i className="ri-more-2-line cursor-pointer dropdown-toggle nav-hide-arrow cursor-pointer" id="dropdownMenuButton8" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
-                                                                        <span className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton8">
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-pushpin-2-line me-1 h5"></i>Pin to top</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-delete-bin-6-line me-1 h5"></i>Delete chat</Link>
-                                                                            <Link className="dropdown-item" to="#"><i className="ri-time-line me-1 h5"></i>Block</Link>
-                                                                        </span>
-                                                                    </span>
+                                                                    <Dropdown className="bg-soft-primary d-flex justify-content-center align-items-center" as="span">
+                                                                        <Dropdown.Toggle as={CustomToggle} variant="material-symbols-outlined cursor-pointer md-18 nav-hide-arrow pe-0 show">
+                                                                            more_vert
+                                                                        </Dropdown.Toggle>
+                                                                        <Dropdown.Menu className="dropdown-menu-right">
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">push_pin</i>Pin to top</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">delete_outline</i>Delete chat</Dropdown.Item>
+                                                                            <Dropdown.Item className="d-flex align-items-center" href="#"><i className="material-symbols-outlined md-18 me-1">watch_later</i>Block</Dropdown.Item>
+                                                                        </Dropdown.Menu>
+                                                                    </Dropdown>
                                                                 </div>
                                                             </header>
                                                         </div>
@@ -1976,7 +2000,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:45</span>
                                                                 </div>
@@ -1989,7 +2013,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                     <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user8} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user8} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:48</span>
                                                                 </div>
@@ -2003,7 +2027,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:49</span>
                                                                 </div>
@@ -2017,7 +2041,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user8} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user8} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:52</span>
                                                                 </div>
@@ -2030,7 +2054,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:53</span>
                                                                 </div>
@@ -2043,7 +2067,7 @@ const Chat=()=>{
                                                             <div className="chat chat-left">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user8} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user8} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:54</span>
                                                                 </div>
@@ -2056,7 +2080,7 @@ const Chat=()=>{
                                                             <div className="chat d-flex other-user">
                                                                 <div className="chat-user">
                                                                     <Link className="avatar m-0" to="">
-                                                                        <img src={user1} alt="avatar" className="avatar-35 "/>
+                                                                        <img loading="lazy" src={user1} alt="avatar" className="avatar-35 "/>
                                                                     </Link>
                                                                     <span className="chat-time mt-1">6:56</span>
                                                                 </div>
@@ -2074,7 +2098,7 @@ const Chat=()=>{
                                                                     <Link to="#"><i className="fa fa-paperclip pe-3" aria-hidden="true"></i></Link>
                                                                 </div>
                                                                 <Form.Control type="text" className="form-control me-3" placeholder="Type your message"/>
-                                                                <Button type="submit" variant="primary d-flex align-items-center p-2"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
+                                                                <Button type="submit" variant="primary d-flex align-items-center"><i className="far fa-paper-plane" aria-hidden="true"></i><span className="d-none d-lg-block ms-1">Send</span></Button>
                                                             </Form>
                                                         </div>
                                                     </Tab.Pane>
