@@ -133,7 +133,7 @@ function FeedPost({ post }) {
             </div>
           </div>
           <div className="mt-3">
-            <p>{post?.desc}</p>
+            <p>{post?.content}</p>
           </div>
           <div className="user-post">
             {post?.img && (

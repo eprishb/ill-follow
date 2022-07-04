@@ -1,6 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import useDebounce from "../../../hooks/useDebounce";
 
 import { AuthContext } from "../../../context/AuthContext";
 import Avatar from "../../Avatar";
@@ -36,7 +35,6 @@ function CreatePost() {
   const [content, setContent] = useState("");
 
   const updateContent = () => setContent(ref.current.value);
-  useDebounce(() => console.log(content), 1000, [content]);
 
   const [file, setFile] = useState(null);
 
@@ -59,7 +57,7 @@ function CreatePost() {
           <div className="user-img">
             <Avatar />
           </div>
-          <form className="post-text ms-3 w-100 ">
+          <form className="post-text ms-3 w-100">
             <ComposePost content={content} handleShow={handleShow} />
           </form>
         </div>
@@ -97,6 +95,7 @@ function CreatePost() {
                 ref={ref}
                 content={content}
                 updateContent={updateContent}
+                enablePublishMode={enablePublishMode}
               />
             </form>
             <div>
@@ -221,7 +220,11 @@ function CreatePost() {
               </div>
             </div>
           </div>
-          {/* <Publish file={file} publishButton={publishButton} /> */}
+          <Publish
+            file={file}
+            content={content}
+            publishButton={publishButton}
+          />
         </Modal.Body>
       </Modal>
     </Card>

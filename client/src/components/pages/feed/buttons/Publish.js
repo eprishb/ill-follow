@@ -3,15 +3,17 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../../../context/AuthContext";
 import Icon from "../../../misc/icon/Icon";
 
-function Publish({ file, desc }) {
+function Publish({ file, content, publishButton }) {
   const { user } = useContext(AuthContext);
 
-  const submitHandler = async (e) => {
-    console.log(desc);
+  const disabled = publishButton ? false : true;
+
+  const handleSubmit = async (e) => {
+    console.log(content);
     e.preventDefault();
     const newPost = {
       userId: user._id,
-      desc: desc.current.value,
+      content: content,
     };
     if (file) {
       const data = new FormData();
@@ -33,11 +35,14 @@ function Publish({ file, desc }) {
   };
 
   return (
-    <form onClick={submitHandler}>
-      <button type="submit" className="btn btn-primary d-block w-100 mt-3">
-        Post
-      </button>
-    </form>
+    <button
+      type="submit"
+      onClick={handleSubmit}
+      className="btn btn-primary d-block w-100 mt-3"
+      disabled={disabled}
+    >
+      Post
+    </button>
   );
 }
 

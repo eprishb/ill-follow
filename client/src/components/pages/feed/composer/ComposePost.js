@@ -10,7 +10,7 @@ const ComposePost = forwardRef((props, ref) => {
       placeholder="Write something here..."
       value={props?.content}
       onChange={props?.updateContent}
-      // onInput={props.enablePublish}
+      onInput={props?.enablePublishMode}
       onClick={props?.handleShow}
       style={{ border: "none" }}
     ></textarea>
