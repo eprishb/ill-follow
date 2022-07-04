@@ -1,5 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import useDebounce from "../../../hooks/useDebounce";
 
 import { AuthContext } from "../../../context/AuthContext";
 import Avatar from "../../Avatar";
@@ -33,7 +34,9 @@ function CreatePost() {
 
   const ref = useRef();
   const [content, setContent] = useState("");
-  console.log(content);
+
+  const updateContent = () => setContent(ref.current.value);
+  useDebounce(() => console.log(content), 1000, [content]);
 
   const [file, setFile] = useState(null);
 
@@ -56,9 +59,9 @@ function CreatePost() {
           <div className="user-img">
             <Avatar />
           </div>
-          <div className="post-text ms-3 w-100 ">
-            <ComposePost handleShow={handleShow} />
-          </div>
+          <form className="post-text ms-3 w-100 ">
+            <ComposePost content={content} handleShow={handleShow} />
+          </form>
         </div>
         <hr />
         <BasicOptions
@@ -85,18 +88,17 @@ function CreatePost() {
             <div className="user-img">
               <Avatar />
             </div>
-            <div
+            <form
               className="post-text ms-3 w-100 "
               data-bs-toggle="modal"
               data-bs-target="#post-modal"
             >
-              {console.log("render")}
-              {/* <ComposePost
+              <ComposePost
                 ref={ref}
                 content={content}
-                setContent={setContent}
-              /> */}
-            </div>
+                updateContent={updateContent}
+              />
+            </form>
             <div>
               {file && (
                 <div>
