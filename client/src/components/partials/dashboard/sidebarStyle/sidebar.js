@@ -58,7 +58,7 @@ const Sidebar = () => {
       <aside
         className={`${sidebarType.join(
           " "
-        )} ${sidebarMenuStyle} sidebar sidebar-default  `}
+        )} ${sidebarMenuStyle} sidebar sidebar-default sidebar-mini `}
         id="first-tour"
         data-toggle="main-sidebar"
         data-sidebar="responsive"
