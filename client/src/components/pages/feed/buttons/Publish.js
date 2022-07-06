@@ -6,10 +6,9 @@ import Icon from "../../../misc/icon/Icon";
 function Publish({ file, content, publishButton }) {
   const { user } = useContext(AuthContext);
 
-  const disabled = publishButton ? false : true;
+  const disabled = publishButton || file ? false : true;
 
   const handleSubmit = async (e) => {
-    console.log(content);
     e.preventDefault();
     const newPost = {
       userId: user._id,
