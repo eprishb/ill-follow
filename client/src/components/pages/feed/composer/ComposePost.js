@@ -1,5 +1,7 @@
 import React, { forwardRef, useLayoutEffect, useState } from "react";
 
+import { Image } from "react-bootstrap";
+
 const ComposePost = forwardRef((props, ref) => {
   const value = props?.content;
   const enablePublish = props?.enablePublishMode;
@@ -20,18 +22,28 @@ const ComposePost = forwardRef((props, ref) => {
   }, [ref, value]);
 
   return (
-    <textarea
-      ref={ref}
-      id="composeModal"
-      className="form-control rounded"
-      placeholder="Write something here..."
-      readOnly={readOnly}
-      value={value}
-      onChange={ref && updateContent}
-      onInput={enablePublish}
-      onClick={handleShow}
-      style={{ border: "none" }}
-    ></textarea>
+    <div>
+      <textarea
+        ref={ref}
+        id="composeModal"
+        className={`form-control rounded
+					${readOnly ? "form-control-plaintext" : ""}
+				`}
+        placeholder="Write something here..."
+        readOnly={readOnly}
+        value={value}
+        onChange={ref && updateContent}
+        onInput={enablePublish}
+        onClick={handleShow}
+        style={{ border: "none" }}
+      ></textarea>
+      {props?.file && (
+        <div>
+          <Image fluid src={URL.createObjectURL(props?.file)} alt="" />
+          <span onClick={() => props?.setFile(null)}>X</span>
+        </div>
+      )}
+    </div>
   );
 });
 
