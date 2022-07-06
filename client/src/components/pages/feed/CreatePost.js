@@ -34,8 +34,6 @@ function CreatePost() {
   const ref = useRef();
   const [content, setContent] = useState("");
 
-  const updateContent = () => setContent(ref.current.value);
-
   const [file, setFile] = useState(null);
 
   const [publishButton, setPublishButton] = useState(false);
@@ -94,7 +92,7 @@ function CreatePost() {
               <ComposePost
                 ref={ref}
                 content={content}
-                updateContent={updateContent}
+                setContent={setContent}
                 enablePublishMode={enablePublishMode}
               />
             </form>

@@ -64,8 +64,7 @@
   // HTML5 says that controls under a fieldset > legend:first-child won't be
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
-  &:disabled,
-  &[readonly] {
+  &:disabled {
     background-color: $input-disabled-bg;
     border-color: $input-disabled-border-color;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
@@ -195,6 +194,13 @@ textarea {
   &.form-control-lg {
     min-height: $input-height-lg;
   }
+}
+
+textarea {
+	&.form-control {
+		border: none;
+		resize: none;
+	}
 }
 // stylelint-enable selector-no-qualifying-type
 
