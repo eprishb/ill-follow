@@ -7,9 +7,8 @@ const ComposePost = forwardRef((props, ref) => {
   const enablePublish = props?.enablePublishMode;
   const handleShow = props?.handleShow;
   const readOnly = !ref ? "readonly" : false;
-  const [rows, setRows] = useState(1);
 
-  const updateContent = (event) => {
+  const updateContent = () => {
     props?.setContent(ref.current.value);
   };
 
@@ -37,10 +36,10 @@ const ComposePost = forwardRef((props, ref) => {
         onClick={handleShow}
         style={{ border: "none" }}
       ></textarea>
-      {props?.file && (
+      {props?.files && (
         <div>
-          <Image fluid src={URL.createObjectURL(props?.file)} alt="" />
-          <span onClick={() => props?.setFile(null)}>X</span>
+          <span onClick={() => props?.setFiles(null)}>X</span>
+          <Image fluid src={URL.createObjectURL(props?.files[0])} alt="" />
         </div>
       )}
     </div>

@@ -24,6 +24,7 @@ import icon5 from "../../../../assets/images/icon/05.png";
 import icon6 from "../../../../assets/images/icon/06.png";
 import icon7 from "../../../../assets/images/icon/07.png";
 import Avatar from "../../../Avatar";
+import ImagePost from "./ImagePost";
 
 function FeedPost({ post }) {
   const [like, setLike] = useState(post.likes.length);
@@ -66,9 +67,6 @@ function FeedPost({ post }) {
                 <div className="d-flex justify-content-between">
                   <div>
                     <h5 className="mb-0 d-inline-block">{user.username}</h5>
-                    <span className="mb-0 ps-1 d-inline-block">
-                      Add New Post
-                    </span>
                     <p className="mb-0 text-primary">
                       {format(post.createdAt)}
                     </p>
@@ -135,28 +133,7 @@ function FeedPost({ post }) {
           <div className="mt-3">
             <p>{post?.content}</p>
           </div>
-          <div className="user-post">
-            {post?.img && (
-              <div className=" d-grid grid-rows-2 grid-flow-col gap-3">
-                <Link to="#">
-                  <img
-                    src={post.img}
-                    alt="Adobe Stock Photo"
-                    className="img-fluid rounded w-100"
-                  />
-                </Link>
-                {/* <div className="row-span-2 row-span-md-1">
-									<img src={p2} alt="post1" className="img-fluid rounded w-100" />
-								</div>
-								<div className="row-span-1">
-									<img src={p1} alt="post2" className="img-fluid rounded w-100" />
-								</div>
-								<div className="row-span-1 ">
-									<img src={p3} alt="post3" className="img-fluid rounded w-100" />
-								</div> */}
-              </div>
-            )}
-          </div>
+          {post?.img && <ImagePost postImage={post.img} />}
           <div className="comment-area mt-3">
             <div className="d-flex justify-content-between align-items-center flex-wrap">
               <div className="like-block position-relative d-flex align-items-center">

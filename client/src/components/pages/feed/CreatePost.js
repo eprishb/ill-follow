@@ -26,7 +26,7 @@ function CreatePost() {
   const ref = useRef();
   const [content, setContent] = useState("");
 
-  const [file, setFile] = useState(null);
+  const [files, setFiles] = useState(null);
   const [input, setInput] = useState("");
 
   const [publishButton, setPublishButton] = useState(false);
@@ -51,8 +51,9 @@ function CreatePost() {
           <form className="post-text ms-3 w-100">
             <ComposePost
               content={content}
-              file={file}
+              files={files}
               handleShow={handleShow}
+              setFiles={setFiles}
             />
           </form>
         </div>
@@ -89,8 +90,9 @@ function CreatePost() {
               <ComposePost
                 ref={ref}
                 content={content}
-                file={file}
+                files={files}
                 setContent={setContent}
+                setFiles={setFiles}
                 enablePublishMode={enablePublishMode}
               />
             </form>
@@ -113,11 +115,11 @@ function CreatePost() {
               </div>
             </div>
           )}
-          <ExtendedOptions setFile={setFile} setInput={setInput} />
+          <ExtendedOptions setFiles={setFiles} setInput={setInput} />
           <hr />
           <HiddenOptions />
           <Publish
-            file={file}
+            files={files}
             content={content}
             publishButton={publishButton}
           />

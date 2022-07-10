@@ -11,7 +11,7 @@ import img6 from "../../../../../assets/images/small/12.png";
 import img7 from "../../../../../assets/images/small/13.png";
 import img8 from "../../../../../assets/images/small/14.png";
 
-function ExtendedOptions({ setFile, setInput }) {
+function ExtendedOptions({ setFiles, setInput }) {
   const showInput = (input) => setInput(input);
 
   return (
@@ -21,11 +21,13 @@ function ExtendedOptions({ setFile, setInput }) {
           <img src={img1} alt="icon" className="img-fluid" />
           <label htmlFor="feed-upload-input-1">&nbsp;Photo/Video</label>
           <input
+            type="file"
+            name="uploadImages"
+            accept=".png, .jpg, .jpeg"
+            multiple
             id="feed-upload-input-1"
             className="position-absolute top-0 end-0 bottom-0 start-0 w-100 h-100 opacity-0"
-            type="file"
-            accept=".png, .jpg, .jpeg"
-            onChange={(e) => setFile(e.target.files[0])}
+            onChange={(e) => setFiles(e.target.files)}
           />
         </div>
       </li>

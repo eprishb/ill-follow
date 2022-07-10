@@ -1,6 +1,7 @@
 // Creates Express
 const express = require("express");
 // Creates Application
+const cors = require("cors");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -13,6 +14,7 @@ const multer = require("multer");
 const path = require("path");
 
 dotenv.config();
+app.use(cors());
 
 // Connect to MongoDB
 mongoose.connect(
@@ -32,29 +34,29 @@ app.use(helmet());
 app.use(morgan("common"));
 
 const storage = multer.diskStorage({
-	destination: (req, file, cb) => {
-		cb(null, 'public/images');
-	},
-	filename: (req, file, cb) => {
-		cb(null, Date.now() + '--' + file.originalname);
-	}
-})
+  destination: (req, file, cb) => {
+    cb(null, "public/images");
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
 
 const upload = multer({ storage });
-app.post('/api/single', upload.single('file'), (req, res) => {
-	try {
-		return res.status(200).json('Single file uploaded');
-	} catch(err) {
-		console.log(err);
-	}
-})
-app.post('/api/multiple', upload.array('files', 3), (req, res) => {
-	try {
-		return res.status(200).json('Multiple files uploaded');
-	} catch(err) {
-		console.log(err);
-	}
-})
+// app.post("/api/single", upload.single("file"), (req, res) => {
+//   try {
+//     return res.status(200).json("Single file uploaded");
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
+app.post("/api/upload", upload.array("uploadImages", 3), (req, res) => {
+  try {
+    return res.status(200).json("Multiple files uploaded");
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
@@ -62,5 +64,5 @@ app.use("/api/posts", postRoute);
 
 // Port to listen to while running
 app.listen(8800, () => {
-	console.log("Backend server is running!")
-})
+  console.log("Backend server is running!");
+});
