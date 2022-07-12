@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { format } from "timeago.js";
+// import { format } from "timeago.js";
 // import FeedPostActions from "../buttons/FeedPostActions";
 import { AuthContext } from "../../../../context/AuthContext";
 
@@ -68,7 +68,7 @@ function FeedPost({ post }) {
                   <div>
                     <h5 className="mb-0 d-inline-block">{user.username}</h5>
                     <p className="mb-0 text-primary">
-                      {format(post.createdAt)}
+                      {/* {format(post.createdAt)} */}
                     </p>
                   </div>
                   <div className="card-post-toolbar">

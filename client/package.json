@@ -39,6 +39,7 @@
     "smooth-scrollbar": "^8.6.3",
     "sweetalert2": "^11.1.5",
     "swiper": "^6.8.1",
+    "timeago": "^1.6.7",
     "timeago.js": "^4.0.2",
     "vanillajs-datepicker": "^1.1.4",
     "web-vitals": "^2.1.4"
@@ -53,7 +54,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:8800",
   "eslintConfig": {
     "extends": [
       "react-app",
